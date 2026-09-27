@@ -1,2 +1,336 @@
-# tokyo-olympic-azure-data-engineering-project
-tokyo-olympic-azure-data-engineering-project
+# Olympic Data Analytics & Machine Learning Platform
+
+An end-to-end analytics and machine learning project built around the Tokyo 2020 Olympic Games dataset.
+
+The project started as an Azure/PySpark data engineering workflow and is being developed into a broader analytics and ML platform covering data quality, feature engineering, predictive modeling, business analytics, and eventually retrieval-augmented and agentic AI.
+
+> **Project status:** 🚧 In active development. This README is an initial version and will be updated again when the full platform is complete.
+
+---
+
+## Project Objectives
+
+- Build a reliable data-quality and preprocessing layer for Olympic datasets.
+- Create reusable country-level analytical features and KPIs.
+- Develop machine learning models for Olympic medal-performance analysis.
+- Validate models using cross-validation and analyze prediction errors.
+- Provide business-facing analytics through Power BI.
+- Extend the analytics layer with a knowledge graph and grounded retrieval.
+- Build an agentic interface for combining structured analytics, ML predictions, and retrieved context.
+
+---
+
+## Current Architecture
+
+```text
+Tokyo Olympic CSV Data
+        │
+        ▼
+Data Quality & Validation
+        │
+        ▼
+Cleaning / Deduplication
+        │
+        ▼
+Feature Engineering
+        │
+        ├──────────────► Country Analytics / KPIs
+        │
+        ▼
+Machine Learning
+   ├── Regression
+   └── Classification
+        │
+        ▼
+Cross-Validation & Error Analysis
+```
+
+The architecture will be extended as the remaining platform components are implemented.
+
+---
+
+## Datasets
+
+The project uses five Tokyo Olympic datasets:
+
+| Dataset | Purpose |
+|---|---|
+| `Athletes.csv` | Athlete participation and disciplines |
+| `Coaches.csv` | Coach, country, discipline and event information |
+| `EntriesGender.csv` | Gender-based participation by discipline |
+| `Medals.csv` | Country-level medal results |
+| `Teams.csv` | Team participation, disciplines and events |
+
+The datasets contain different country granularities and schemas, so country-level joins are performed through controlled aggregation rather than blindly joining raw tables.
+
+---
+
+## Data Quality
+
+A reusable validation module is implemented in:
+
+```text
+src/quality/data_quality.py
+```
+
+Current checks include:
+
+- Required-column validation
+- Duplicate-row detection
+- Missing-value profiling
+- Medal-total consistency checks
+- Gender-total consistency checks
+- Non-negative numeric-value checks
+- Dataset-level row/column profiling
+- Encoding fallback for the supplied CSV files
+
+Observed data-quality issues are reported rather than silently fabricated or overwritten. For example, the Coaches dataset contains systematic missing values in the `Event` field.
+
+---
+
+## Feature Engineering
+
+Country-level features are generated in:
+
+```text
+src/features/build_features.py
+```
+
+Current features include:
+
+- Athlete count
+- Athlete discipline count
+- Team count
+- Team discipline count
+- Team event count
+- Gold medals
+- Silver medals
+- Bronze medals
+- Total medals
+
+The resulting analytical dataset is written to:
+
+```text
+models/country_features.csv
+```
+
+---
+
+## Machine Learning
+
+### Medal Regression
+
+The project evaluates:
+
+- Mean baseline
+- Random Forest Regressor
+- XGBoost Regressor
+
+The models use participation-derived features to predict total medals.
+
+Current hold-out results:
+
+| Model | MAE | RMSE | R² |
+|---|---:|---:|---:|
+| Mean baseline | 8.37 | 19.71 | -0.02 |
+| Random Forest | 3.68 | 10.46 | 0.71 |
+| XGBoost | 4.24 | 12.68 | 0.58 |
+
+Random Forest is selected based on the current hold-out MAE.
+
+### Medal Performance Classification
+
+A three-class target is defined for project analysis:
+
+- **No Medal:** 0 medals
+- **Medal:** 1–9 medals
+- **High Medal:** 10+ medals
+
+A class-weighted Random Forest classifier is evaluated using stratified 5-fold cross-validation.
+
+Current metrics:
+
+- Weighted F1: **0.79**
+- ROC-AUC: **0.89**
+- PR-AUC: **0.83**
+
+These results describe modeling of the Tokyo dataset and should **not** be interpreted as evidence of prospective performance on future Olympic editions.
+
+---
+
+## Model Validation & Error Analysis
+
+The project includes:
+
+- 5-fold cross-validation
+- Regression MAE/RMSE/R² evaluation
+- Classification precision/recall/F1
+- ROC-AUC and PR-AUC
+- Feature-importance analysis
+- Largest-error analysis
+
+Cross-validation of the Random Forest regression model currently gives:
+
+- Mean MAE: **2.78**
+- Mean RMSE: **6.98**
+- Mean R²: **0.69**
+
+The analysis also highlights an important limitation: participation-only variables do not capture every factor influencing Olympic medal outcomes, and extreme medal counts can be difficult to model accurately.
+
+---
+
+## Country Analytics
+
+The analytical dataset is generated by:
+
+```text
+src/features/build_analytics.py
+```
+
+Current KPIs include:
+
+- Athlete participation
+- Team participation
+- Discipline and event coverage
+- Gold / Silver / Bronze / Total medals
+- Medal rate per athlete
+- Gold share
+- Medals per team event
+- Medals per discipline
+- Performance class
+
+Output:
+
+```text
+models/country_analytics.csv
+```
+
+The analytics layer is intended to support both exploratory analysis and the planned Power BI dashboard.
+
+---
+
+## Repository Structure
+
+```text
+.
+├── data/
+│   ├── Athletes.csv
+│   ├── Coaches.csv
+│   ├── EntriesGender.csv
+│   ├── Medals.csv
+│   └── Teams.csv
+│
+├── src/
+│   ├── ingestion/
+│   ├── transformation/
+│   ├── quality/
+│   │   └── data_quality.py
+│   ├── features/
+│   │   ├── build_features.py
+│   │   └── build_analytics.py
+│   ├── ml/
+│   │   ├── train_model.py
+│   │   ├── cross_validate.py
+│   │   ├── classify_medal_performance.py
+│   │   └── analyze_model.py
+│   ├── rag/
+│   ├── agents/
+│   └── api/
+│
+├── models/
+│   ├── country_features.csv
+│   └── country_analytics.csv
+│
+├── dashboards/
+├── notebooks/
+├── pipelines/
+├── tests/
+├── docs/
+├── config/
+└── scripts/
+```
+
+---
+
+## Technology Stack
+
+### Current
+
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- XGBoost
+- PySpark / Databricks foundation
+- Azure data engineering foundation
+
+### Planned
+
+- Power BI
+- Neo4j
+- FAISS / vector retrieval
+- RAG / GraphRAG
+- LangGraph
+- FastAPI
+
+Only components that are actually implemented will be presented as completed features in the final documentation.
+
+---
+
+## Development Roadmap
+
+### Phase 1 — Data & ML Foundation ✅
+
+- [x] Data-quality validation
+- [x] Data preprocessing and deduplication
+- [x] Country-level feature engineering
+- [x] Regression modeling
+- [x] Classification modeling
+- [x] Cross-validation
+- [x] Error analysis
+- [x] Country-level analytics
+
+### Phase 2 — Analytics & Knowledge Layer 🚧
+
+- [ ] Power BI dashboard
+- [ ] Neo4j knowledge graph
+- [ ] Graph-based relationship analysis
+
+### Phase 3 — Retrieval & Agentic AI 🚧
+
+- [ ] Vector retrieval
+- [ ] RAG
+- [ ] GraphRAG
+- [ ] LangGraph orchestration
+- [ ] Tool-based access to analytics and ML outputs
+- [ ] Grounded Olympic performance insights
+
+### Phase 4 — Serving & Engineering 🚧
+
+- [ ] FastAPI service
+- [ ] Automated tests
+- [ ] API documentation
+- [ ] End-to-end integration
+- [ ] Final architecture and reproducibility documentation
+
+---
+
+## Reproducibility
+
+The project keeps raw datasets separate from generated model artifacts and ignores local environments, secrets, logs, and generated outputs through `.gitignore`.
+
+No credentials or Azure secrets should be committed to the repository.
+
+---
+
+## Current Limitations
+
+This project currently models the Tokyo Olympic dataset as an observational analytical dataset. The ML models use participation-derived variables and therefore should not be interpreted as causal models or guaranteed future-Olympics forecasting systems.
+
+The knowledge graph, retrieval, agentic AI, API, dashboard, and full testing layers are still under development and will be documented here after implementation.
+
+---
+
+## License
+
+This project is currently maintained as a personal portfolio and learning project.
