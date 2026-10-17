@@ -3,29 +3,24 @@ from pathlib import Path
 import pandas as pd
 
 from src.quality.data_quality import load_csv
+from src.quality.gates import load_validated_sources
+from src.features.team_counts import aggregate_team_counts
 
 
 OUTPUT_DIR = Path(__file__).resolve().parents[2] / "models"
-OUTPUT_DIR.mkdir(exist_ok=True)
 
 
 def build_country_features() -> pd.DataFrame:
     """Build country-level participation features and medal targets."""
 
-    athletes = load_csv("Athletes.csv")
-    teams = load_csv("Teams.csv")
-    medals = load_csv("Medals.csv")
-
-    # Remove exact duplicate athlete records.
-    athletes = athletes.drop_duplicates()
-
-    # Remove exact duplicate team records.
-    teams = teams.drop_duplicates()
+    sources, quality_report = load_validated_sources(loader=load_csv)
+    athletes, teams, medals = (sources[name] for name in ("Athletes", "Teams", "Medals"))
 
     # ---------------------------------------------------------
     # Athlete participation features
     # ---------------------------------------------------------
 
+    # athlete_count is a distinct normalized-name proxy, not verified people.
     athlete_features = (
         athletes.groupby("Country")
         .agg(
@@ -40,16 +35,7 @@ def build_country_features() -> pd.DataFrame:
     # Team participation features
     # ---------------------------------------------------------
 
-    team_features = (
-        teams.groupby("Country")
-        .agg(
-            team_count=("TeamName", "nunique"),
-            team_discipline_count=("Discipline", "nunique"),
-            team_event_count=("Event", "nunique"),
-        )
-        .reset_index()
-        .rename(columns={"Country": "country"})
-    )
+    team_features = aggregate_team_counts(teams)
 
     # ---------------------------------------------------------
     # Medal target
@@ -77,12 +63,14 @@ def build_country_features() -> pd.DataFrame:
         team_features,
         on="country",
         how="outer",
+        validate="one_to_one",
     )
 
     features = features.merge(
         medal_targets,
         on="country",
         how="left",
+        validate="one_to_one",
     )
 
     # Countries without medals receive a target of zero.
@@ -107,12 +95,14 @@ def build_country_features() -> pd.DataFrame:
     # Sort for reproducibility.
     features = features.sort_values("country").reset_index(drop=True)
 
+    features.attrs["data_quality_report"] = quality_report
     return features
 
 
 if __name__ == "__main__":
     df = build_country_features()
 
+    OUTPUT_DIR.mkdir(exist_ok=True)
     output_path = OUTPUT_DIR / "country_features.csv"
     df.to_csv(output_path, index=False)
 

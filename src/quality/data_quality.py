@@ -2,8 +2,112 @@ from pathlib import Path
 
 import pandas as pd
 
+from src.quality.gender_data import validate_gender_data
 
 DATA_DIR = Path(__file__).resolve().parents[2] / "data"
+
+
+def clean_and_validate_coaches(coaches: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
+    """Clean a copy and report errors separately from permitted missing events.
+
+    Event is optional: an absent assignment is not evidence of an invalid coach.
+    See docs/coach_cleaning.md. No assignments or coach identities are inferred.
+    """
+    cleaned = coaches.copy(deep=True)
+    required = ["Name", "Country", "Discipline", "Event"]
+    report = {
+        "input_rows": len(coaches),
+        "output_rows": len(coaches),
+        "duplicate_rows_removed": 0,
+        "errors": [],
+        "warnings": [],
+    }
+    missing = check_required_columns(coaches, required)
+    if missing or not coaches.columns.is_unique:
+        report["errors"].append({
+            "code": "invalid_schema",
+            "missing_columns": missing,
+            "duplicate_column_labels": not coaches.columns.is_unique,
+        })
+        return cleaned, report
+
+    for column in required:
+        cleaned[column] = cleaned[column].map(
+            lambda value: value.strip() if isinstance(value, str) else value
+        )
+        invalid = cleaned[column].map(
+            lambda value: not isinstance(value, str) and not pd.isna(value)
+        )
+        if invalid.any():
+            report["errors"].append({
+                "code": "invalid_text_type", "column": column,
+                "rows": int(invalid.sum()),
+            })
+        if column != "Event":
+            absent = cleaned[column].isna() | cleaned[column].eq("").fillna(False)
+            if absent.any():
+                report["errors"].append({
+                    "code": "missing_identity", "column": column,
+                    "rows": int(absent.sum()),
+                })
+
+    # A whitespace-only optional Event represents an unspecified assignment.
+    cleaned["Event"] = cleaned["Event"].mask(cleaned["Event"].eq("").fillna(False), pd.NA)
+    duplicates = cleaned.duplicated()
+    removed = int(duplicates.sum())
+    known = (
+        cleaned["Name"].eq("GUERRERO Rolando")
+        & cleaned["Country"].eq("Mexico")
+        & cleaned["Discipline"].eq("Baseball/Softball")
+        & cleaned["Event"].eq("Softball")
+    ).fillna(False)
+    # Only the one documented redundant row is expected; other duplicates
+    # are removed by the same exact-row rule but remain explicit errors.
+    expected = min(int((duplicates & known).sum()), 1)
+    if expected:
+        report["warnings"].append({"code": "known_exact_duplicate", "rows": expected})
+    if removed > expected:
+        report["errors"].append({
+            "code": "unexpected_exact_duplicates", "rows": removed - expected,
+        })
+    cleaned = cleaned.loc[~duplicates].copy()
+    missing_events = cleaned["Event"].isna()
+    if missing_events.any():
+        distribution = cleaned.loc[missing_events].groupby("Discipline", dropna=False).size()
+        report["warnings"].append({
+            "code": "unspecified_event",
+            "rows": int(missing_events.sum()),
+            "by_discipline": {str(key): int(value) for key, value in distribution.items()},
+        })
+    report["output_rows"] = len(cleaned)
+    report["duplicate_rows_removed"] = removed
+    return cleaned, report
+
+
+def clean_athlete_names(athletes: pd.DataFrame) -> pd.DataFrame:
+    """Strip surrounding PersonName whitespace on a copy, without inferring IDs.
+
+    Preserve accents, case, internal whitespace and non-string/missing values.
+    Callers remove exact full-row duplicates after normalizing country keys;
+    matching names alone never justify removing distinct source records.
+    """
+    cleaned = athletes.copy(deep=True)
+    cleaned["PersonName"] = cleaned["PersonName"].map(
+        lambda value: value.strip() if isinstance(value, str) else value
+    )
+    return cleaned
+
+
+def normalize_country_key(value: str) -> str:
+    """Trim a country key and repair only the documented Teams.csv alias.
+
+    Apply to derived join keys, leaving loaded source values unchanged for
+    provenance and raw quality profiling. Missing/non-string values pass through.
+    """
+    if not isinstance(value, str):
+        return value
+    value = value.strip()
+    return {"C�te d'Ivoire": "Côte d'Ivoire"}.get(value, value)
 
 
 def load_csv(filename: str) -> pd.DataFrame:
@@ -136,6 +240,9 @@ def run_quality_checks() -> dict:
         ),
     }
 
+    # Preserve raw profiling above; expose the coach policy as a separate result.
+    _, results["Coaches"]["cleaning_validation"] = clean_and_validate_coaches(coaches)
+
     results["Medals"]["invalid_medal_totals"] = check_medal_totals(medals)
 
     results["Medals"]["negative_values"] = check_non_negative(
@@ -143,14 +250,10 @@ def run_quality_checks() -> dict:
         ["Gold", "Silver", "Bronze", "Total"],
     )
 
-    results["EntriesGender"]["invalid_gender_totals"] = check_gender_totals(
-        entries
-    )
-
-    results["EntriesGender"]["negative_values"] = check_non_negative(
-        entries,
-        ["Female", "Male", "Total"],
-    )
+    gender_validation = validate_gender_data(entries, athletes)
+    results["EntriesGender"]["validation"] = gender_validation
+    results["EntriesGender"]["invalid_gender_totals"] = gender_validation["invalid_gender_totals"]
+    results["EntriesGender"]["negative_values"] = gender_validation["negative_values"]
 
     return results
 

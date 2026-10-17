@@ -3,18 +3,18 @@ from pathlib import Path
 import pandas as pd
 
 from src.quality.data_quality import load_csv
+from src.quality.gates import load_validated_sources
+from src.features.team_counts import aggregate_team_counts
 
 
 OUTPUT_DIR = Path("models")
-OUTPUT_DIR.mkdir(exist_ok=True)
 
 
 def build_country_analytics() -> pd.DataFrame:
-    athletes = load_csv("Athletes.csv").drop_duplicates()
-    teams = load_csv("Teams.csv").drop_duplicates()
-    medals = load_csv("Medals.csv").copy()
+    sources, quality_report = load_validated_sources(loader=load_csv)
+    athletes, teams, medals = (sources[name] for name in ("Athletes", "Teams", "Medals"))
 
-    # Athlete participation
+    # athlete_count is a distinct normalized-name proxy, not verified people.
     athlete_stats = (
         athletes.groupby("Country")
         .agg(
@@ -26,16 +26,7 @@ def build_country_analytics() -> pd.DataFrame:
     )
 
     # Team/event participation
-    team_stats = (
-        teams.groupby("Country")
-        .agg(
-            team_count=("TeamName", "nunique"),
-            team_discipline_count=("Discipline", "nunique"),
-            team_event_count=("Event", "nunique"),
-        )
-        .reset_index()
-        .rename(columns={"Country": "country"})
-    )
+    team_stats = aggregate_team_counts(teams)
 
     # Medal outcomes
     medal_stats = (
@@ -48,8 +39,8 @@ def build_country_analytics() -> pd.DataFrame:
     # Combine analytics layers
     analytics = (
         athlete_stats
-        .merge(team_stats, on="country", how="outer")
-        .merge(medal_stats, on="country", how="left")
+        .merge(team_stats, on="country", how="outer", validate="one_to_one")
+        .merge(medal_stats, on="country", how="left", validate="one_to_one")
     )
 
     numeric_columns = [
@@ -77,11 +68,6 @@ def build_country_analytics() -> pd.DataFrame:
         / analytics["Total"].replace(0, pd.NA)
     ).fillna(0)
 
-    analytics["medals_per_team_event"] = (
-        analytics["Total"]
-        / analytics["team_event_count"].replace(0, pd.NA)
-    ).fillna(0)
-
     analytics["medals_per_discipline"] = (
         analytics["Total"]
         / analytics["athlete_discipline_count"].replace(0, pd.NA)
@@ -94,15 +80,18 @@ def build_country_analytics() -> pd.DataFrame:
         labels=["No Medal", "Medal", "High Medal"],
     )
 
-    return analytics.sort_values(
+    analytics = analytics.sort_values(
         "Total",
         ascending=False,
     ).reset_index(drop=True)
+    analytics.attrs["data_quality_report"] = quality_report
+    return analytics
 
 
 def main():
     analytics = build_country_analytics()
 
+    OUTPUT_DIR.mkdir(exist_ok=True)
     output_path = OUTPUT_DIR / "country_analytics.csv"
     analytics.to_csv(output_path, index=False)
 
