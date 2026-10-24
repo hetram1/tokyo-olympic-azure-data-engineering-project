@@ -1,0 +1,3407 @@
+{
+  "artifacts": {
+    "model": {
+      "path": "models/medal_classification_model.joblib",
+      "sha256": "16423720e98cafe6c4473eebe05b78b3f5f8cf1f7070b60fb693790450a2fa76"
+    },
+    "predictions": {
+      "path": "reports/classification_oof_predictions.csv",
+      "sha256": "724fadfdf6a9ad61eb9194e34eaa1bd9ca2351cc51d23af3fd70ca912e9b3a15"
+    }
+  },
+  "class_definitions": {
+    "High Medal": "Total >= 10",
+    "Medal": "1 <= Total <= 9",
+    "No Medal": "Total = 0"
+  },
+  "class_distribution": {
+    "High Medal": 25,
+    "Medal": 68,
+    "No Medal": 113
+  },
+  "class_order": [
+    "No Medal",
+    "Medal",
+    "High Medal"
+  ],
+  "code_sha256": {
+    "classify_medal_performance.py": "f701a323c6eac638f75800e9af1db617084f49803fb3caa4cd88699668539c14",
+    "persist_classification.py": "aa277deec0e7c13f03cf633f1578f3a61cd64fcfc97abf1b5632cc79a58cf96d"
+  },
+  "cv": {
+    "n_splits": 5,
+    "ordering": "normalized country key ascending",
+    "random_state": 42,
+    "shuffle": true,
+    "splitter": "StratifiedKFold"
+  },
+  "dataset": {
+    "path": "/home/hetram/tokyo-olympic-azure-data-engineering-project/models/country_features.csv",
+    "rows": 206,
+    "sha256": "a6bdd867d999895c126e7b3c0eb112a40c4cb47134f96e8d3d8b14aadd231480"
+  },
+  "feature_dtypes": {
+    "athlete_count": "int64",
+    "athlete_discipline_count": "int64",
+    "team_count": "int64",
+    "team_discipline_count": "int64",
+    "team_event_count": "int64"
+  },
+  "features": [
+    "athlete_count",
+    "athlete_discipline_count",
+    "team_count",
+    "team_discipline_count",
+    "team_event_count"
+  ],
+  "final_model": {
+    "native_class_order": [
+      "High Medal",
+      "Medal",
+      "No Medal"
+    ],
+    "purpose": "Separate fit on all validated countries; demonstration/inference only",
+    "train_countries": [
+      "Afghanistan",
+      "Albania",
+      "Algeria",
+      "American Samoa",
+      "Andorra",
+      "Angola",
+      "Antigua and Barbuda",
+      "Argentina",
+      "Armenia",
+      "Aruba",
+      "Australia",
+      "Austria",
+      "Azerbaijan",
+      "Bahamas",
+      "Bahrain",
+      "Bangladesh",
+      "Barbados",
+      "Belarus",
+      "Belgium",
+      "Belize",
+      "Benin",
+      "Bermuda",
+      "Bhutan",
+      "Bolivia",
+      "Bosnia and Herzegovina",
+      "Botswana",
+      "Brazil",
+      "Brunei Darussalam",
+      "Bulgaria",
+      "Burkina Faso",
+      "Burundi",
+      "Cambodia",
+      "Cameroon",
+      "Canada",
+      "Cape Verde",
+      "Cayman Islands",
+      "Central African Republic",
+      "Chad",
+      "Chile",
+      "Chinese Taipei",
+      "Colombia",
+      "Comoros",
+      "Congo",
+      "Cook Islands",
+      "Costa Rica",
+      "Croatia",
+      "Cuba",
+      "Cyprus",
+      "Czech Republic",
+      "Côte d'Ivoire",
+      "Democratic Republic of Timor-Leste",
+      "Democratic Republic of the Congo",
+      "Denmark",
+      "Djibouti",
+      "Dominica",
+      "Dominican Republic",
+      "Ecuador",
+      "Egypt",
+      "El Salvador",
+      "Equatorial Guinea",
+      "Eritrea",
+      "Estonia",
+      "Eswatini",
+      "Ethiopia",
+      "Federated States of Micronesia",
+      "Fiji",
+      "Finland",
+      "France",
+      "Gabon",
+      "Gambia",
+      "Georgia",
+      "Germany",
+      "Ghana",
+      "Great Britain",
+      "Greece",
+      "Grenada",
+      "Guam",
+      "Guatemala",
+      "Guinea",
+      "Guinea-Bissau",
+      "Guyana",
+      "Haiti",
+      "Honduras",
+      "Hong Kong, China",
+      "Hungary",
+      "Iceland",
+      "India",
+      "Indonesia",
+      "Iraq",
+      "Ireland",
+      "Islamic Republic of Iran",
+      "Israel",
+      "Italy",
+      "Jamaica",
+      "Japan",
+      "Jordan",
+      "Kazakhstan",
+      "Kenya",
+      "Kiribati",
+      "Kosovo",
+      "Kuwait",
+      "Kyrgyzstan",
+      "Lao People's Democratic Republic",
+      "Latvia",
+      "Lebanon",
+      "Lesotho",
+      "Liberia",
+      "Libya",
+      "Liechtenstein",
+      "Lithuania",
+      "Luxembourg",
+      "Madagascar",
+      "Malawi",
+      "Malaysia",
+      "Maldives",
+      "Mali",
+      "Malta",
+      "Marshall Islands",
+      "Mauritania",
+      "Mauritius",
+      "Mexico",
+      "Monaco",
+      "Mongolia",
+      "Montenegro",
+      "Morocco",
+      "Mozambique",
+      "Myanmar",
+      "Namibia",
+      "Nauru",
+      "Nepal",
+      "Netherlands",
+      "New Zealand",
+      "Nicaragua",
+      "Niger",
+      "Nigeria",
+      "North Macedonia",
+      "Norway",
+      "Oman",
+      "Pakistan",
+      "Palau",
+      "Palestine",
+      "Panama",
+      "Papua New Guinea",
+      "Paraguay",
+      "People's Republic of China",
+      "Peru",
+      "Philippines",
+      "Poland",
+      "Portugal",
+      "Puerto Rico",
+      "Qatar",
+      "ROC",
+      "Refugee Olympic Team",
+      "Republic of Korea",
+      "Republic of Moldova",
+      "Romania",
+      "Rwanda",
+      "Saint Kitts and Nevis",
+      "Saint Lucia",
+      "Samoa",
+      "San Marino",
+      "Sao Tome and Principe",
+      "Saudi Arabia",
+      "Senegal",
+      "Serbia",
+      "Seychelles",
+      "Sierra Leone",
+      "Singapore",
+      "Slovakia",
+      "Slovenia",
+      "Solomon Islands",
+      "Somalia",
+      "South Africa",
+      "South Sudan",
+      "Spain",
+      "Sri Lanka",
+      "St Vincent and the Grenadines",
+      "Sudan",
+      "Suriname",
+      "Sweden",
+      "Switzerland",
+      "Syrian Arab Republic",
+      "Tajikistan",
+      "Thailand",
+      "Togo",
+      "Tonga",
+      "Trinidad and Tobago",
+      "Tunisia",
+      "Turkey",
+      "Turkmenistan",
+      "Tuvalu",
+      "Uganda",
+      "Ukraine",
+      "United Arab Emirates",
+      "United Republic of Tanzania",
+      "United States of America",
+      "Uruguay",
+      "Uzbekistan",
+      "Vanuatu",
+      "Venezuela",
+      "Vietnam",
+      "Virgin Islands, British",
+      "Virgin Islands, US",
+      "Yemen",
+      "Zambia",
+      "Zimbabwe"
+    ],
+    "training_count": 206
+  },
+  "fold_memberships": [
+    {
+      "fold": 1,
+      "train_countries": [
+        "Afghanistan",
+        "Algeria",
+        "American Samoa",
+        "Angola",
+        "Antigua and Barbuda",
+        "Argentina",
+        "Armenia",
+        "Aruba",
+        "Australia",
+        "Austria",
+        "Azerbaijan",
+        "Bahamas",
+        "Bahrain",
+        "Bangladesh",
+        "Belarus",
+        "Belgium",
+        "Belize",
+        "Benin",
+        "Bermuda",
+        "Bhutan",
+        "Bolivia",
+        "Botswana",
+        "Brazil",
+        "Burkina Faso",
+        "Burundi",
+        "Cambodia",
+        "Cameroon",
+        "Canada",
+        "Cape Verde",
+        "Cayman Islands",
+        "Central African Republic",
+        "Chile",
+        "Colombia",
+        "Comoros",
+        "Congo",
+        "Cook Islands",
+        "Croatia",
+        "Cuba",
+        "Cyprus",
+        "Czech Republic",
+        "Côte d'Ivoire",
+        "Democratic Republic of Timor-Leste",
+        "Democratic Republic of the Congo",
+        "Dominica",
+        "Egypt",
+        "El Salvador",
+        "Eritrea",
+        "Estonia",
+        "Eswatini",
+        "Ethiopia",
+        "Federated States of Micronesia",
+        "Finland",
+        "France",
+        "Gabon",
+        "Gambia",
+        "Georgia",
+        "Germany",
+        "Ghana",
+        "Great Britain",
+        "Greece",
+        "Grenada",
+        "Guatemala",
+        "Guinea",
+        "Guinea-Bissau",
+        "Guyana",
+        "Honduras",
+        "Hungary",
+        "Iceland",
+        "India",
+        "Indonesia",
+        "Iraq",
+        "Ireland",
+        "Islamic Republic of Iran",
+        "Israel",
+        "Italy",
+        "Japan",
+        "Jordan",
+        "Kazakhstan",
+        "Kosovo",
+        "Kuwait",
+        "Kyrgyzstan",
+        "Lao People's Democratic Republic",
+        "Latvia",
+        "Lebanon",
+        "Lesotho",
+        "Liberia",
+        "Liechtenstein",
+        "Lithuania",
+        "Luxembourg",
+        "Madagascar",
+        "Malaysia",
+        "Maldives",
+        "Mali",
+        "Marshall Islands",
+        "Mauritania",
+        "Mexico",
+        "Montenegro",
+        "Mozambique",
+        "Namibia",
+        "Nauru",
+        "Nepal",
+        "New Zealand",
+        "Nicaragua",
+        "Niger",
+        "Nigeria",
+        "Norway",
+        "Oman",
+        "Pakistan",
+        "Palau",
+        "Palestine",
+        "Panama",
+        "Papua New Guinea",
+        "Paraguay",
+        "People's Republic of China",
+        "Peru",
+        "Philippines",
+        "Poland",
+        "Portugal",
+        "Puerto Rico",
+        "Qatar",
+        "ROC",
+        "Refugee Olympic Team",
+        "Republic of Korea",
+        "Republic of Moldova",
+        "Romania",
+        "Rwanda",
+        "Saint Kitts and Nevis",
+        "Saint Lucia",
+        "Samoa",
+        "San Marino",
+        "Sao Tome and Principe",
+        "Saudi Arabia",
+        "Senegal",
+        "Serbia",
+        "Seychelles",
+        "Sierra Leone",
+        "Singapore",
+        "Slovakia",
+        "Slovenia",
+        "Solomon Islands",
+        "Somalia",
+        "South Africa",
+        "South Sudan",
+        "St Vincent and the Grenadines",
+        "Switzerland",
+        "Tajikistan",
+        "Togo",
+        "Tonga",
+        "Trinidad and Tobago",
+        "Turkey",
+        "Turkmenistan",
+        "Tuvalu",
+        "Uganda",
+        "Ukraine",
+        "United Arab Emirates",
+        "United Republic of Tanzania",
+        "United States of America",
+        "Vanuatu",
+        "Venezuela",
+        "Vietnam",
+        "Virgin Islands, British",
+        "Yemen",
+        "Zambia",
+        "Zimbabwe"
+      ],
+      "validation_countries": [
+        "Albania",
+        "Andorra",
+        "Barbados",
+        "Bosnia and Herzegovina",
+        "Brunei Darussalam",
+        "Bulgaria",
+        "Chad",
+        "Chinese Taipei",
+        "Costa Rica",
+        "Denmark",
+        "Djibouti",
+        "Dominican Republic",
+        "Ecuador",
+        "Equatorial Guinea",
+        "Fiji",
+        "Guam",
+        "Haiti",
+        "Hong Kong, China",
+        "Jamaica",
+        "Kenya",
+        "Kiribati",
+        "Libya",
+        "Malawi",
+        "Malta",
+        "Mauritius",
+        "Monaco",
+        "Mongolia",
+        "Morocco",
+        "Myanmar",
+        "Netherlands",
+        "North Macedonia",
+        "Spain",
+        "Sri Lanka",
+        "Sudan",
+        "Suriname",
+        "Sweden",
+        "Syrian Arab Republic",
+        "Thailand",
+        "Tunisia",
+        "Uruguay",
+        "Uzbekistan",
+        "Virgin Islands, US"
+      ]
+    },
+    {
+      "fold": 2,
+      "train_countries": [
+        "Afghanistan",
+        "Albania",
+        "American Samoa",
+        "Andorra",
+        "Antigua and Barbuda",
+        "Argentina",
+        "Armenia",
+        "Aruba",
+        "Australia",
+        "Austria",
+        "Azerbaijan",
+        "Bahamas",
+        "Bangladesh",
+        "Barbados",
+        "Belarus",
+        "Belize",
+        "Bhutan",
+        "Bolivia",
+        "Bosnia and Herzegovina",
+        "Botswana",
+        "Brazil",
+        "Brunei Darussalam",
+        "Bulgaria",
+        "Burkina Faso",
+        "Burundi",
+        "Cameroon",
+        "Canada",
+        "Cape Verde",
+        "Cayman Islands",
+        "Central African Republic",
+        "Chad",
+        "Chinese Taipei",
+        "Colombia",
+        "Comoros",
+        "Congo",
+        "Cook Islands",
+        "Costa Rica",
+        "Croatia",
+        "Cuba",
+        "Czech Republic",
+        "Côte d'Ivoire",
+        "Democratic Republic of Timor-Leste",
+        "Democratic Republic of the Congo",
+        "Denmark",
+        "Djibouti",
+        "Dominican Republic",
+        "Ecuador",
+        "Egypt",
+        "El Salvador",
+        "Equatorial Guinea",
+        "Eswatini",
+        "Ethiopia",
+        "Federated States of Micronesia",
+        "Fiji",
+        "Finland",
+        "France",
+        "Georgia",
+        "Germany",
+        "Ghana",
+        "Great Britain",
+        "Greece",
+        "Grenada",
+        "Guam",
+        "Guatemala",
+        "Guinea",
+        "Haiti",
+        "Honduras",
+        "Hong Kong, China",
+        "Hungary",
+        "Iraq",
+        "Ireland",
+        "Islamic Republic of Iran",
+        "Jamaica",
+        "Japan",
+        "Jordan",
+        "Kazakhstan",
+        "Kenya",
+        "Kiribati",
+        "Kuwait",
+        "Kyrgyzstan",
+        "Latvia",
+        "Lebanon",
+        "Lesotho",
+        "Libya",
+        "Liechtenstein",
+        "Luxembourg",
+        "Malawi",
+        "Malaysia",
+        "Maldives",
+        "Mali",
+        "Malta",
+        "Marshall Islands",
+        "Mauritius",
+        "Mexico",
+        "Monaco",
+        "Mongolia",
+        "Morocco",
+        "Mozambique",
+        "Myanmar",
+        "Namibia",
+        "Nauru",
+        "Nepal",
+        "Netherlands",
+        "New Zealand",
+        "Nicaragua",
+        "Niger",
+        "Nigeria",
+        "North Macedonia",
+        "Norway",
+        "Oman",
+        "Pakistan",
+        "Palau",
+        "Palestine",
+        "Panama",
+        "Papua New Guinea",
+        "Paraguay",
+        "People's Republic of China",
+        "Puerto Rico",
+        "Qatar",
+        "Refugee Olympic Team",
+        "Republic of Moldova",
+        "Romania",
+        "Rwanda",
+        "Saint Kitts and Nevis",
+        "Saint Lucia",
+        "Samoa",
+        "Senegal",
+        "Serbia",
+        "Seychelles",
+        "Sierra Leone",
+        "Singapore",
+        "Slovakia",
+        "Slovenia",
+        "South Africa",
+        "South Sudan",
+        "Spain",
+        "Sri Lanka",
+        "St Vincent and the Grenadines",
+        "Sudan",
+        "Suriname",
+        "Sweden",
+        "Syrian Arab Republic",
+        "Thailand",
+        "Togo",
+        "Tonga",
+        "Trinidad and Tobago",
+        "Tunisia",
+        "Turkey",
+        "Turkmenistan",
+        "Tuvalu",
+        "Uganda",
+        "Ukraine",
+        "United Arab Emirates",
+        "United Republic of Tanzania",
+        "United States of America",
+        "Uruguay",
+        "Uzbekistan",
+        "Vanuatu",
+        "Venezuela",
+        "Vietnam",
+        "Virgin Islands, British",
+        "Virgin Islands, US",
+        "Yemen",
+        "Zambia",
+        "Zimbabwe"
+      ],
+      "validation_countries": [
+        "Algeria",
+        "Angola",
+        "Bahrain",
+        "Belgium",
+        "Benin",
+        "Bermuda",
+        "Cambodia",
+        "Chile",
+        "Cyprus",
+        "Dominica",
+        "Eritrea",
+        "Estonia",
+        "Gabon",
+        "Gambia",
+        "Guinea-Bissau",
+        "Guyana",
+        "Iceland",
+        "India",
+        "Indonesia",
+        "Israel",
+        "Italy",
+        "Kosovo",
+        "Lao People's Democratic Republic",
+        "Liberia",
+        "Lithuania",
+        "Madagascar",
+        "Mauritania",
+        "Montenegro",
+        "Peru",
+        "Philippines",
+        "Poland",
+        "Portugal",
+        "ROC",
+        "Republic of Korea",
+        "San Marino",
+        "Sao Tome and Principe",
+        "Saudi Arabia",
+        "Solomon Islands",
+        "Somalia",
+        "Switzerland",
+        "Tajikistan"
+      ]
+    },
+    {
+      "fold": 3,
+      "train_countries": [
+        "Afghanistan",
+        "Albania",
+        "Algeria",
+        "American Samoa",
+        "Andorra",
+        "Angola",
+        "Antigua and Barbuda",
+        "Armenia",
+        "Australia",
+        "Austria",
+        "Azerbaijan",
+        "Bahamas",
+        "Bahrain",
+        "Barbados",
+        "Belarus",
+        "Belgium",
+        "Belize",
+        "Benin",
+        "Bermuda",
+        "Bhutan",
+        "Bolivia",
+        "Bosnia and Herzegovina",
+        "Botswana",
+        "Brunei Darussalam",
+        "Bulgaria",
+        "Burkina Faso",
+        "Burundi",
+        "Cambodia",
+        "Cameroon",
+        "Canada",
+        "Cayman Islands",
+        "Central African Republic",
+        "Chad",
+        "Chile",
+        "Chinese Taipei",
+        "Colombia",
+        "Congo",
+        "Cook Islands",
+        "Costa Rica",
+        "Cyprus",
+        "Czech Republic",
+        "Democratic Republic of Timor-Leste",
+        "Democratic Republic of the Congo",
+        "Denmark",
+        "Djibouti",
+        "Dominica",
+        "Dominican Republic",
+        "Ecuador",
+        "Egypt",
+        "El Salvador",
+        "Equatorial Guinea",
+        "Eritrea",
+        "Estonia",
+        "Fiji",
+        "Finland",
+        "France",
+        "Gabon",
+        "Gambia",
+        "Georgia",
+        "Great Britain",
+        "Greece",
+        "Grenada",
+        "Guam",
+        "Guinea-Bissau",
+        "Guyana",
+        "Haiti",
+        "Honduras",
+        "Hong Kong, China",
+        "Hungary",
+        "Iceland",
+        "India",
+        "Indonesia",
+        "Ireland",
+        "Israel",
+        "Italy",
+        "Jamaica",
+        "Japan",
+        "Jordan",
+        "Kenya",
+        "Kiribati",
+        "Kosovo",
+        "Kuwait",
+        "Kyrgyzstan",
+        "Lao People's Democratic Republic",
+        "Latvia",
+        "Lesotho",
+        "Liberia",
+        "Libya",
+        "Liechtenstein",
+        "Lithuania",
+        "Luxembourg",
+        "Madagascar",
+        "Malawi",
+        "Malaysia",
+        "Maldives",
+        "Malta",
+        "Marshall Islands",
+        "Mauritania",
+        "Mauritius",
+        "Mexico",
+        "Monaco",
+        "Mongolia",
+        "Montenegro",
+        "Morocco",
+        "Mozambique",
+        "Myanmar",
+        "Namibia",
+        "Nauru",
+        "Nepal",
+        "Netherlands",
+        "Nicaragua",
+        "Nigeria",
+        "North Macedonia",
+        "Norway",
+        "Pakistan",
+        "Palestine",
+        "Papua New Guinea",
+        "Paraguay",
+        "People's Republic of China",
+        "Peru",
+        "Philippines",
+        "Poland",
+        "Portugal",
+        "Qatar",
+        "ROC",
+        "Republic of Korea",
+        "Saint Kitts and Nevis",
+        "Samoa",
+        "San Marino",
+        "Sao Tome and Principe",
+        "Saudi Arabia",
+        "Senegal",
+        "Serbia",
+        "Singapore",
+        "Slovakia",
+        "Slovenia",
+        "Solomon Islands",
+        "Somalia",
+        "South Sudan",
+        "Spain",
+        "Sri Lanka",
+        "Sudan",
+        "Suriname",
+        "Sweden",
+        "Switzerland",
+        "Syrian Arab Republic",
+        "Tajikistan",
+        "Thailand",
+        "Togo",
+        "Tonga",
+        "Trinidad and Tobago",
+        "Tunisia",
+        "Tuvalu",
+        "Uganda",
+        "Ukraine",
+        "United Arab Emirates",
+        "United Republic of Tanzania",
+        "United States of America",
+        "Uruguay",
+        "Uzbekistan",
+        "Vietnam",
+        "Virgin Islands, British",
+        "Virgin Islands, US",
+        "Yemen",
+        "Zimbabwe"
+      ],
+      "validation_countries": [
+        "Argentina",
+        "Aruba",
+        "Bangladesh",
+        "Brazil",
+        "Cape Verde",
+        "Comoros",
+        "Croatia",
+        "Cuba",
+        "Côte d'Ivoire",
+        "Eswatini",
+        "Ethiopia",
+        "Federated States of Micronesia",
+        "Germany",
+        "Ghana",
+        "Guatemala",
+        "Guinea",
+        "Iraq",
+        "Islamic Republic of Iran",
+        "Kazakhstan",
+        "Lebanon",
+        "Mali",
+        "New Zealand",
+        "Niger",
+        "Oman",
+        "Palau",
+        "Panama",
+        "Puerto Rico",
+        "Refugee Olympic Team",
+        "Republic of Moldova",
+        "Romania",
+        "Rwanda",
+        "Saint Lucia",
+        "Seychelles",
+        "Sierra Leone",
+        "South Africa",
+        "St Vincent and the Grenadines",
+        "Turkey",
+        "Turkmenistan",
+        "Vanuatu",
+        "Venezuela",
+        "Zambia"
+      ]
+    },
+    {
+      "fold": 4,
+      "train_countries": [
+        "Albania",
+        "Algeria",
+        "Andorra",
+        "Angola",
+        "Argentina",
+        "Aruba",
+        "Australia",
+        "Austria",
+        "Azerbaijan",
+        "Bahrain",
+        "Bangladesh",
+        "Barbados",
+        "Belgium",
+        "Belize",
+        "Benin",
+        "Bermuda",
+        "Bolivia",
+        "Bosnia and Herzegovina",
+        "Botswana",
+        "Brazil",
+        "Brunei Darussalam",
+        "Bulgaria",
+        "Burkina Faso",
+        "Cambodia",
+        "Canada",
+        "Cape Verde",
+        "Cayman Islands",
+        "Central African Republic",
+        "Chad",
+        "Chile",
+        "Chinese Taipei",
+        "Comoros",
+        "Congo",
+        "Cook Islands",
+        "Costa Rica",
+        "Croatia",
+        "Cuba",
+        "Cyprus",
+        "Côte d'Ivoire",
+        "Democratic Republic of Timor-Leste",
+        "Denmark",
+        "Djibouti",
+        "Dominica",
+        "Dominican Republic",
+        "Ecuador",
+        "Egypt",
+        "El Salvador",
+        "Equatorial Guinea",
+        "Eritrea",
+        "Estonia",
+        "Eswatini",
+        "Ethiopia",
+        "Federated States of Micronesia",
+        "Fiji",
+        "Gabon",
+        "Gambia",
+        "Georgia",
+        "Germany",
+        "Ghana",
+        "Greece",
+        "Grenada",
+        "Guam",
+        "Guatemala",
+        "Guinea",
+        "Guinea-Bissau",
+        "Guyana",
+        "Haiti",
+        "Honduras",
+        "Hong Kong, China",
+        "Iceland",
+        "India",
+        "Indonesia",
+        "Iraq",
+        "Ireland",
+        "Islamic Republic of Iran",
+        "Israel",
+        "Italy",
+        "Jamaica",
+        "Japan",
+        "Kazakhstan",
+        "Kenya",
+        "Kiribati",
+        "Kosovo",
+        "Kuwait",
+        "Lao People's Democratic Republic",
+        "Lebanon",
+        "Liberia",
+        "Libya",
+        "Lithuania",
+        "Luxembourg",
+        "Madagascar",
+        "Malawi",
+        "Malaysia",
+        "Mali",
+        "Malta",
+        "Mauritania",
+        "Mauritius",
+        "Monaco",
+        "Mongolia",
+        "Montenegro",
+        "Morocco",
+        "Mozambique",
+        "Myanmar",
+        "Nepal",
+        "Netherlands",
+        "New Zealand",
+        "Niger",
+        "Nigeria",
+        "North Macedonia",
+        "Oman",
+        "Palau",
+        "Panama",
+        "Papua New Guinea",
+        "People's Republic of China",
+        "Peru",
+        "Philippines",
+        "Poland",
+        "Portugal",
+        "Puerto Rico",
+        "ROC",
+        "Refugee Olympic Team",
+        "Republic of Korea",
+        "Republic of Moldova",
+        "Romania",
+        "Rwanda",
+        "Saint Kitts and Nevis",
+        "Saint Lucia",
+        "San Marino",
+        "Sao Tome and Principe",
+        "Saudi Arabia",
+        "Senegal",
+        "Serbia",
+        "Seychelles",
+        "Sierra Leone",
+        "Singapore",
+        "Slovenia",
+        "Solomon Islands",
+        "Somalia",
+        "South Africa",
+        "South Sudan",
+        "Spain",
+        "Sri Lanka",
+        "St Vincent and the Grenadines",
+        "Sudan",
+        "Suriname",
+        "Sweden",
+        "Switzerland",
+        "Syrian Arab Republic",
+        "Tajikistan",
+        "Thailand",
+        "Tonga",
+        "Tunisia",
+        "Turkey",
+        "Turkmenistan",
+        "United Republic of Tanzania",
+        "United States of America",
+        "Uruguay",
+        "Uzbekistan",
+        "Vanuatu",
+        "Venezuela",
+        "Virgin Islands, British",
+        "Virgin Islands, US",
+        "Yemen",
+        "Zambia",
+        "Zimbabwe"
+      ],
+      "validation_countries": [
+        "Afghanistan",
+        "American Samoa",
+        "Antigua and Barbuda",
+        "Armenia",
+        "Bahamas",
+        "Belarus",
+        "Bhutan",
+        "Burundi",
+        "Cameroon",
+        "Colombia",
+        "Czech Republic",
+        "Democratic Republic of the Congo",
+        "Finland",
+        "France",
+        "Great Britain",
+        "Hungary",
+        "Jordan",
+        "Kyrgyzstan",
+        "Latvia",
+        "Lesotho",
+        "Liechtenstein",
+        "Maldives",
+        "Marshall Islands",
+        "Mexico",
+        "Namibia",
+        "Nauru",
+        "Nicaragua",
+        "Norway",
+        "Pakistan",
+        "Palestine",
+        "Paraguay",
+        "Qatar",
+        "Samoa",
+        "Slovakia",
+        "Togo",
+        "Trinidad and Tobago",
+        "Tuvalu",
+        "Uganda",
+        "Ukraine",
+        "United Arab Emirates",
+        "Vietnam"
+      ]
+    },
+    {
+      "fold": 5,
+      "train_countries": [
+        "Afghanistan",
+        "Albania",
+        "Algeria",
+        "American Samoa",
+        "Andorra",
+        "Angola",
+        "Antigua and Barbuda",
+        "Argentina",
+        "Armenia",
+        "Aruba",
+        "Bahamas",
+        "Bahrain",
+        "Bangladesh",
+        "Barbados",
+        "Belarus",
+        "Belgium",
+        "Benin",
+        "Bermuda",
+        "Bhutan",
+        "Bosnia and Herzegovina",
+        "Brazil",
+        "Brunei Darussalam",
+        "Bulgaria",
+        "Burundi",
+        "Cambodia",
+        "Cameroon",
+        "Cape Verde",
+        "Chad",
+        "Chile",
+        "Chinese Taipei",
+        "Colombia",
+        "Comoros",
+        "Costa Rica",
+        "Croatia",
+        "Cuba",
+        "Cyprus",
+        "Czech Republic",
+        "Côte d'Ivoire",
+        "Democratic Republic of the Congo",
+        "Denmark",
+        "Djibouti",
+        "Dominica",
+        "Dominican Republic",
+        "Ecuador",
+        "Equatorial Guinea",
+        "Eritrea",
+        "Estonia",
+        "Eswatini",
+        "Ethiopia",
+        "Federated States of Micronesia",
+        "Fiji",
+        "Finland",
+        "France",
+        "Gabon",
+        "Gambia",
+        "Germany",
+        "Ghana",
+        "Great Britain",
+        "Guam",
+        "Guatemala",
+        "Guinea",
+        "Guinea-Bissau",
+        "Guyana",
+        "Haiti",
+        "Hong Kong, China",
+        "Hungary",
+        "Iceland",
+        "India",
+        "Indonesia",
+        "Iraq",
+        "Islamic Republic of Iran",
+        "Israel",
+        "Italy",
+        "Jamaica",
+        "Jordan",
+        "Kazakhstan",
+        "Kenya",
+        "Kiribati",
+        "Kosovo",
+        "Kyrgyzstan",
+        "Lao People's Democratic Republic",
+        "Latvia",
+        "Lebanon",
+        "Lesotho",
+        "Liberia",
+        "Libya",
+        "Liechtenstein",
+        "Lithuania",
+        "Madagascar",
+        "Malawi",
+        "Maldives",
+        "Mali",
+        "Malta",
+        "Marshall Islands",
+        "Mauritania",
+        "Mauritius",
+        "Mexico",
+        "Monaco",
+        "Mongolia",
+        "Montenegro",
+        "Morocco",
+        "Myanmar",
+        "Namibia",
+        "Nauru",
+        "Netherlands",
+        "New Zealand",
+        "Nicaragua",
+        "Niger",
+        "North Macedonia",
+        "Norway",
+        "Oman",
+        "Pakistan",
+        "Palau",
+        "Palestine",
+        "Panama",
+        "Paraguay",
+        "Peru",
+        "Philippines",
+        "Poland",
+        "Portugal",
+        "Puerto Rico",
+        "Qatar",
+        "ROC",
+        "Refugee Olympic Team",
+        "Republic of Korea",
+        "Republic of Moldova",
+        "Romania",
+        "Rwanda",
+        "Saint Lucia",
+        "Samoa",
+        "San Marino",
+        "Sao Tome and Principe",
+        "Saudi Arabia",
+        "Seychelles",
+        "Sierra Leone",
+        "Slovakia",
+        "Solomon Islands",
+        "Somalia",
+        "South Africa",
+        "Spain",
+        "Sri Lanka",
+        "St Vincent and the Grenadines",
+        "Sudan",
+        "Suriname",
+        "Sweden",
+        "Switzerland",
+        "Syrian Arab Republic",
+        "Tajikistan",
+        "Thailand",
+        "Togo",
+        "Trinidad and Tobago",
+        "Tunisia",
+        "Turkey",
+        "Turkmenistan",
+        "Tuvalu",
+        "Uganda",
+        "Ukraine",
+        "United Arab Emirates",
+        "Uruguay",
+        "Uzbekistan",
+        "Vanuatu",
+        "Venezuela",
+        "Vietnam",
+        "Virgin Islands, US",
+        "Zambia"
+      ],
+      "validation_countries": [
+        "Australia",
+        "Austria",
+        "Azerbaijan",
+        "Belize",
+        "Bolivia",
+        "Botswana",
+        "Burkina Faso",
+        "Canada",
+        "Cayman Islands",
+        "Central African Republic",
+        "Congo",
+        "Cook Islands",
+        "Democratic Republic of Timor-Leste",
+        "Egypt",
+        "El Salvador",
+        "Georgia",
+        "Greece",
+        "Grenada",
+        "Honduras",
+        "Ireland",
+        "Japan",
+        "Kuwait",
+        "Luxembourg",
+        "Malaysia",
+        "Mozambique",
+        "Nepal",
+        "Nigeria",
+        "Papua New Guinea",
+        "People's Republic of China",
+        "Saint Kitts and Nevis",
+        "Senegal",
+        "Serbia",
+        "Singapore",
+        "Slovenia",
+        "South Sudan",
+        "Tonga",
+        "United Republic of Tanzania",
+        "United States of America",
+        "Virgin Islands, British",
+        "Yemen",
+        "Zimbabwe"
+      ]
+    }
+  ],
+  "fold_metrics": [
+    {
+      "estimator": "model",
+      "fold": 1,
+      "metrics": {
+        "accuracy": 0.8333333333333334,
+        "confusion_matrix": [
+          [
+            21,
+            2,
+            0
+          ],
+          [
+            2,
+            12,
+            0
+          ],
+          [
+            0,
+            3,
+            2
+          ]
+        ],
+        "macro_average_precision": 0.8901794743827104,
+        "macro_f1": 0.7528885326921791,
+        "macro_precision": 0.8729752770673486,
+        "macro_recall": 0.7233954451345755,
+        "macro_roc_auc_ovr": 0.9441853121977345,
+        "per_class": {
+          "High Medal": {
+            "average_precision": 0.8711111111111111,
+            "f1": 0.5714285714285714,
+            "precision": 1.0,
+            "recall": 0.4,
+            "roc_auc_ovr": 0.972972972972973,
+            "support": 5
+          },
+          "Medal": {
+            "average_precision": 0.8433467982552387,
+            "f1": 0.7741935483870968,
+            "precision": 0.7058823529411765,
+            "recall": 0.8571428571428571,
+            "roc_auc_ovr": 0.9030612244897959,
+            "support": 14
+          },
+          "No Medal": {
+            "average_precision": 0.9560805137817815,
+            "f1": 0.9130434782608695,
+            "precision": 0.9130434782608695,
+            "recall": 0.9130434782608695,
+            "roc_auc_ovr": 0.9565217391304347,
+            "support": 23
+          }
+        },
+        "undefined_aggregate_policy": "Zero contribution for undefined precision/recall/F1; no omission",
+        "undefined_metrics": [],
+        "weighted_average_precision": 0.9083872035264255,
+        "weighted_f1": 0.826091727013386,
+        "weighted_precision": 0.854341736694678,
+        "weighted_recall": 0.8333333333333333,
+        "weighted_roc_auc_ovr": 0.9406600478029049
+      },
+      "training_count": 164,
+      "validation_count": 42
+    },
+    {
+      "estimator": "baseline",
+      "fold": 1,
+      "metrics": {
+        "accuracy": 0.5476190476190477,
+        "confusion_matrix": [
+          [
+            23,
+            0,
+            0
+          ],
+          [
+            14,
+            0,
+            0
+          ],
+          [
+            5,
+            0,
+            0
+          ]
+        ],
+        "macro_average_precision": 0.3333333333333333,
+        "macro_f1": 0.23589743589743592,
+        "macro_precision": 0.18253968253968256,
+        "macro_recall": 0.3333333333333333,
+        "macro_roc_auc_ovr": 0.5,
+        "per_class": {
+          "High Medal": {
+            "average_precision": 0.11904761904761904,
+            "f1": 0.0,
+            "precision": null,
+            "recall": 0.0,
+            "roc_auc_ovr": 0.5,
+            "support": 5
+          },
+          "Medal": {
+            "average_precision": 0.3333333333333333,
+            "f1": 0.0,
+            "precision": null,
+            "recall": 0.0,
+            "roc_auc_ovr": 0.5,
+            "support": 14
+          },
+          "No Medal": {
+            "average_precision": 0.5476190476190477,
+            "f1": 0.7076923076923077,
+            "precision": 0.5476190476190477,
+            "recall": 1.0,
+            "roc_auc_ovr": 0.5,
+            "support": 23
+          }
+        },
+        "undefined_aggregate_policy": "Zero contribution for undefined precision/recall/F1; no omission",
+        "undefined_metrics": [
+          "Medal: precision",
+          "High Medal: precision"
+        ],
+        "weighted_average_precision": 0.4251700680272109,
+        "weighted_f1": 0.3875457875457876,
+        "weighted_precision": 0.2998866213151928,
+        "weighted_recall": 0.5476190476190477,
+        "weighted_roc_auc_ovr": 0.5
+      },
+      "training_count": 164,
+      "validation_count": 42
+    },
+    {
+      "estimator": "model",
+      "fold": 2,
+      "metrics": {
+        "accuracy": 0.7073170731707317,
+        "confusion_matrix": [
+          [
+            16,
+            7,
+            0
+          ],
+          [
+            3,
+            9,
+            1
+          ],
+          [
+            0,
+            1,
+            4
+          ]
+        ],
+        "macro_average_precision": 0.7751328771726872,
+        "macro_f1": 0.7206349206349207,
+        "macro_precision": 0.7238390092879255,
+        "macro_recall": 0.729319955406912,
+        "macro_roc_auc_ovr": 0.8552945444249792,
+        "per_class": {
+          "High Medal": {
+            "average_precision": 0.925,
+            "f1": 0.8,
+            "precision": 0.8,
+            "recall": 0.8,
+            "roc_auc_ovr": 0.9833333333333334,
+            "support": 5
+          },
+          "Medal": {
+            "average_precision": 0.5337096700474309,
+            "f1": 0.6,
+            "precision": 0.5294117647058824,
+            "recall": 0.6923076923076923,
+            "roc_auc_ovr": 0.7335164835164836,
+            "support": 13
+          },
+          "No Medal": {
+            "average_precision": 0.8666889614706308,
+            "f1": 0.7619047619047619,
+            "precision": 0.8421052631578947,
+            "recall": 0.6956521739130435,
+            "roc_auc_ovr": 0.8490338164251208,
+            "support": 23
+          }
+        },
+        "undefined_aggregate_policy": "Zero contribution for undefined precision/recall/F1; no omission",
+        "undefined_metrics": [],
+        "weighted_average_precision": 0.7682212640107589,
+        "weighted_f1": 0.7152148664343786,
+        "weighted_precision": 0.7378237559465378,
+        "weighted_recall": 0.7073170731707317,
+        "weighted_roc_auc_ovr": 0.8287843592721642
+      },
+      "training_count": 165,
+      "validation_count": 41
+    },
+    {
+      "estimator": "baseline",
+      "fold": 2,
+      "metrics": {
+        "accuracy": 0.5609756097560976,
+        "confusion_matrix": [
+          [
+            23,
+            0,
+            0
+          ],
+          [
+            13,
+            0,
+            0
+          ],
+          [
+            5,
+            0,
+            0
+          ]
+        ],
+        "macro_average_precision": 0.3333333333333333,
+        "macro_f1": 0.23958333333333334,
+        "macro_precision": 0.1869918699186992,
+        "macro_recall": 0.3333333333333333,
+        "macro_roc_auc_ovr": 0.5,
+        "per_class": {
+          "High Medal": {
+            "average_precision": 0.12195121951219512,
+            "f1": 0.0,
+            "precision": null,
+            "recall": 0.0,
+            "roc_auc_ovr": 0.5,
+            "support": 5
+          },
+          "Medal": {
+            "average_precision": 0.3170731707317073,
+            "f1": 0.0,
+            "precision": null,
+            "recall": 0.0,
+            "roc_auc_ovr": 0.5,
+            "support": 13
+          },
+          "No Medal": {
+            "average_precision": 0.5609756097560976,
+            "f1": 0.71875,
+            "precision": 0.5609756097560976,
+            "recall": 1.0,
+            "roc_auc_ovr": 0.5,
+            "support": 23
+          }
+        },
+        "undefined_aggregate_policy": "Zero contribution for undefined precision/recall/F1; no omission",
+        "undefined_metrics": [
+          "Medal: precision",
+          "High Medal: precision"
+        ],
+        "weighted_average_precision": 0.4301011302795955,
+        "weighted_f1": 0.4032012195121952,
+        "weighted_precision": 0.3146936347412255,
+        "weighted_recall": 0.5609756097560976,
+        "weighted_roc_auc_ovr": 0.5
+      },
+      "training_count": 165,
+      "validation_count": 41
+    },
+    {
+      "estimator": "model",
+      "fold": 3,
+      "metrics": {
+        "accuracy": 0.8048780487804879,
+        "confusion_matrix": [
+          [
+            20,
+            3,
+            0
+          ],
+          [
+            1,
+            9,
+            3
+          ],
+          [
+            0,
+            1,
+            4
+          ]
+        ],
+        "macro_average_precision": 0.8365652678820755,
+        "macro_f1": 0.7560217560217559,
+        "macro_precision": 0.7387057387057387,
+        "macro_recall": 0.7872909698996656,
+        "macro_roc_auc_ovr": 0.9251114827201784,
+        "per_class": {
+          "High Medal": {
+            "average_precision": 0.8392857142857143,
+            "f1": 0.6666666666666666,
+            "precision": 0.5714285714285714,
+            "recall": 0.8,
+            "roc_auc_ovr": 0.9666666666666667,
+            "support": 5
+          },
+          "Medal": {
+            "average_precision": 0.7059780214757589,
+            "f1": 0.6923076923076923,
+            "precision": 0.6923076923076923,
+            "recall": 0.6923076923076923,
+            "roc_auc_ovr": 0.8557692307692307,
+            "support": 13
+          },
+          "No Medal": {
+            "average_precision": 0.9644320678847532,
+            "f1": 0.9090909090909091,
+            "precision": 0.9523809523809523,
+            "recall": 0.8695652173913043,
+            "roc_auc_ovr": 0.9528985507246377,
+            "support": 23
+          }
+        },
+        "undefined_aggregate_policy": "Zero contribution for undefined precision/recall/F1; no omission",
+        "undefined_metrics": [],
+        "weighted_average_precision": 0.8672214734625064,
+        "weighted_f1": 0.8107908351810791,
+        "weighted_precision": 0.8234610917537747,
+        "weighted_recall": 0.8048780487804879,
+        "weighted_roc_auc_ovr": 0.9237804878048781
+      },
+      "training_count": 165,
+      "validation_count": 41
+    },
+    {
+      "estimator": "baseline",
+      "fold": 3,
+      "metrics": {
+        "accuracy": 0.5609756097560976,
+        "confusion_matrix": [
+          [
+            23,
+            0,
+            0
+          ],
+          [
+            13,
+            0,
+            0
+          ],
+          [
+            5,
+            0,
+            0
+          ]
+        ],
+        "macro_average_precision": 0.3333333333333333,
+        "macro_f1": 0.23958333333333334,
+        "macro_precision": 0.1869918699186992,
+        "macro_recall": 0.3333333333333333,
+        "macro_roc_auc_ovr": 0.5,
+        "per_class": {
+          "High Medal": {
+            "average_precision": 0.12195121951219512,
+            "f1": 0.0,
+            "precision": null,
+            "recall": 0.0,
+            "roc_auc_ovr": 0.5,
+            "support": 5
+          },
+          "Medal": {
+            "average_precision": 0.3170731707317073,
+            "f1": 0.0,
+            "precision": null,
+            "recall": 0.0,
+            "roc_auc_ovr": 0.5,
+            "support": 13
+          },
+          "No Medal": {
+            "average_precision": 0.5609756097560976,
+            "f1": 0.71875,
+            "precision": 0.5609756097560976,
+            "recall": 1.0,
+            "roc_auc_ovr": 0.5,
+            "support": 23
+          }
+        },
+        "undefined_aggregate_policy": "Zero contribution for undefined precision/recall/F1; no omission",
+        "undefined_metrics": [
+          "Medal: precision",
+          "High Medal: precision"
+        ],
+        "weighted_average_precision": 0.4301011302795955,
+        "weighted_f1": 0.4032012195121952,
+        "weighted_precision": 0.3146936347412255,
+        "weighted_recall": 0.5609756097560976,
+        "weighted_roc_auc_ovr": 0.5
+      },
+      "training_count": 165,
+      "validation_count": 41
+    },
+    {
+      "estimator": "model",
+      "fold": 4,
+      "metrics": {
+        "accuracy": 0.7317073170731707,
+        "confusion_matrix": [
+          [
+            19,
+            3,
+            0
+          ],
+          [
+            5,
+            8,
+            1
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        "macro_average_precision": 0.7999300616692908,
+        "macro_f1": 0.6951154052603328,
+        "macro_precision": 0.719017094017094,
+        "macro_recall": 0.6783549783549784,
+        "macro_roc_auc_ovr": 0.8935410917867058,
+        "per_class": {
+          "High Medal": {
+            "average_precision": 0.8392857142857143,
+            "f1": 0.6666666666666666,
+            "precision": 0.75,
+            "recall": 0.6,
+            "roc_auc_ovr": 0.9666666666666667,
+            "support": 5
+          },
+          "Medal": {
+            "average_precision": 0.6354530753775749,
+            "f1": 0.5925925925925926,
+            "precision": 0.6153846153846154,
+            "recall": 0.5714285714285714,
+            "roc_auc_ovr": 0.8108465608465608,
+            "support": 14
+          },
+          "No Medal": {
+            "average_precision": 0.9250513953445832,
+            "f1": 0.8260869565217391,
+            "precision": 0.7916666666666666,
+            "recall": 0.8636363636363636,
+            "roc_auc_ovr": 0.90311004784689,
+            "support": 22
+          }
+        },
+        "undefined_aggregate_policy": "Zero contribution for undefined precision/recall/F1; no omission",
+        "undefined_metrics": [],
+        "weighted_average_precision": 0.8157049347389135,
+        "weighted_f1": 0.726915674953851,
+        "weighted_precision": 0.7263914946841776,
+        "weighted_recall": 0.7317073170731707,
+        "weighted_roc_auc_ovr": 0.879356249702848
+      },
+      "training_count": 165,
+      "validation_count": 41
+    },
+    {
+      "estimator": "baseline",
+      "fold": 4,
+      "metrics": {
+        "accuracy": 0.5365853658536586,
+        "confusion_matrix": [
+          [
+            22,
+            0,
+            0
+          ],
+          [
+            14,
+            0,
+            0
+          ],
+          [
+            5,
+            0,
+            0
+          ]
+        ],
+        "macro_average_precision": 0.3333333333333333,
+        "macro_f1": 0.2328042328042328,
+        "macro_precision": 0.17886178861788618,
+        "macro_recall": 0.3333333333333333,
+        "macro_roc_auc_ovr": 0.5,
+        "per_class": {
+          "High Medal": {
+            "average_precision": 0.12195121951219512,
+            "f1": 0.0,
+            "precision": null,
+            "recall": 0.0,
+            "roc_auc_ovr": 0.5,
+            "support": 5
+          },
+          "Medal": {
+            "average_precision": 0.34146341463414637,
+            "f1": 0.0,
+            "precision": null,
+            "recall": 0.0,
+            "roc_auc_ovr": 0.5,
+            "support": 14
+          },
+          "No Medal": {
+            "average_precision": 0.5365853658536586,
+            "f1": 0.6984126984126984,
+            "precision": 0.5365853658536586,
+            "recall": 1.0,
+            "roc_auc_ovr": 0.5,
+            "support": 22
+          }
+        },
+        "undefined_aggregate_policy": "Zero contribution for undefined precision/recall/F1; no omission",
+        "undefined_metrics": [
+          "Medal: precision",
+          "High Medal: precision"
+        ],
+        "weighted_average_precision": 0.4193932183224272,
+        "weighted_f1": 0.37475803329461865,
+        "weighted_precision": 0.28792385484830463,
+        "weighted_recall": 0.5365853658536586,
+        "weighted_roc_auc_ovr": 0.5
+      },
+      "training_count": 165,
+      "validation_count": 41
+    },
+    {
+      "estimator": "model",
+      "fold": 5,
+      "metrics": {
+        "accuracy": 0.7317073170731707,
+        "confusion_matrix": [
+          [
+            19,
+            3,
+            0
+          ],
+          [
+            4,
+            6,
+            4
+          ],
+          [
+            0,
+            0,
+            5
+          ]
+        ],
+        "macro_average_precision": 0.8949599327176793,
+        "macro_f1": 0.6934897630549804,
+        "macro_precision": 0.6827697262479872,
+        "macro_recall": 0.764069264069264,
+        "macro_roc_auc_ovr": 0.9327400994067662,
+        "per_class": {
+          "High Medal": {
+            "average_precision": 1.0,
+            "f1": 0.7142857142857143,
+            "precision": 0.5555555555555556,
+            "recall": 1.0,
+            "roc_auc_ovr": 1.0,
+            "support": 5
+          },
+          "Medal": {
+            "average_precision": 0.7466705913134484,
+            "f1": 0.5217391304347826,
+            "precision": 0.6666666666666666,
+            "recall": 0.42857142857142855,
+            "roc_auc_ovr": 0.8664021164021164,
+            "support": 14
+          },
+          "No Medal": {
+            "average_precision": 0.9382092068395896,
+            "f1": 0.8444444444444444,
+            "precision": 0.8260869565217391,
+            "recall": 0.8636363636363636,
+            "roc_auc_ovr": 0.9318181818181819,
+            "support": 22
+          }
+        },
+        "undefined_aggregate_policy": "Zero contribution for undefined precision/recall/F1; no omission",
+        "undefined_metrics": [],
+        "weighted_average_precision": 0.8803412397282745,
+        "weighted_f1": 0.718379370129105,
+        "weighted_precision": 0.7386591257216921,
+        "weighted_recall": 0.7317073170731707,
+        "weighted_roc_auc_ovr": 0.917795844625113
+      },
+      "training_count": 165,
+      "validation_count": 41
+    },
+    {
+      "estimator": "baseline",
+      "fold": 5,
+      "metrics": {
+        "accuracy": 0.5365853658536586,
+        "confusion_matrix": [
+          [
+            22,
+            0,
+            0
+          ],
+          [
+            14,
+            0,
+            0
+          ],
+          [
+            5,
+            0,
+            0
+          ]
+        ],
+        "macro_average_precision": 0.3333333333333333,
+        "macro_f1": 0.2328042328042328,
+        "macro_precision": 0.17886178861788618,
+        "macro_recall": 0.3333333333333333,
+        "macro_roc_auc_ovr": 0.5,
+        "per_class": {
+          "High Medal": {
+            "average_precision": 0.12195121951219512,
+            "f1": 0.0,
+            "precision": null,
+            "recall": 0.0,
+            "roc_auc_ovr": 0.5,
+            "support": 5
+          },
+          "Medal": {
+            "average_precision": 0.34146341463414637,
+            "f1": 0.0,
+            "precision": null,
+            "recall": 0.0,
+            "roc_auc_ovr": 0.5,
+            "support": 14
+          },
+          "No Medal": {
+            "average_precision": 0.5365853658536586,
+            "f1": 0.6984126984126984,
+            "precision": 0.5365853658536586,
+            "recall": 1.0,
+            "roc_auc_ovr": 0.5,
+            "support": 22
+          }
+        },
+        "undefined_aggregate_policy": "Zero contribution for undefined precision/recall/F1; no omission",
+        "undefined_metrics": [
+          "Medal: precision",
+          "High Medal: precision"
+        ],
+        "weighted_average_precision": 0.4193932183224272,
+        "weighted_f1": 0.37475803329461865,
+        "weighted_precision": 0.28792385484830463,
+        "weighted_recall": 0.5365853658536586,
+        "weighted_roc_auc_ovr": 0.5
+      },
+      "training_count": 165,
+      "validation_count": 41
+    }
+  ],
+  "inference_replay": {
+    "native_probabilities": [
+      [
+        0.0,
+        0.024025619930065814,
+        0.9759743800699344
+      ],
+      [
+        0.0,
+        0.2932267514597324,
+        0.7067732485402675
+      ],
+      [
+        0.0,
+        0.6527258297258296,
+        0.3472741702741703
+      ],
+      [
+        0.0,
+        0.024025619930065814,
+        0.9759743800699344
+      ],
+      [
+        0.0,
+        0.1839381393099645,
+        0.8160618606900361
+      ],
+      [
+        0.0,
+        0.5683279856696374,
+        0.4316720143303628
+      ],
+      [
+        0.0,
+        0.08463067558862607,
+        0.9153693244113741
+      ],
+      [
+        0.44069470453293974,
+        0.55930529546706,
+        0.0
+      ],
+      [
+        0.0,
+        0.7733059606085924,
+        0.22669403939140784
+      ],
+      [
+        0.0,
+        0.031034301432442218,
+        0.9689656985675581
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.2922791005291004,
+        0.7032764550264549,
+        0.0044444444444444444
+      ],
+      [
+        0.0,
+        0.9792500480127522,
+        0.020749951987247814
+      ],
+      [
+        0.0,
+        0.7912063992214379,
+        0.2087936007785623
+      ],
+      [
+        0.0,
+        0.7564245372661889,
+        0.2435754627338113
+      ],
+      [
+        0.0,
+        0.32803918857694875,
+        0.6719608114230512
+      ],
+      [
+        0.0,
+        0.22866879524544084,
+        0.7713312047545595
+      ],
+      [
+        0.29349915824915823,
+        0.7065008417508422,
+        0.0
+      ],
+      [
+        0.491015013853249,
+        0.508984986146751,
+        0.0
+      ],
+      [
+        0.0,
+        0.031034301432442218,
+        0.9689656985675581
+      ],
+      [
+        0.0,
+        0.1066219546799052,
+        0.8933780453200953
+      ],
+      [
+        0.0,
+        0.1839381393099645,
+        0.8160618606900361
+      ],
+      [
+        0.0,
+        0.012684424058545245,
+        0.987315575941455
+      ],
+      [
+        0.0,
+        0.011803471677592865,
+        0.9881965283224075
+      ],
+      [
+        0.0,
+        0.2588819538117164,
+        0.7411180461882839
+      ],
+      [
+        0.0,
+        0.7234085300948372,
+        0.27659146990516265
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.1839381393099645,
+        0.8160618606900361
+      ],
+      [
+        0.0,
+        0.9712037517164559,
+        0.028796248283544112
+      ],
+      [
+        0.0,
+        0.2588819538117164,
+        0.7411180461882839
+      ],
+      [
+        0.0,
+        0.1602283094059353,
+        0.8397716905940649
+      ],
+      [
+        0.0,
+        0.031034301432442218,
+        0.9689656985675581
+      ],
+      [
+        0.0,
+        0.5523273368627822,
+        0.447672663137218
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.14113416271392518,
+        0.8588658372860749
+      ],
+      [
+        0.0,
+        0.011803471677592865,
+        0.9881965283224075
+      ],
+      [
+        0.0,
+        0.1839381393099645,
+        0.8160618606900361
+      ],
+      [
+        0.0,
+        0.012684424058545245,
+        0.987315575941455
+      ],
+      [
+        0.0344047619047619,
+        0.7199761904761902,
+        0.24561904761904757
+      ],
+      [
+        0.7813910533910532,
+        0.21860894660894678,
+        0.0
+      ],
+      [
+        0.04740476190476191,
+        0.9039523809523808,
+        0.04864285714285714
+      ],
+      [
+        0.0,
+        0.031034301432442218,
+        0.9689656985675581
+      ],
+      [
+        0.0,
+        0.031034301432442218,
+        0.9689656985675581
+      ],
+      [
+        0.0,
+        0.08463067558862607,
+        0.9153693244113741
+      ],
+      [
+        0.0,
+        0.4900652821533589,
+        0.509934717846641
+      ],
+      [
+        0.0,
+        0.9168809523809527,
+        0.08311904761904762
+      ],
+      [
+        0.7708172198172198,
+        0.22601611351611364,
+        0.0031666666666666666
+      ],
+      [
+        0.0,
+        0.5890685221211537,
+        0.41093147787884626
+      ],
+      [
+        0.7472938542938546,
+        0.2438966218966221,
+        0.008809523809523807
+      ],
+      [
+        0.0,
+        0.7326610785027301,
+        0.26733892149727
+      ],
+      [
+        0.0,
+        0.031034301432442218,
+        0.9689656985675581
+      ],
+      [
+        0.0,
+        0.1066219546799052,
+        0.8933780453200953
+      ],
+      [
+        0.8387423605805961,
+        0.1612576394194042,
+        0.0
+      ],
+      [
+        0.0,
+        0.02001126388538507,
+        0.9799887361146151
+      ],
+      [
+        0.0,
+        0.018157655904480898,
+        0.9818423440955193
+      ],
+      [
+        0.17397089947089941,
+        0.8066481481481481,
+        0.01938095238095238
+      ],
+      [
+        0.0,
+        0.9735872103630724,
+        0.026412789636927565
+      ],
+      [
+        0.572973507973508,
+        0.4270264920264921,
+        0.0
+      ],
+      [
+        0.0,
+        0.024025619930065814,
+        0.9759743800699344
+      ],
+      [
+        0.0,
+        0.031034301432442218,
+        0.9689656985675581
+      ],
+      [
+        0.0,
+        0.4370711119049444,
+        0.562928888095056
+      ],
+      [
+        0.0,
+        0.93206195783782,
+        0.06793804216218009
+      ],
+      [
+        0.0,
+        0.02001126388538507,
+        0.9799887361146151
+      ],
+      [
+        0.0011111111111111111,
+        0.8497834042176147,
+        0.14910548467127419
+      ],
+      [
+        0.0,
+        0.031034301432442218,
+        0.9689656985675581
+      ],
+      [
+        0.0016666666666666668,
+        0.8173432574349092,
+        0.18099007589842436
+      ],
+      [
+        0.0,
+        0.8311107503607504,
+        0.16888924963924964
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.024025619930065814,
+        0.9759743800699344
+      ],
+      [
+        0.0,
+        0.031034301432442218,
+        0.9689656985675581
+      ],
+      [
+        0.0,
+        0.7086332371332372,
+        0.2913667628667629
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.7714228630145147,
+        0.2285771369854855
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.2138994708994709,
+        0.7861005291005292,
+        0.0
+      ],
+      [
+        0.0,
+        0.2559307000073457,
+        0.7440692999926546
+      ],
+      [
+        0.0,
+        0.024025619930065814,
+        0.9759743800699344
+      ],
+      [
+        0.0,
+        0.6111385281385284,
+        0.3888614718614719
+      ],
+      [
+        0.0,
+        0.024025619930065814,
+        0.9759743800699344
+      ],
+      [
+        0.0,
+        0.02001126388538507,
+        0.9799887361146151
+      ],
+      [
+        0.0,
+        0.1066219546799052,
+        0.8933780453200953
+      ],
+      [
+        0.0,
+        0.14113416271392518,
+        0.8588658372860749
+      ],
+      [
+        0.0,
+        0.5760989091905612,
+        0.4239010908094392
+      ],
+      [
+        0.27382737741561264,
+        0.7142744744362391,
+        0.011898148148148147
+      ],
+      [
+        0.9575194805194805,
+        0.042004329004328995,
+        0.0004761904761904762
+      ],
+      [
+        0.0,
+        0.02001126388538507,
+        0.9799887361146151
+      ],
+      [
+        0.4803439153439152,
+        0.5196560846560848,
+        0.0
+      ],
+      [
+        0.0016666666666666668,
+        0.766225532567184,
+        0.23210780076614929
+      ],
+      [
+        0.0,
+        0.02001126388538507,
+        0.9799887361146151
+      ],
+      [
+        0.13389213564213562,
+        0.8661078643578641,
+        0.0
+      ],
+      [
+        0.20733453583453582,
+        0.7852448292448292,
+        0.007420634920634921
+      ],
+      [
+        0.24444312169312155,
+        0.7555568783068783,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.06051984126984127,
+        0.8409960317460317,
+        0.09848412698412697
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.5712629086009855,
+        0.4287370913990144
+      ],
+      [
+        0.224745522995523,
+        0.752754477004477,
+        0.0225
+      ],
+      [
+        0.8365160857660855,
+        0.15670613645613649,
+        0.0067777777777777775
+      ],
+      [
+        0.0,
+        0.012684424058545245,
+        0.987315575941455
+      ],
+      [
+        0.0,
+        0.5700366442220893,
+        0.42996335577791056
+      ],
+      [
+        0.0,
+        0.5401570490743454,
+        0.45984295092565464
+      ],
+      [
+        0.0,
+        0.7790584211110525,
+        0.22094157888894733
+      ],
+      [
+        0.0,
+        0.02001126388538507,
+        0.9799887361146151
+      ],
+      [
+        0.02891666666666667,
+        0.8138621933621935,
+        0.15722113997114004
+      ],
+      [
+        0.0,
+        0.14113416271392518,
+        0.8588658372860749
+      ],
+      [
+        0.0,
+        0.018157655904480898,
+        0.9818423440955193
+      ],
+      [
+        0.0,
+        0.019415915189055975,
+        0.9805840848109442
+      ],
+      [
+        0.0,
+        0.18711512784566078,
+        0.8128848721543391
+      ],
+      [
+        0.0,
+        0.27236963257356317,
+        0.7276303674264368
+      ],
+      [
+        0.0016666666666666668,
+        0.9230423280423281,
+        0.07529100529100527
+      ],
+      [
+        0.0,
+        0.5712629086009855,
+        0.4287370913990144
+      ],
+      [
+        0.0,
+        0.08463067558862607,
+        0.9153693244113741
+      ],
+      [
+        0.0,
+        0.024025619930065814,
+        0.9759743800699344
+      ],
+      [
+        0.0,
+        0.8463354411770927,
+        0.15366455882290733
+      ],
+      [
+        0.0,
+        0.02001126388538507,
+        0.9799887361146151
+      ],
+      [
+        0.0,
+        0.02001126388538507,
+        0.9799887361146151
+      ],
+      [
+        0.0,
+        0.14113416271392518,
+        0.8588658372860749
+      ],
+      [
+        0.0,
+        0.018157655904480898,
+        0.9818423440955193
+      ],
+      [
+        0.0,
+        0.018157655904480898,
+        0.9818423440955193
+      ],
+      [
+        0.0,
+        0.3278779885719278,
+        0.6721220114280722
+      ],
+      [
+        0.3997676593558945,
+        0.6002323406441051,
+        0.0
+      ],
+      [
+        0.0,
+        0.14113416271392518,
+        0.8588658372860749
+      ],
+      [
+        0.0016666666666666668,
+        0.909138053467001,
+        0.08919527986633254
+      ],
+      [
+        0.005555555555555555,
+        0.7309277360066837,
+        0.2635167084377611
+      ],
+      [
+        0.0038888888888888883,
+        0.9579760992519615,
+        0.03813501185914979
+      ],
+      [
+        0.0,
+        0.23148336220216664,
+        0.7685166377978336
+      ],
+      [
+        0.0,
+        0.1839381393099645,
+        0.8160618606900361
+      ],
+      [
+        0.0,
+        0.5523273368627822,
+        0.447672663137218
+      ],
+      [
+        0.0,
+        0.1839381393099645,
+        0.8160618606900361
+      ],
+      [
+        0.0,
+        0.024025619930065814,
+        0.9759743800699344
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.9651481481481481,
+        0.03485185185185185,
+        0.0
+      ],
+      [
+        0.0,
+        0.2932267514597324,
+        0.7067732485402675
+      ],
+      [
+        0.0,
+        0.1066219546799052,
+        0.8933780453200953
+      ],
+      [
+        0.09900120250120252,
+        0.8678162578162577,
+        0.03318253968253968
+      ],
+      [
+        0.0,
+        0.3890510918367044,
+        0.6109489081632954
+      ],
+      [
+        0.18108799533799533,
+        0.7869120046620047,
+        0.03200000000000001
+      ],
+      [
+        0.0,
+        0.024025619930065814,
+        0.9759743800699344
+      ],
+      [
+        0.0,
+        0.5700366442220893,
+        0.42996335577791056
+      ],
+      [
+        0.0,
+        0.031034301432442218,
+        0.9689656985675581
+      ],
+      [
+        0.0,
+        0.18711512784566078,
+        0.8128848721543391
+      ],
+      [
+        0.0,
+        0.19063343435223873,
+        0.8093665656477614
+      ],
+      [
+        0.0,
+        0.2588819538117164,
+        0.7411180461882839
+      ],
+      [
+        0.0,
+        0.2932267514597324,
+        0.7067732485402675
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.5604969937469936,
+        0.43950300625300637
+      ],
+      [
+        0.0,
+        0.7242583415609736,
+        0.27574165843902704
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.06163838013838015,
+        0.8290653235653235,
+        0.10929629629629628
+      ],
+      [
+        0.0,
+        0.9517008467267087,
+        0.0482991532732912
+      ],
+      [
+        0.0,
+        0.8307421270837786,
+        0.16925787291622146
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.5011610149110148,
+        0.4988389850889851
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.7432957586374104,
+        0.25670424136258985
+      ],
+      [
+        0.5937262829762828,
+        0.4062737170237169,
+        0.0
+      ],
+      [
+        0.0,
+        0.011803471677592865,
+        0.9881965283224075
+      ],
+      [
+        0.0,
+        0.018157655904480898,
+        0.9818423440955193
+      ],
+      [
+        0.0,
+        0.011803471677592865,
+        0.9881965283224075
+      ],
+      [
+        0.0,
+        0.23148336220216664,
+        0.7685166377978336
+      ],
+      [
+        0.0,
+        0.18711512784566078,
+        0.8128848721543391
+      ],
+      [
+        0.0,
+        0.031034301432442218,
+        0.9689656985675581
+      ],
+      [
+        0.0,
+        0.8869380052796568,
+        0.11306199472034317
+      ],
+      [
+        0.0,
+        0.303156856442469,
+        0.6968431435575307
+      ],
+      [
+        0.2894567099567098,
+        0.71054329004329,
+        0.0
+      ],
+      [
+        0.0,
+        0.024025619930065814,
+        0.9759743800699344
+      ],
+      [
+        0.0,
+        0.02001126388538507,
+        0.9799887361146151
+      ],
+      [
+        0.0,
+        0.5050607743234785,
+        0.49493922567652143
+      ],
+      [
+        0.0,
+        0.9284101009228052,
+        0.0715898990771949
+      ],
+      [
+        0.0,
+        0.9293439153439156,
+        0.07065608465608465
+      ],
+      [
+        0.0,
+        0.012684424058545245,
+        0.987315575941455
+      ],
+      [
+        0.0,
+        0.1839381393099645,
+        0.8160618606900361
+      ],
+      [
+        0.3146931216931216,
+        0.685306878306878,
+        0.0
+      ],
+      [
+        0.0,
+        0.018157655904480898,
+        0.9818423440955193
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.3325979893836019,
+        0.6674020106163977
+      ],
+      [
+        0.0,
+        0.018157655904480898,
+        0.9818423440955193
+      ],
+      [
+        0.0,
+        0.024025619930065814,
+        0.9759743800699344
+      ],
+      [
+        0.0,
+        0.012684424058545245,
+        0.987315575941455
+      ],
+      [
+        0.19751719576719576,
+        0.8024828042328042,
+        0.0
+      ],
+      [
+        0.7726297128797129,
+        0.22737028712028712,
+        0.0
+      ],
+      [
+        0.0,
+        0.3118371571810962,
+        0.6881628428189034
+      ],
+      [
+        0.0,
+        0.3245441481054264,
+        0.6754558518945736
+      ],
+      [
+        0.0,
+        0.689154401154401,
+        0.31084559884559887
+      ],
+      [
+        0.0,
+        0.18711512784566078,
+        0.8128848721543391
+      ],
+      [
+        0.0,
+        0.024025619930065814,
+        0.9759743800699344
+      ],
+      [
+        0.02891666666666667,
+        0.6976987423496042,
+        0.27338459098372886
+      ],
+      [
+        0.08830278980278981,
+        0.8973321308321308,
+        0.014365079365079364
+      ],
+      [
+        0.7840848688348688,
+        0.21591513116513128,
+        0.0
+      ],
+      [
+        0.0,
+        0.3245441481054264,
+        0.6754558518945736
+      ],
+      [
+        0.0,
+        0.018157655904480898,
+        0.9818423440955193
+      ],
+      [
+        0.0,
+        0.7822203284045386,
+        0.21777967159546113
+      ],
+      [
+        0.683581151419387,
+        0.3164188485806136,
+        0.0
+      ],
+      [
+        0.0,
+        0.02001126388538507,
+        0.9799887361146151
+      ],
+      [
+        0.0,
+        0.018157655904480898,
+        0.9818423440955193
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.4856673184346148,
+        0.5143326815653853
+      ],
+      [
+        0.0016666666666666668,
+        0.9797313902572525,
+        0.01860194307608101
+      ],
+      [
+        0.0,
+        0.1839381393099645,
+        0.8160618606900361
+      ],
+      [
+        0.0,
+        0.9934205436964056,
+        0.006579456303594234
+      ],
+      [
+        0.0,
+        0.6020943304359822,
+        0.39790566956401807
+      ],
+      [
+        0.0,
+        0.031034301432442218,
+        0.9689656985675581
+      ],
+      [
+        0.0,
+        0.02001126388538507,
+        0.9799887361146151
+      ],
+      [
+        0.0,
+        0.012684424058545245,
+        0.987315575941455
+      ],
+      [
+        0.0,
+        0.7326610785027301,
+        0.26733892149727
+      ],
+      [
+        0.0,
+        0.024025619930065814,
+        0.9759743800699344
+      ]
+    ],
+    "predicted_classes": [
+      "No Medal",
+      "No Medal",
+      "Medal",
+      "No Medal",
+      "No Medal",
+      "Medal",
+      "No Medal",
+      "Medal",
+      "Medal",
+      "No Medal",
+      "High Medal",
+      "Medal",
+      "Medal",
+      "Medal",
+      "Medal",
+      "No Medal",
+      "No Medal",
+      "Medal",
+      "Medal",
+      "No Medal",
+      "No Medal",
+      "No Medal",
+      "No Medal",
+      "No Medal",
+      "No Medal",
+      "Medal",
+      "High Medal",
+      "No Medal",
+      "Medal",
+      "No Medal",
+      "No Medal",
+      "No Medal",
+      "Medal",
+      "High Medal",
+      "No Medal",
+      "No Medal",
+      "No Medal",
+      "No Medal",
+      "Medal",
+      "High Medal",
+      "Medal",
+      "No Medal",
+      "No Medal",
+      "No Medal",
+      "No Medal",
+      "Medal",
+      "High Medal",
+      "Medal",
+      "High Medal",
+      "Medal",
+      "No Medal",
+      "No Medal",
+      "High Medal",
+      "No Medal",
+      "No Medal",
+      "Medal",
+      "Medal",
+      "High Medal",
+      "No Medal",
+      "No Medal",
+      "No Medal",
+      "Medal",
+      "No Medal",
+      "Medal",
+      "No Medal",
+      "Medal",
+      "Medal",
+      "High Medal",
+      "No Medal",
+      "No Medal",
+      "Medal",
+      "High Medal",
+      "Medal",
+      "High Medal",
+      "Medal",
+      "No Medal",
+      "No Medal",
+      "Medal",
+      "No Medal",
+      "No Medal",
+      "No Medal",
+      "No Medal",
+      "Medal",
+      "Medal",
+      "High Medal",
+      "No Medal",
+      "Medal",
+      "Medal",
+      "No Medal",
+      "Medal",
+      "Medal",
+      "Medal",
+      "High Medal",
+      "Medal",
+      "High Medal",
+      "Medal",
+      "Medal",
+      "High Medal",
+      "No Medal",
+      "Medal",
+      "Medal",
+      "Medal",
+      "No Medal",
+      "Medal",
+      "No Medal",
+      "No Medal",
+      "No Medal",
+      "No Medal",
+      "No Medal",
+      "Medal",
+      "Medal",
+      "No Medal",
+      "No Medal",
+      "Medal",
+      "No Medal",
+      "No Medal",
+      "No Medal",
+      "No Medal",
+      "No Medal",
+      "No Medal",
+      "Medal",
+      "No Medal",
+      "Medal",
+      "Medal",
+      "Medal",
+      "No Medal",
+      "No Medal",
+      "Medal",
+      "No Medal",
+      "No Medal",
+      "High Medal",
+      "High Medal",
+      "No Medal",
+      "No Medal",
+      "Medal",
+      "No Medal",
+      "Medal",
+      "No Medal",
+      "Medal",
+      "No Medal",
+      "No Medal",
+      "No Medal",
+      "No Medal",
+      "No Medal",
+      "High Medal",
+      "Medal",
+      "Medal",
+      "High Medal",
+      "Medal",
+      "Medal",
+      "Medal",
+      "High Medal",
+      "Medal",
+      "High Medal",
+      "Medal",
+      "High Medal",
+      "No Medal",
+      "No Medal",
+      "No Medal",
+      "No Medal",
+      "No Medal",
+      "No Medal",
+      "Medal",
+      "No Medal",
+      "Medal",
+      "No Medal",
+      "No Medal",
+      "Medal",
+      "Medal",
+      "Medal",
+      "No Medal",
+      "No Medal",
+      "Medal",
+      "No Medal",
+      "High Medal",
+      "No Medal",
+      "No Medal",
+      "No Medal",
+      "No Medal",
+      "Medal",
+      "High Medal",
+      "No Medal",
+      "No Medal",
+      "Medal",
+      "No Medal",
+      "No Medal",
+      "Medal",
+      "Medal",
+      "High Medal",
+      "No Medal",
+      "No Medal",
+      "Medal",
+      "High Medal",
+      "No Medal",
+      "No Medal",
+      "High Medal",
+      "No Medal",
+      "Medal",
+      "No Medal",
+      "Medal",
+      "Medal",
+      "No Medal",
+      "No Medal",
+      "No Medal",
+      "Medal",
+      "No Medal"
+    ]
+  },
+  "limitations": [
+    "Exploratory same-Olympics evaluation; not future-Olympics forecasting or independent external validation.",
+    "Data and CV results were already inspected; no hyperparameter tuning or model selection in this run.",
+    "Small skewed classes; athlete-name proxies, source coverage and absent-medal-row zero assumptions limit validity.",
+    "Pre-event feature availability is unverified; probabilities are not established as calibrated.",
+    "Final full-data model is for demonstration/inference only; its predictions are not OOF evaluation evidence.",
+    "Native libraries/platforms and source/code/environment differences can affect reproducibility."
+  ],
+  "model_name": "sklearn.ensemble._forest.RandomForestClassifier",
+  "model_parameters": {
+    "bootstrap": true,
+    "ccp_alpha": 0.0,
+    "class_weight": "balanced",
+    "criterion": "gini",
+    "max_depth": 8,
+    "max_features": "sqrt",
+    "max_leaf_nodes": null,
+    "max_samples": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 2,
+    "min_samples_split": 2,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 300,
+    "n_jobs": -1,
+    "oob_score": false,
+    "random_state": 42,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "pooled_metrics": {
+    "baseline": {
+      "accuracy": 0.5485436893203883,
+      "confusion_matrix": [
+        [
+          113,
+          0,
+          0
+        ],
+        [
+          68,
+          0,
+          0
+        ],
+        [
+          25,
+          0,
+          0
+        ]
+      ],
+      "macro_average_precision": 0.3333333333333333,
+      "macro_f1": 0.2361546499477534,
+      "macro_precision": 0.18284789644012944,
+      "macro_recall": 0.3333333333333333,
+      "macro_roc_auc_ovr": 0.5,
+      "per_class": {
+        "High Medal": {
+          "average_precision": 0.12135922330097088,
+          "f1": 0.0,
+          "precision": null,
+          "recall": 0.0,
+          "roc_auc_ovr": 0.5,
+          "support": 25
+        },
+        "Medal": {
+          "average_precision": 0.3300970873786408,
+          "f1": 0.0,
+          "precision": null,
+          "recall": 0.0,
+          "roc_auc_ovr": 0.5,
+          "support": 68
+        },
+        "No Medal": {
+          "average_precision": 0.5485436893203883,
+          "f1": 0.7084639498432602,
+          "precision": 0.5485436893203883,
+          "recall": 1.0,
+          "roc_auc_ovr": 0.5,
+          "support": 113
+        }
+      },
+      "undefined_aggregate_policy": "Zero contribution for undefined precision/recall/F1; no omission",
+      "undefined_metrics": [
+        "Medal: precision",
+        "High Medal: precision"
+      ],
+      "weighted_average_precision": 0.42459232726929963,
+      "weighted_f1": 0.3886234287975165,
+      "weighted_precision": 0.3009001790932227,
+      "weighted_recall": 0.5485436893203883,
+      "weighted_roc_auc_ovr": 0.5
+    },
+    "model": {
+      "accuracy": 0.7621359223300971,
+      "confusion_matrix": [
+        [
+          95,
+          18,
+          0
+        ],
+        [
+          15,
+          44,
+          9
+        ],
+        [
+          0,
+          7,
+          18
+        ]
+      ],
+      "macro_average_precision": 0.8086456343617175,
+      "macro_f1": 0.7288871319835936,
+      "macro_precision": 0.72266139657444,
+      "macro_recall": 0.735922262710394,
+      "macro_roc_auc_ovr": 0.9036673903469471,
+      "per_class": {
+        "High Medal": {
+          "average_precision": 0.864921218880179,
+          "f1": 0.6923076923076923,
+          "precision": 0.6666666666666666,
+          "recall": 0.72,
+          "roc_auc_ovr": 0.9721546961325968,
+          "support": 25
+        },
+        "Medal": {
+          "average_precision": 0.6596692581976206,
+          "f1": 0.6423357664233577,
+          "precision": 0.6376811594202898,
+          "recall": 0.6470588235294118,
+          "roc_auc_ovr": 0.8258205456095481,
+          "support": 68
+        },
+        "No Medal": {
+          "average_precision": 0.9013464260073527,
+          "f1": 0.852017937219731,
+          "precision": 0.8636363636363636,
+          "recall": 0.8407079646017699,
+          "roc_auc_ovr": 0.9130269292986963,
+          "support": 113
+        }
+      },
+      "undefined_aggregate_policy": "Zero contribution for undefined precision/recall/F1; no omission",
+      "undefined_metrics": [],
+      "weighted_average_precision": 0.8171489619819103,
+      "weighted_f1": 0.7634201520888846,
+      "weighted_precision": 0.7651451194085217,
+      "weighted_recall": 0.762135922330097,
+      "weighted_roc_auc_ovr": 0.8914160559005674
+    }
+  },
+  "provenance": {
+    "aggregation": "Pooled OOF metrics; fold metrics also retained; no in-sample performance scores",
+    "baseline": "Most-frequent class fitted independently on each identical training fold; lexical ties",
+    "evaluation": "Step 20 evaluator; one training-only fit per fold; pooled OOF metrics",
+    "final_model": "Separate fit on all validated countries; demonstration/inference only"
+  },
+  "schema_version": 1,
+  "target": "Total",
+  "versions": {
+    "joblib": "1.6.0",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "python": "3.14.4",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1"
+  }
+}

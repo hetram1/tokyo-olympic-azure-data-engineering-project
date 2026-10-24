@@ -65,7 +65,7 @@ This is a version-pinned environment, not a hash-verified installation lock.
 
 ## Tests and read-only data validation
 
-Run the complete **59-test** suite:
+Run the complete **80-test** suite:
 
 ```bash
 python -B -m unittest discover -s tests -v
@@ -144,7 +144,7 @@ python -B -m src.ml.analyze_model
 # Compares all candidates within training only; does not evaluate holdout.
 python -B -m src.ml.cross_validate
 
-# Separate, unchanged classification experiment.
+# Separate classification OOF evaluation; saves nothing.
 python -B -m src.ml.classify_medal_performance
 ```
 
@@ -179,7 +179,27 @@ digits and no rounding before metrics. Only the model created by this run is
 reloaded for verification; never deserialize an untrusted joblib file.
 
 Classification remains separate: No Medal (0), Medal (1–9) or High Medal (10+)
-using stratified five-fold predictions. Metrics are printed, not persisted.
+using one explicit stratified five-fold loop with strict count/country validation,
+aligned out-of-fold probabilities and a fold-trained majority baseline. Metrics
+are printed, not persisted; the reusable API returns country-level evidence in
+memory. See [classification evaluation](docs/classification_evaluation.md) for
+class order, undefined-metric handling and exploratory same-Olympics limitations.
+To explicitly save classification evidence and a separate full-data demonstration
+model (replacing only these three classification artifacts):
+
+```bash
+python -B -m src.ml.persist_classification
+sha256sum reports/classification_evaluation.json reports/classification_oof_predictions.csv models/medal_classification_model.joblib
+```
+
+The report/CSV contain fold-excluded OOF evidence and the fold-trained majority
+baseline. The ignored joblib model is separately fitted on all validated countries;
+its inference replay is not CV evidence. Prior classification outputs and checksums
+are retained outside the repository under `/tmp/tokyo-classification-*`; the
+command prints the recovery directory. Staged artifacts are validated before
+replacement, with rollback on synchronous replacement/verification errors. Copy
+temporary backups elsewhere for durable retention. See the classification document
+for exact provenance, trust and crash-recovery limits.
 Native-library/platform differences can still affect numerical reproducibility.
 The corrected regression procedure was executed on the 206-country feature CSV;
 tests also verify split isolation, train-only selection and baseline calculations
@@ -212,6 +232,9 @@ country/team counts. It drops the retired `medals_per_team_event` field.
 | `models/medal_prediction_model.joblib` | Training-partition model from the explicit persistence command; ignored by Git |
 | `reports/regression_evaluation.json` | Selection, holdout metrics, partitions, schemas, hashes, versions and limitations |
 | `reports/regression_holdout_predictions.csv` | Sorted holdout actual/predicted medal totals and absolute errors |
+| `models/medal_classification_model.joblib` | Separate full-data demonstration/inference classifier; ignored by Git |
+| `reports/classification_evaluation.json` | Classification OOF/baseline metrics, folds, hashes, versions and final-model provenance |
+| `reports/classification_oof_predictions.csv` | Country-sorted OOF labels/probabilities and fold-trained baseline evidence |
 | `dashboards/olympic_country_dashboard.csv` | Current corrected exporter output; CSV for future Power BI work |
 
 Local loaders handle the source CSV encodings. Do not bulk-convert or edit raw
