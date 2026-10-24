@@ -1,0 +1,11 @@
+# Direct runtime dependencies verified with CPython 3.14.4 on WSL2 Linux x86-64.
+# Keep the tested transitive runtime versions via the separate constraints file.
+-c constraints.txt
+
+# Data quality, feature engineering, analytics and CSV export.
+pandas==3.0.6
+
+# Existing ML scripts (unittest itself is part of Python).
+scikit-learn==1.9.1
+xgboost==3.4.1
+joblib==1.6.0

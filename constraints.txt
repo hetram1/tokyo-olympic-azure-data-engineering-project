@@ -1,0 +1,22 @@
+# Tested transitive dependency closure, not additional direct project imports.
+# Derived from installed package dependency metadata; pip/build tools excluded.
+# These constrain requirements.txt; installing this file alone installs nothing.
+
+# Numerical runtimes: pandas, scikit-learn and XGBoost.
+numpy==2.5.3
+scipy==1.18.1
+
+# pandas -> python-dateutil -> six.
+python-dateutil==2.9.0.post0
+six==1.17.0
+
+# scikit-learn runtime dependencies.
+narwhals==2.26.0
+threadpoolctl==3.7.0
+
+# joblib runtime dependency.
+cloudpickle==3.1.2
+
+# Required by this XGBoost distribution on the tested Linux platform.
+# This package does not imply the project needs a GPU or CUDA toolkit.
+nvidia-nccl-cu13==2.32.3; platform_system == "Linux" and platform_machine == "x86_64"

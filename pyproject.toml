@@ -1,0 +1,8 @@
+# Repository scripts run as modules from the root; this is not a pip package.
+# requirements.txt is the single source of direct dependency declarations.
+[tool.tokyo_olympics]
+tested-python = "3.14.4"
+tested-platform = "WSL2 Linux x86_64 (glibc 2.43)"
+requirements-file = "requirements.txt"
+constraints-file = "constraints.txt"
+test-command = "python -B -m unittest discover -s tests -v"
