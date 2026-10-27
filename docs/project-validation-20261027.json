@@ -13,7 +13,7 @@
   "new_resources_remaining": 0,
   "original_resource_data_role_preservation": true,
   "protected_local_hashes_unchanged": 60,
-  "published_branch": "feature/olympic-ai-platform",
+  "published_branch": "main",
   "cloud_job_invocations": 0,
   "cloud_blocker": "UC_STORAGE_CREDENTIAL_PRINCIPAL_MISSING_AZURE_OBJECT_ID"
 }

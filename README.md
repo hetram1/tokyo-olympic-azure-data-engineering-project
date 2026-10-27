@@ -325,7 +325,7 @@ four report pages, 16 DAX measures, an embedded CSV snapshot and actual Desktop
 captures. Live DAX reconciled all 206 countries and selected-country aggregates.
 Open the project in Desktop and Refresh to load a fresh source checkout.
 No Power BI Service dashboard has been published. The report uses verified local
-analytics, not a successful Databricks output. The verified release is published on `feature/olympic-ai-platform`; the default branch is unchanged.
+analytics, not a successful Databricks output. The verified release is published on `main` on the default branch.
 
 Validate the captured Power BI evidence without cloud access:
 

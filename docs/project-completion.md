@@ -4,18 +4,18 @@
 > rejected storage credential validation because the operator lacks a linked
 > Entra object ID. Zero jobs were submitted. See the
 > [identity prerequisite](azure/stage3/identity-prerequisite.md) and latest cleanup record.
-> The verified local project has been pushed to `feature/olympic-ai-platform`.
+> The verified local project has been pushed to `main`.
 
 
 | Area | Verified status |
 | --- | --- |
 | Local quality, analytics and ML | Completed earlier; preserved, no retraining |
 | ADF/ADLS Stage 1 and Stage 2 | Deployed; one successful ingestion, five SHA256 matches |
-| Databricks PySpark execution | Incomplete: zero job submissions; workspace readiness response stopped setup |
+| Databricks PySpark execution | Incomplete: zero job submissions; Unity Catalog rejected the missing Entra identity association |
 | Temporary Azure resources | All new resources removed; original resources/data/access preserved |
 | Power BI Desktop | Four-page native PBIP saved; all 206 country rows and DAX aggregates reconciled |
 | Power BI Service dashboard | Not published |
-| GitHub | Verified release pushed to `feature/olympic-ai-platform`; default branch unchanged |
+| GitHub | Verified release pushed to `main` on the default branch |
 
 Open [Power BI instructions](../powerbi/TokyoOlympics/README.md) and
 [actual overview capture](../powerbi/TokyoOlympics/previews/Overview.png).
@@ -28,7 +28,7 @@ visual-container schema 2.14.0; real Desktop render and DAX checks passed.
 The report uses **local analytics**, not a cloud transformation result. It must
 not be presented as proof that the whole Azure pipeline ran end to end.
 [Azure progress](azure/progress.md) records setup attempts, cleanup and delayed
-costs. ₹4.82 is reported so far for Oct 25; Oct 26 and final charges are pending.
+costs. INR 15.35 is reported for Oct 25–26; Oct 27 and final charges are pending.
 
 ## Reproducible checks
 
@@ -45,7 +45,7 @@ refresh the report in Desktop, open the PBIP, Refresh and Save. All Azure creati
 and execution remain separate from these offline commands. Tests alone cannot
 close the Databricks execution gap.
 
-## Final execution outcome
+## Historical execution outcome — 2026-10-26
 
 The fourth and final approved setup provisioned the workspace. A read-only
 node-type readiness response used a different `UnknownWorkerEnvironmentException`
@@ -62,7 +62,7 @@ not been exercised in Azure. [Validation journal](project-validation-20261026.js
 
 ## Latest handover — 2026-10-27
 
-The release is now pushed on `feature/olympic-ai-platform` (including the prior
+The release is now pushed on `main` (including the prior
 three local analytics/ML commits). All 95 tests passed again in 7.561 seconds;
 contracts, Power BI snapshot reconciliation, dependency and staged diff checks
 passed. The prepared readiness helper passed five tests. Power BI text files

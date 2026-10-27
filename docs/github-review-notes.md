@@ -29,14 +29,14 @@ as a successfully executed end-to-end Azure pipeline until Stage 3 completes.
 
 # Local handover
 
-- Branch: `feature/olympic-ai-platform`
+- Branch: `main`
 - Native report: `powerbi/TokyoOlympics/TokyoOlympics.pbip`
 - Report instructions and validation: `powerbi/TokyoOlympics/README.md`
 - Completion audit: `docs/project-completion.md`
 - Azure attempts and cleanup: `docs/azure/progress.md`
-- Validation journal: `docs/project-validation-20261026.json`
+- Validation journal: `docs/project-validation-20261027.json`
 
-The verified release is committed and pushed to `feature/olympic-ai-platform`.
-The default branch is unchanged. The latest execution evidence records successful
+The verified release is committed and pushed to `main`.
+The latest execution evidence records successful
 runtime readiness, blocked credential validation due to missing Entra identity
 association, zero job submissions and verified cleanup. No Service publication.

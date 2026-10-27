@@ -4,7 +4,7 @@
 > rejected storage credential validation because the operator lacks a linked
 > Entra object ID. Zero jobs were submitted. See the
 > [identity prerequisite](stage3/identity-prerequisite.md) and latest cleanup record.
-> The verified local project has been pushed to `feature/olympic-ai-platform`.
+> The verified local project has been pushed to `main`.
 
 
 **ADF Stage 2 is complete. Databricks Stage 3 is not complete. All newly created
@@ -165,5 +165,5 @@ with the workspace and managed dependencies.
   for Oct 25–26 as reported at 09:18:23 UTC Oct 27. Oct 27/final charges are pending;
   the US$5 allowance is not a guaranteed billing cap.
 
-The verified local release is pushed to `feature/olympic-ai-platform`. Databricks
+The verified local release is pushed to `main`. Databricks
 cloud transformation/parity and Power BI Service publication remain incomplete.
