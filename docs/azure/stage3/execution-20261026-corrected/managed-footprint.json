@@ -1,0 +1,197 @@
+[
+  {
+    "changedTime": "2026-10-26T09:18:11.263076+00:00",
+    "createdTime": "2026-10-26T09:18:08.950228+00:00",
+    "extendedLocation": null,
+    "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed/providers/Microsoft.ManagedIdentity/userAssignedIdentities/dbmanagedidentity",
+    "identity": null,
+    "kind": null,
+    "location": "eastasia",
+    "managedBy": null,
+    "name": "dbmanagedidentity",
+    "plan": null,
+    "properties": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "rg-tokyo-olympics-databricks-managed",
+    "sku": null,
+    "tags": {
+      "application": "databricks",
+      "databricks-environment": "true",
+      "project": "tokyo-olympics",
+      "purpose": "education-demo"
+    },
+    "type": "Microsoft.ManagedIdentity/userAssignedIdentities"
+  },
+  {
+    "changedTime": "2026-10-26T09:18:11.345893+00:00",
+    "createdTime": "2026-10-26T09:18:08.512976+00:00",
+    "extendedLocation": null,
+    "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed/providers/Microsoft.Databricks/accessConnectors/unity-catalog-access-connector",
+    "identity": {
+      "principalId": "02df8a6a-a604-42e0-88aa-e634e73978fc",
+      "tenantId": "fae6a919-55a8-478f-81b8-640ca685d113",
+      "type": "SystemAssigned",
+      "userAssignedIdentities": null
+    },
+    "kind": null,
+    "location": "eastasia",
+    "managedBy": null,
+    "name": "unity-catalog-access-connector",
+    "plan": null,
+    "properties": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "rg-tokyo-olympics-databricks-managed",
+    "sku": null,
+    "systemData": {
+      "createdAt": "2026-10-26T09:18:08.5958069Z",
+      "createdBy": "d9327919-6775-4843-9037-3fb0fb0473cb",
+      "createdByType": "Application",
+      "lastModifiedAt": "2026-10-26T09:18:08.5958069Z",
+      "lastModifiedBy": "d9327919-6775-4843-9037-3fb0fb0473cb",
+      "lastModifiedByType": "Application"
+    },
+    "tags": {
+      "application": "databricks",
+      "databricks-environment": "true",
+      "project": "tokyo-olympics",
+      "purpose": "education-demo"
+    },
+    "type": "Microsoft.Databricks/accessConnectors"
+  },
+  {
+    "changedTime": "2026-10-26T09:18:31.719177+00:00",
+    "createdTime": "2026-10-26T09:18:08.888173+00:00",
+    "extendedLocation": null,
+    "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed/providers/Microsoft.Storage/storageAccounts/dbstorageqtiay3xsvnfe6",
+    "identity": null,
+    "kind": "StorageV2",
+    "location": "eastasia",
+    "managedBy": null,
+    "name": "dbstorageqtiay3xsvnfe6",
+    "plan": null,
+    "properties": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "rg-tokyo-olympics-databricks-managed",
+    "sku": {
+      "capacity": null,
+      "family": null,
+      "model": null,
+      "name": "Standard_ZRS",
+      "size": null,
+      "tier": "Standard"
+    },
+    "tags": {
+      "application": "databricks",
+      "databricks-environment": "true",
+      "project": "tokyo-olympics",
+      "purpose": "education-demo"
+    },
+    "type": "Microsoft.Storage/storageAccounts"
+  },
+  {
+    "changedTime": "2026-10-26T09:18:12.616723+00:00",
+    "createdTime": "2026-10-26T09:18:09.194686+00:00",
+    "extendedLocation": null,
+    "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed/providers/Microsoft.Network/publicIPAddresses/nat-gw-public-ip",
+    "identity": null,
+    "kind": null,
+    "location": "eastasia",
+    "managedBy": null,
+    "name": "nat-gw-public-ip",
+    "plan": null,
+    "properties": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "rg-tokyo-olympics-databricks-managed",
+    "sku": {
+      "capacity": null,
+      "family": null,
+      "model": null,
+      "name": "StandardV2",
+      "size": null,
+      "tier": null
+    },
+    "tags": {
+      "application": "databricks",
+      "databricks-environment": "true",
+      "project": "tokyo-olympics",
+      "purpose": "education-demo"
+    },
+    "type": "Microsoft.Network/publicIPAddresses"
+  },
+  {
+    "changedTime": "2026-10-26T09:18:13.936300+00:00",
+    "createdTime": "2026-10-26T09:18:08.591532+00:00",
+    "extendedLocation": null,
+    "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed/providers/Microsoft.Network/networkSecurityGroups/workers-sg",
+    "identity": null,
+    "kind": null,
+    "location": "eastasia",
+    "managedBy": null,
+    "name": "workers-sg",
+    "plan": null,
+    "properties": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "rg-tokyo-olympics-databricks-managed",
+    "sku": null,
+    "tags": {
+      "application": "databricks",
+      "databricks-environment": "true",
+      "project": "tokyo-olympics",
+      "purpose": "education-demo"
+    },
+    "type": "Microsoft.Network/networkSecurityGroups"
+  },
+  {
+    "changedTime": "2026-10-26T09:18:14.584465+00:00",
+    "createdTime": "2026-10-26T09:18:11.875987+00:00",
+    "extendedLocation": null,
+    "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed/providers/Microsoft.Network/natGateways/nat-gateway",
+    "identity": null,
+    "kind": null,
+    "location": "eastasia",
+    "managedBy": null,
+    "name": "nat-gateway",
+    "plan": null,
+    "properties": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "rg-tokyo-olympics-databricks-managed",
+    "sku": {
+      "capacity": null,
+      "family": null,
+      "model": null,
+      "name": "StandardV2",
+      "size": null,
+      "tier": null
+    },
+    "tags": {
+      "application": "databricks",
+      "databricks-environment": "true",
+      "project": "tokyo-olympics",
+      "purpose": "education-demo"
+    },
+    "type": "Microsoft.Network/natGateways"
+  },
+  {
+    "changedTime": "2026-10-26T09:18:22.693813+00:00",
+    "createdTime": "2026-10-26T09:18:16.421838+00:00",
+    "extendedLocation": null,
+    "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed/providers/Microsoft.Network/virtualNetworks/workers-vnet",
+    "identity": null,
+    "kind": null,
+    "location": "eastasia",
+    "managedBy": null,
+    "name": "workers-vnet",
+    "plan": null,
+    "properties": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "rg-tokyo-olympics-databricks-managed",
+    "sku": null,
+    "tags": {
+      "application": "databricks",
+      "databricks-environment": "true",
+      "project": "tokyo-olympics",
+      "purpose": "education-demo"
+    },
+    "type": "Microsoft.Network/virtualNetworks"
+  }
+]

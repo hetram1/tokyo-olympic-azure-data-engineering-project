@@ -1,0 +1,14 @@
+{
+  "at": "2026-10-26T09:14:24.312680+00:00",
+  "new_resources_remaining": [],
+  "preservation": {
+    "original_blobs": true,
+    "adf": true,
+    "storage": true,
+    "roles": true,
+    "local": true
+  },
+  "cleanup_errors": [],
+  "cleanup_verified": true,
+  "resource_list_rechecked_at": "2026-10-26T09:16:09.484838+00:00"
+}

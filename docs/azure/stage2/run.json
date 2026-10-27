@@ -1,0 +1,96 @@
+{
+  "stage": 2,
+  "create_run_attempts": 1,
+  "started_at": "2026-10-25T13:51:46.800932+00:00",
+  "status": "Succeeded",
+  "automatic_retry": false,
+  "allowance_usd": 0.5,
+  "hard_cap": false,
+  "run_id": "1a11a954-8e6c-45e9-98b1-fc530f00a6e8",
+  "destination": "raw/adf/1a11a954-8e6c-45e9-98b1-fc530f00a6e8/",
+  "pipeline": {
+    "runId": "1a11a954-8e6c-45e9-98b1-fc530f00a6e8",
+    "pipelineName": "pl_tokyo_ingest",
+    "status": "Succeeded",
+    "runStart": "2026-10-25T13:51:51.3786548Z",
+    "runEnd": "2026-10-25T13:53:36.8537534Z",
+    "durationInMs": 105475,
+    "parameters": {},
+    "isLatest": true
+  },
+  "activities": [
+    {
+      "activityRunId": "643074c4-43ee-4b10-a2ba-59a6ab1edb85",
+      "activityName": "CopyAllFive",
+      "activityType": "ForEach",
+      "status": "Succeeded",
+      "activityRunStart": "2026-10-25T13:51:59.9903084Z",
+      "activityRunEnd": "2026-10-25T13:53:36.5371359Z",
+      "durationInMs": 96546,
+      "retryAttempt": null,
+      "error_code": "",
+      "billing": {}
+    },
+    {
+      "activityRunId": "bcdaa0bc-3547-4a7c-912a-d149aeb5a969",
+      "activityName": "CopyPinnedFile",
+      "activityType": "Copy",
+      "status": "Succeeded",
+      "activityRunStart": "2026-10-25T13:52:00.3024085Z",
+      "activityRunEnd": "2026-10-25T13:52:17.0795685Z",
+      "durationInMs": 16777,
+      "retryAttempt": null,
+      "error_code": "",
+      "billing": {}
+    },
+    {
+      "activityRunId": "5d8ad19d-d15f-4c52-a521-abb528192fdf",
+      "activityName": "CopyPinnedFile",
+      "activityType": "Copy",
+      "status": "Succeeded",
+      "activityRunStart": "2026-10-25T13:52:17.9221546Z",
+      "activityRunEnd": "2026-10-25T13:52:38.7388575Z",
+      "durationInMs": 20816,
+      "retryAttempt": null,
+      "error_code": "",
+      "billing": {}
+    },
+    {
+      "activityRunId": "17d34e7f-8e55-4066-9bf7-b2a82d332f8b",
+      "activityName": "CopyPinnedFile",
+      "activityType": "Copy",
+      "status": "Succeeded",
+      "activityRunStart": "2026-10-25T13:52:39.5493681Z",
+      "activityRunEnd": "2026-10-25T13:52:56.7806215Z",
+      "durationInMs": 17231,
+      "retryAttempt": null,
+      "error_code": "",
+      "billing": {}
+    },
+    {
+      "activityRunId": "a30cef89-24c8-4825-b989-0a7537817f4e",
+      "activityName": "CopyPinnedFile",
+      "activityType": "Copy",
+      "status": "Succeeded",
+      "activityRunStart": "2026-10-25T13:52:57.7212586Z",
+      "activityRunEnd": "2026-10-25T13:53:16.5803075Z",
+      "durationInMs": 18859,
+      "retryAttempt": null,
+      "error_code": "",
+      "billing": {}
+    },
+    {
+      "activityRunId": "177bbf1c-49b0-4594-82ca-f0fcfb2b972e",
+      "activityName": "CopyPinnedFile",
+      "activityType": "Copy",
+      "status": "Succeeded",
+      "activityRunStart": "2026-10-25T13:53:17.5619003Z",
+      "activityRunEnd": "2026-10-25T13:53:35.3427158Z",
+      "durationInMs": 17780,
+      "retryAttempt": null,
+      "error_code": "",
+      "billing": {}
+    }
+  ],
+  "last_checked_at": "2026-10-25T13:53:40.156512+00:00"
+}

@@ -1,0 +1,429 @@
+{
+  "compatibilityLevel": 1606,
+  "model": {
+    "annotations": [
+      {
+        "name": "SourceSHA256",
+        "value": "37495ff232f8aa5140e6f194d851f41c053aa4cf4390f65faaf45e6283956bcb"
+      },
+      {
+        "name": "Snapshot",
+        "value": "Tokyo Olympics, pinned project dataset; imported snapshot, not a live connection"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"CountryResults\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\",\"DaxQueryView_Desktop\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "Entities": {
+              "countryresults.bronze_top_countries": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "CountryResults",
+                    "ConceptualProperty": "Bronze Top Countries"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Bronze": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "countryresults.gold_top_countries": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "CountryResults",
+                    "ConceptualProperty": "Gold Top Countries"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Gold": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "countryresults.silver_top_countries": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "CountryResults",
+                    "ConceptualProperty": "Silver Top Countries"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Silver": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "countryresults.total_top_countries": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "CountryResults",
+                    "ConceptualProperty": "Total Top Countries"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Total medals": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              }
+            },
+            "Language": "en-US",
+            "Version": "2.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "discourageImplicitMeasures": true,
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "CountryResults",
+        "columns": [
+          {
+            "name": "country",
+            "dataType": "string",
+            "description": "country",
+            "lineageTag": "54ece894-37a7-4af4-a791-724d41211f16",
+            "sourceColumn": "country",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "athlete_count",
+            "dataType": "int64",
+            "description": "athlete count",
+            "lineageTag": "96fda8cf-a1ec-4daf-9bf7-34ebe15fc7bd",
+            "sourceColumn": "athlete_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "athlete_discipline_count",
+            "dataType": "int64",
+            "description": "athlete discipline count",
+            "lineageTag": "55037651-7755-4ded-8886-56432eea9bd9",
+            "sourceColumn": "athlete_discipline_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "team_count",
+            "dataType": "int64",
+            "description": "team count",
+            "lineageTag": "c8ddfb9c-11cb-4cd9-b6a7-054d92b98e37",
+            "sourceColumn": "team_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "team_discipline_count",
+            "dataType": "int64",
+            "description": "team discipline count",
+            "lineageTag": "36a839a1-cf1d-436c-9b73-4edd2a13e5a0",
+            "sourceColumn": "team_discipline_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "team_event_count",
+            "dataType": "int64",
+            "description": "team event count",
+            "lineageTag": "320d6437-db52-4f60-977d-4af1506e00fe",
+            "sourceColumn": "team_event_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Gold",
+            "dataType": "int64",
+            "description": "Gold",
+            "lineageTag": "88bd62e7-55b7-4df3-99c2-0b925b28e11a",
+            "sourceColumn": "Gold",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Silver",
+            "dataType": "int64",
+            "description": "Silver",
+            "lineageTag": "8512a11d-3944-4754-9d9d-8299159e930c",
+            "sourceColumn": "Silver",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Bronze",
+            "dataType": "int64",
+            "description": "Bronze",
+            "lineageTag": "4514cf34-30f3-480d-a05b-89d40701926b",
+            "sourceColumn": "Bronze",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Total",
+            "dataType": "int64",
+            "description": "Total",
+            "lineageTag": "c4310048-502a-48eb-81a6-08f0af8f7e70",
+            "sourceColumn": "Total",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "medal_rate_per_athlete",
+            "dataType": "double",
+            "description": "medal rate per athlete",
+            "isHidden": true,
+            "lineageTag": "1ccbf5c1-12d1-4641-829c-492f6d69842d",
+            "sourceColumn": "medal_rate_per_athlete",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "gold_share",
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "double",
+            "description": "gold share",
+            "isHidden": true,
+            "lineageTag": "66256bca-5d51-4889-b4fc-c54cca91ec38",
+            "sourceColumn": "gold_share",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "medals_per_discipline",
+            "dataType": "double",
+            "description": "medals per discipline",
+            "isHidden": true,
+            "lineageTag": "80de8308-8346-46f8-ad21-e273cbebb247",
+            "sourceColumn": "medals_per_discipline",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "performance_class",
+            "dataType": "string",
+            "description": "performance class",
+            "isHidden": true,
+            "lineageTag": "95b1f242-ef52-49c3-8797-ac87213788ee",
+            "sourceColumn": "performance_class",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "medal_rank",
+            "dataType": "int64",
+            "description": "medal rank",
+            "isHidden": true,
+            "lineageTag": "997df894-ee41-40cc-bce2-f8d80e8b1442",
+            "sourceColumn": "medal_rank",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "performance_label",
+            "dataType": "string",
+            "description": "performance label",
+            "lineageTag": "e0dbc831-0e87-4a6b-b2cc-d8b1d0f2482f",
+            "sourceColumn": "performance_label",
+            "summarizeBy": "none"
+          }
+        ],
+        "description": "One row per country/delegation in the pinned Tokyo Olympics dataset. No time series or athlete gender is inferred.",
+        "lineageTag": "2987c0c3-101c-4f52-99ed-e6b2123c248f",
+        "measures": [
+          {
+            "name": "Total Medals",
+            "description": "Total Medals for the current country selection.",
+            "displayFolder": "Core metrics",
+            "expression": "SUM(CountryResults[Total])",
+            "formatString": "#,0",
+            "lineageTag": "93c6fbf1-7545-48df-a4bb-334b2e1a442c"
+          },
+          {
+            "name": "Gold Medals",
+            "description": "Gold Medals for the current country selection.",
+            "displayFolder": "Core metrics",
+            "expression": "SUM(CountryResults[Gold])",
+            "formatString": "#,0",
+            "lineageTag": "16c2e9b8-5b29-49b6-a842-7c7f87f8862b"
+          },
+          {
+            "name": "Silver Medals",
+            "description": "Silver Medals for the current country selection.",
+            "displayFolder": "Core metrics",
+            "expression": "SUM(CountryResults[Silver])",
+            "formatString": "#,0",
+            "lineageTag": "1ac31935-de70-4369-b91d-0d7107eebee7"
+          },
+          {
+            "name": "Bronze Medals",
+            "description": "Bronze Medals for the current country selection.",
+            "displayFolder": "Core metrics",
+            "expression": "SUM(CountryResults[Bronze])",
+            "formatString": "#,0",
+            "lineageTag": "3ea7ed36-8dd6-4cc2-917f-326c433356d5"
+          },
+          {
+            "name": "Athletes",
+            "description": "Athletes for the current country selection.",
+            "displayFolder": "Core metrics",
+            "expression": "SUM(CountryResults[athlete_count])",
+            "formatString": "#,0",
+            "lineageTag": "193b80f2-c013-4e34-919c-ae3eb6ad753f"
+          },
+          {
+            "name": "Team Entries",
+            "description": "Team Entries for the current country selection.",
+            "displayFolder": "Core metrics",
+            "expression": "SUM(CountryResults[team_count])",
+            "formatString": "#,0",
+            "lineageTag": "75264b32-0639-4516-ac23-eed1e8a95960"
+          },
+          {
+            "name": "Countries",
+            "description": "Country/delegation rows in this snapshot; includes refugee and neutral delegations as represented in the source.",
+            "displayFolder": "Core metrics",
+            "expression": "COUNTROWS(CountryResults)",
+            "formatString": "#,0",
+            "lineageTag": "0f2256f9-02d3-4224-8225-040edacf5104"
+          },
+          {
+            "name": "Medal Countries",
+            "description": "Medal Countries for the current country selection.",
+            "displayFolder": "Core metrics",
+            "expression": "CALCULATE(COUNTROWS(CountryResults), KEEPFILTERS(CountryResults[Total] > 0))",
+            "formatString": "#,0",
+            "lineageTag": "901b474b-61bf-4686-87e1-51e8e2206973"
+          },
+          {
+            "name": "Medals per 100 Athletes",
+            "description": "100 × aggregate medal awards divided by listed unique athlete names within country. Not a personal medal probability; team medal accounting differs.",
+            "displayFolder": "Core metrics",
+            "expression": "100 * DIVIDE([Total Medals], [Athletes], 0)",
+            "formatString": "0.00",
+            "lineageTag": "e62e7607-8687-4504-83ab-109116ccd779"
+          },
+          {
+            "name": "Gold Share",
+            "description": "Gold medals divided by all medal awards for the current selection; ratio of sums, never an average of country percentages.",
+            "displayFolder": "Core metrics",
+            "expression": "DIVIDE([Gold Medals], [Total Medals], 0)",
+            "formatString": "0.0%",
+            "lineageTag": "5862f7c1-e243-4ffe-9fa6-95c2ea8027d6"
+          },
+          {
+            "name": "Medal Rank in Selection",
+            "description": "Medal Rank in Selection for the current country selection.",
+            "displayFolder": "Chart helpers",
+            "expression": "RANKX(ALLSELECTED(CountryResults[country]), [Total Medals], , DESC, SKIP)",
+            "formatString": "#,0",
+            "isHidden": true,
+            "lineageTag": "2545e74d-2c11-4f7f-980c-353a264578b3"
+          },
+          {
+            "name": "Gold Top Countries",
+            "description": "Gold Top Countries for the current country selection.",
+            "displayFolder": "Chart helpers",
+            "expression": "IF([Medal Rank in Selection] <= 10 && [Total Medals] > 0, [Gold Medals])",
+            "formatString": "#,0",
+            "isHidden": true,
+            "lineageTag": "dfe4cdb5-4eba-4807-9a22-408a99bb0edf"
+          },
+          {
+            "name": "Silver Top Countries",
+            "description": "Silver Top Countries for the current country selection.",
+            "displayFolder": "Chart helpers",
+            "expression": "IF([Medal Rank in Selection] <= 10 && [Total Medals] > 0, [Silver Medals])",
+            "formatString": "#,0",
+            "isHidden": true,
+            "lineageTag": "696702c1-63ac-43c9-ba44-2f1c61cb0510"
+          },
+          {
+            "name": "Bronze Top Countries",
+            "description": "Bronze Top Countries for the current country selection.",
+            "displayFolder": "Chart helpers",
+            "expression": "IF([Medal Rank in Selection] <= 10 && [Total Medals] > 0, [Bronze Medals])",
+            "formatString": "#,0",
+            "isHidden": true,
+            "lineageTag": "552e420a-784b-4faa-8194-2028a92ddb90"
+          },
+          {
+            "name": "Efficiency Top Countries",
+            "description": "Efficiency Top Countries for the current country selection.",
+            "displayFolder": "Chart helpers",
+            "expression": "VAR Eligible = FILTER(ALLSELECTED(CountryResults[country]), CALCULATE([Athletes]) >= 20) RETURN IF([Athletes] >= 20 && RANKX(Eligible, [Medals per 100 Athletes], , DESC, SKIP) <= 10, [Medals per 100 Athletes])",
+            "formatString": "0.00",
+            "isHidden": true,
+            "lineageTag": "c944f4c1-b088-4d78-bdf2-5b628f3efcc6"
+          },
+          {
+            "name": "Total Top Countries",
+            "description": "Total medals for top ten ranks in the current selection; blank outside this set.",
+            "displayFolder": "Chart helpers",
+            "expression": "IF([Medal Rank in Selection] <= 10 && [Total Medals] > 0, [Total Medals])",
+            "formatString": "#,0",
+            "isHidden": true,
+            "lineageTag": "dd77457e-3b3f-4a3e-9855-b816977f687f"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "CountryResults",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(Binary.FromText(\"Y291bnRyeSxhdGhsZXRlX2NvdW50LGF0aGxldGVfZGlzY2lwbGluZV9jb3VudCx0ZWFtX2NvdW50LHRlYW1fZGlzY2lwbGluZV9jb3VudCx0ZWFtX2V2ZW50X2NvdW50LEdvbGQsU2lsdmVyLEJyb256ZSxUb3RhbCxtZWRhbF9yYXRlX3Blcl9hdGhsZXRlLGdvbGRfc2hhcmUsbWVkYWxzX3Blcl9kaXNjaXBsaW5lLHBlcmZvcm1hbmNlX2NsYXNzLG1lZGFsX3JhbmsscGVyZm9ybWFuY2VfbGFiZWwKVW5pdGVkIFN0YXRlcyBvZiBBbWVyaWNhLDYxNCw0NCw0Ny4wLDE4LjAsNDUuMCwzOS4wLDQxLjAsMzMuMCwxMTMuMCwwLjE4NDAzOTA4Nzk0Nzg4MjcsMC4zNDUxMzI3NDMzNjI4MzE4LDIuNTY4MTgxODE4MTgxODE4MyxIaWdoIE1lZGFsLDEsSGlnaCBNZWRhbApQZW9wbGUncyBSZXB1YmxpYyBvZiBDaGluYSwzOTgsNDEsMzMuMCwxNy4wLDMyLjAsMzguMCwzMi4wLDE4LjAsODguMCwwLjIyMTEwNTUyNzYzODE5MDksMC40MzE4MTgxODE4MTgxODE4LDIuMTQ2MzQxNDYzNDE0NjM0MyxIaWdoIE1lZGFsLDIsSGlnaCBNZWRhbApST0MsMzE4LDM5LDM0LjAsMTQuMCwzMy4wLDIwLjAsMjguMCwyMy4wLDcxLjAsMC4yMjMyNzA0NDAyNTE1NzIzLDAuMjgxNjkwMTQwODQ1MDcwNCwxLjgyMDUxMjgyMDUxMjgyMDUsSGlnaCBNZWRhbCwzLEhpZ2ggTWVkYWwKR3JlYXQgQnJpdGFpbiwzNjYsMzUsMjguMCwxMC4wLDI4LjAsMjIuMCwyMS4wLDIyLjAsNjUuMCwwLjE3NzU5NTYyODQxNTMwMDUsMC4zMzg0NjE1Mzg0NjE1Mzg1LDEuODU3MTQyODU3MTQyODU2OCxIaWdoIE1lZGFsLDQsSGlnaCBNZWRhbApKYXBhbiw1ODUsNDYsNDguMCwyMC4wLDQ4LjAsMjcuMCwxNC4wLDE3LjAsNTguMCwwLjA5OTE0NTI5OTE0NTI5OTEsMC40NjU1MTcyNDEzNzkzMTAzLDEuMjYwODY5NTY1MjE3MzkxNCxIaWdoIE1lZGFsLDUsSGlnaCBNZWRhbApBdXN0cmFsaWEsNDcwLDQxLDM1LjAsMTUuMCwzNS4wLDE3LjAsNy4wLDIyLjAsNDYuMCwwLjA5Nzg3MjM0MDQyNTUzMTksMC4zNjk1NjUyMTczOTEzMDQzLDEuMTIxOTUxMjE5NTEyMTk1MixIaWdoIE1lZGFsLDYsSGlnaCBNZWRhbApJdGFseSwzNTQsMzksMzcuMCwxNS4wLDM2LjAsMTAuMCwxMC4wLDIwLjAsNDAuMCwwLjExMjk5NDM1MDI4MjQ4NTgsMC4yNSwxLjAyNTY0MTAyNTY0MTAyNTUsSGlnaCBNZWRhbCw3LEhpZ2ggTWVkYWwKR2VybWFueSwzOTksMzcsMzYuMCwxMy4wLDM1LjAsMTAuMCwxMS4wLDE2LjAsMzcuMCwwLjA5MjczMTgyOTU3MzkzNDgsMC4yNzAyNzAyNzAyNzAyNzAzLDEuMCxIaWdoIE1lZGFsLDgsSGlnaCBNZWRhbApOZXRoZXJsYW5kcywyNzIsMzEsMjcuMCwxMy4wLDI2LjAsMTAuMCwxMi4wLDE0LjAsMzYuMCwwLjEzMjM1Mjk0MTE3NjQ3MDYsMC4yNzc3Nzc3Nzc3Nzc3Nzc4LDEuMTYxMjkwMzIyNTgwNjQ1MixIaWdoIE1lZGFsLDksSGlnaCBNZWRhbApGcmFuY2UsMzc3LDQxLDMzLjAsMTUuMCwzMy4wLDEwLjAsMTIuMCwxMS4wLDMzLjAsMC4wODc1MzMxNTY0OTg2NzM3LDAuMzAzMDMwMzAzMDMwMzAzLDAuODA0ODc4MDQ4NzgwNDg3OSxIaWdoIE1lZGFsLDEwLEhpZ2ggTWVkYWwKQ2FuYWRhLDM2OCw0MCwzMC4wLDE3LjAsMjkuMCw3LjAsNi4wLDExLjAsMjQuMCwwLjA2NTIxNzM5MTMwNDM0NzgsMC4yOTE2NjY2NjY2NjY2NjY3LDAuNixIaWdoIE1lZGFsLDExLEhpZ2ggTWVkYWwKQnJhemlsLDI5MSwzMSwyNS4wLDExLjAsMjMuMCw3LjAsNi4wLDguMCwyMS4wLDAuMDcyMTY0OTQ4NDUzNjA4MiwwLjMzMzMzMzMzMzMzMzMzMzMsMC42Nzc0MTkzNTQ4Mzg3MDk2LEhpZ2ggTWVkYWwsMTIsSGlnaCBNZWRhbApOZXcgWmVhbGFuZCwyMDIsMjYsMTMuMCw2LjAsMTMuMCw3LjAsNi4wLDcuMCwyMC4wLDAuMDk5MDA5OTAwOTkwMDk5LDAuMzUsMC43NjkyMzA3NjkyMzA3NjkzLEhpZ2ggTWVkYWwsMTMsSGlnaCBNZWRhbApIdW5nYXJ5LDE1NCwyNiwxNC4wLDYuMCwxNC4wLDYuMCw3LjAsNy4wLDIwLjAsMC4xMjk4NzAxMjk4NzAxMjk4LDAuMywwLjc2OTIzMDc2OTIzMDc2OTMsSGlnaCBNZWRhbCwxMyxIaWdoIE1lZGFsClJlcHVibGljIG9mIEtvcmVhLDIyMiwzMSwxOS4wLDExLjAsMTkuMCw2LjAsNC4wLDEwLjAsMjAuMCwwLjA5MDA5MDA5MDA5MDA5LDAuMywwLjY0NTE2MTI5MDMyMjU4MDYsSGlnaCBNZWRhbCwxMyxIaWdoIE1lZGFsClVrcmFpbmUsMTUyLDI4LDEwLjAsNy4wLDEwLjAsMS4wLDYuMCwxMi4wLDE5LjAsMC4xMjUsMC4wNTI2MzE1Nzg5NDczNjg0LDAuNjc4NTcxNDI4NTcxNDI4NixIaWdoIE1lZGFsLDE2LEhpZ2ggTWVkYWwKU3BhaW4sMzI0LDM2LDIwLjAsMTMuMCwyMC4wLDMuMCw4LjAsNi4wLDE3LjAsMC4wNTI0NjkxMzU4MDI0NjkxLDAuMTc2NDcwNTg4MjM1Mjk0MSwwLjQ3MjIyMjIyMjIyMjIyMjIsSGlnaCBNZWRhbCwxNyxIaWdoIE1lZGFsCkN1YmEsNjksMTUsMy4wLDMuMCwzLjAsNy4wLDMuMCw1LjAsMTUuMCwwLjIxNzM5MTMwNDM0NzgyNiwwLjQ2NjY2NjY2NjY2NjY2NjcsMS4wLEhpZ2ggTWVkYWwsMTgsSGlnaCBNZWRhbApQb2xhbmQsMTk1LDI4LDIxLjAsOS4wLDIwLjAsNC4wLDUuMCw1LjAsMTQuMCwwLjA3MTc5NDg3MTc5NDg3MTcsMC4yODU3MTQyODU3MTQyODU3LDAuNSxIaWdoIE1lZGFsLDE5LEhpZ2ggTWVkYWwKU3dpdHplcmxhbmQsMTE1LDI1LDEyLjAsNy4wLDExLjAsMy4wLDQuMCw2LjAsMTMuMCwwLjExMzA0MzQ3ODI2MDg2OTUsMC4yMzA3NjkyMzA3NjkyMzA3LDAuNTIsSGlnaCBNZWRhbCwyMCxIaWdoIE1lZGFsClR1cmtleSwxMDIsMTgsNC4wLDQuMCw0LjAsMi4wLDIuMCw5LjAsMTMuMCwwLjEyNzQ1MDk4MDM5MjE1NjgsMC4xNTM4NDYxNTM4NDYxNTM4LDAuNzIyMjIyMjIyMjIyMjIyMixIaWdoIE1lZGFsLDIwLEhpZ2ggTWVkYWwKQ2hpbmVzZSBUYWlwZWksNjcsMTgsNy4wLDMuMCw3LjAsMi4wLDQuMCw2LjAsMTIuMCwwLjE3OTEwNDQ3NzYxMTk0MDMsMC4xNjY2NjY2NjY2NjY2NjY2LDAuNjY2NjY2NjY2NjY2NjY2NixIaWdoIE1lZGFsLDIyLEhpZ2ggTWVkYWwKQ3plY2ggUmVwdWJsaWMsMTE3LDI2LDUuMCw0LjAsNS4wLDQuMCw0LjAsMy4wLDExLjAsMC4wOTQwMTcwOTQwMTcwOTQsMC4zNjM2MzYzNjM2MzYzNjM2LDAuNDIzMDc2OTIzMDc2OTIzMSxIaWdoIE1lZGFsLDIzLEhpZ2ggTWVkYWwKRGVubWFyaywxMDMsMTgsOC4wLDQuMCw4LjAsMy4wLDQuMCw0LjAsMTEuMCwwLjEwNjc5NjExNjUwNDg1NDMsMC4yNzI3MjcyNzI3MjcyNzI3LDAuNjExMTExMTExMTExMTExMixIaWdoIE1lZGFsLDIzLEhpZ2ggTWVkYWwKS2VueWEsNzgsNiw0LjAsMy4wLDQuMCw0LjAsNC4wLDIuMCwxMC4wLDAuMTI4MjA1MTI4MjA1MTI4MiwwLjQsMS42NjY2NjY2NjY2NjY2NjY3LEhpZ2ggTWVkYWwsMjUsSGlnaCBNZWRhbApKYW1haWNhLDYwLDYsNS4wLDEuMCw1LjAsNC4wLDEuMCw0LjAsOS4wLDAuMTUsMC40NDQ0NDQ0NDQ0NDQ0NDQ0LDEuNSxNZWRhbCwyNixNZWRhbApTZXJiaWEsODMsMTYsNi4wLDYuMCw2LjAsMy4wLDEuMCw1LjAsOS4wLDAuMTA4NDMzNzM0OTM5NzU5LDAuMzMzMzMzMzMzMzMzMzMzMywwLjU2MjUsTWVkYWwsMjYsTWVkYWwKU3dlZGVuLDEyOSwyMyw2LjAsNC4wLDYuMCwzLjAsNi4wLDAuMCw5LjAsMC4wNjk3Njc0NDE4NjA0NjUxLDAuMzMzMzMzMzMzMzMzMzMzMywwLjM5MTMwNDM0NzgyNjA4NyxNZWRhbCwyNixNZWRhbApOb3J3YXksOTIsMTgsMy4wLDIuMCwzLjAsNC4wLDIuMCwyLjAsOC4wLDAuMDg2OTU2NTIxNzM5MTMwNCwwLjUsMC40NDQ0NDQ0NDQ0NDQ0NDQ0LE1lZGFsLDI5LE1lZGFsCkNyb2F0aWEsNTcsMTcsMi4wLDIuMCwyLjAsMy4wLDMuMCwyLjAsOC4wLDAuMTQwMzUwODc3MTkyOTgyNCwwLjM3NSwwLjQ3MDU4ODIzNTI5NDExNzYsTWVkYWwsMjksTWVkYWwKR2VvcmdpYSwzNSwxMSwwLjAsMC4wLDAuMCwyLjAsNS4wLDEuMCw4LjAsMC4yMjg1NzE0Mjg1NzE0Mjg1LDAuMjUsMC43MjcyNzI3MjcyNzI3MjczLE1lZGFsLDI5LE1lZGFsCkthemFraHN0YW4sOTIsMjQsMy4wLDMuMCwzLjAsMC4wLDAuMCw4LjAsOC4wLDAuMDg2OTU2NTIxNzM5MTMwNCwwLjAsMC4zMzMzMzMzMzMzMzMzMzMzLE1lZGFsLDI5LE1lZGFsCkJlbGdpdW0sMTI0LDI1LDEwLjAsNy4wLDEwLjAsMy4wLDEuMCwzLjAsNy4wLDAuMDU2NDUxNjEyOTAzMjI1OCwwLjQyODU3MTQyODU3MTQyODUsMC4yOCxNZWRhbCwzMyxNZWRhbApJc2xhbWljIFJlcHVibGljIG9mIElyYW4sNjYsMTcsMy4wLDMuMCwzLjAsMy4wLDIuMCwyLjAsNy4wLDAuMTA2MDYwNjA2MDYwNjA2LDAuNDI4NTcxNDI4NTcxNDI4NSwwLjQxMTc2NDcwNTg4MjM1MjksTWVkYWwsMzMsTWVkYWwKQXVzdHJpYSw3MiwyMyw1LjAsNC4wLDUuMCwxLjAsMS4wLDUuMCw3LjAsMC4wOTcyMjIyMjIyMjIyMjIyLDAuMTQyODU3MTQyODU3MTQyOCwwLjMwNDM0NzgyNjA4Njk1NjUsTWVkYWwsMzMsTWVkYWwKQmVsYXJ1cywxMDQsMjAsNy4wLDUuMCw3LjAsMS4wLDMuMCwzLjAsNy4wLDAuMDY3MzA3NjkyMzA3NjkyMywwLjE0Mjg1NzE0Mjg1NzE0MjgsMC4zNSxNZWRhbCwzMyxNZWRhbApJbmRpYSwxMTcsMTcsNy4wLDQuMCw3LjAsMS4wLDIuMCw0LjAsNy4wLDAuMDU5ODI5MDU5ODI5MDU5OCwwLjE0Mjg1NzE0Mjg1NzE0MjgsMC40MTE3NjQ3MDU4ODIzNTI5LE1lZGFsLDMzLE1lZGFsCkF6ZXJiYWlqYW4sNDEsMTQsMS4wLDEuMCwxLjAsMC4wLDMuMCw0LjAsNy4wLDAuMTcwNzMxNzA3MzE3MDczMSwwLjAsMC41LE1lZGFsLDMzLE1lZGFsCkJ1bGdhcmlhLDQxLDEzLDEuMCwxLjAsMS4wLDMuMCwxLjAsMi4wLDYuMCwwLjE0NjM0MTQ2MzQxNDYzNDEsMC41LDAuNDYxNTM4NDYxNTM4NDYxNSxNZWRhbCwzOSxNZWRhbApFZ3lwdCwxMzMsMjcsMTIuMCw3LjAsMTIuMCwxLjAsMS4wLDQuMCw2LjAsMC4wNDUxMTI3ODE5NTQ4ODcyLDAuMTY2NjY2NjY2NjY2NjY2NiwwLjIyMjIyMjIyMjIyMjIyMjIsTWVkYWwsMzksTWVkYWwKIkhvbmcgS29uZywgQ2hpbmEiLDQwLDE1LDkuMCw0LjAsOS4wLDEuMCwyLjAsMy4wLDYuMCwwLjE1LDAuMTY2NjY2NjY2NjY2NjY2NiwwLjQsTWVkYWwsMzksTWVkYWwKU2xvdmVuaWEsNTEsMTYsMi4wLDIuMCwyLjAsMy4wLDEuMCwxLjAsNS4wLDAuMDk4MDM5MjE1Njg2Mjc0NSwwLjYsMC4zMTI1LE1lZGFsLDQyLE1lZGFsClV6YmVraXN0YW4sNjMsMTUsMS4wLDEuMCwxLjAsMy4wLDAuMCwyLjAsNS4wLDAuMDc5MzY1MDc5MzY1MDc5MywwLjYsMC4zMzMzMzMzMzMzMzMzMzMzLE1lZGFsLDQyLE1lZGFsCkluZG9uZXNpYSwyNiw4LDIuMCwxLjAsMi4wLDEuMCwxLjAsMy4wLDUuMCwwLjE5MjMwNzY5MjMwNzY5MjMsMC4yLDAuNjI1LE1lZGFsLDQyLE1lZGFsCkNvbG9tYmlhLDY0LDE5LDMuMCwzLjAsMy4wLDAuMCw0LjAsMS4wLDUuMCwwLjA3ODEyNSwwLjAsMC4yNjMxNTc4OTQ3MzY4NDIxLE1lZGFsLDQyLE1lZGFsCkRvbWluaWNhbiBSZXB1YmxpYyw2MSwxMSwzLjAsMy4wLDMuMCwwLjAsMy4wLDIuMCw1LjAsMC4wODE5NjcyMTMxMTQ3NTQsMC4wLDAuNDU0NTQ1NDU0NTQ1NDU0NSxNZWRhbCw0MixNZWRhbApHcmVlY2UsNzUsMTksNi4wLDMuMCw2LjAsMi4wLDEuMCwxLjAsNC4wLDAuMDUzMzMzMzMzMzMzMzMzMywwLjUsMC4yMTA1MjYzMTU3ODk0NzM2LE1lZGFsLDQ3LE1lZGFsCklyZWxhbmQsMTE2LDIwLDYuMCw1LjAsNi4wLDIuMCwwLjAsMi4wLDQuMCwwLjAzNDQ4Mjc1ODYyMDY4OTYsMC41LDAuMixNZWRhbCw0NyxNZWRhbApJc3JhZWwsODUsMTksNS4wLDQuMCw1LjAsMi4wLDAuMCwyLjAsNC4wLDAuMDQ3MDU4ODIzNTI5NDExNywwLjUsMC4yMTA1MjYzMTU3ODk0NzM2LE1lZGFsLDQ3LE1lZGFsClVnYW5kYSwyNCw0LDAuMCwwLjAsMC4wLDIuMCwxLjAsMS4wLDQuMCwwLjE2NjY2NjY2NjY2NjY2NjYsMC41LDEuMCxNZWRhbCw0NyxNZWRhbApFdGhpb3BpYSw0Miw0LDAuMCwwLjAsMC4wLDEuMCwxLjAsMi4wLDQuMCwwLjA5NTIzODA5NTIzODA5NTIsMC4yNSwxLjAsTWVkYWwsNDcsTWVkYWwKUGhpbGlwcGluZXMsMTgsMTAsMC4wLDAuMCwwLjAsMS4wLDIuMCwxLjAsNC4wLDAuMjIyMjIyMjIyMjIyMjIyMiwwLjI1LDAuNCxNZWRhbCw0NyxNZWRhbApQb3J0dWdhbCw4NSwyMiwyLjAsMi4wLDIuMCwxLjAsMS4wLDIuMCw0LjAsMC4wNDcwNTg4MjM1Mjk0MTE3LDAuMjUsMC4xODE4MTgxODE4MTgxODE4LE1lZGFsLDQ3LE1lZGFsClJvbWFuaWEsOTksMTgsNC4wLDMuMCw0LjAsMS4wLDMuMCwwLjAsNC4wLDAuMDQwNDA0MDQwNDA0MDQwNCwwLjI1LDAuMjIyMjIyMjIyMjIyMjIyMixNZWRhbCw0NyxNZWRhbApTbG92YWtpYSwzOCwxMiwxLjAsMS4wLDEuMCwxLjAsMi4wLDEuMCw0LjAsMC4xMDUyNjMxNTc4OTQ3MzY4LDAuMjUsMC4zMzMzMzMzMzMzMzMzMzMzLE1lZGFsLDQ3LE1lZGFsClZlbmV6dWVsYSw0MywxNiwxLjAsMS4wLDEuMCwxLjAsMy4wLDAuMCw0LjAsMC4wOTMwMjMyNTU4MTM5NTM0LDAuMjUsMC4yNSxNZWRhbCw0NyxNZWRhbApBcm1lbmlhLDE2LDgsMC4wLDAuMCwwLjAsMC4wLDIuMCwyLjAsNC4wLDAuMjUsMC4wLDAuNSxNZWRhbCw0NyxNZWRhbApNZXhpY28sMTU1LDMxLDkuMCw3LjAsOS4wLDAuMCwwLjAsNC4wLDQuMCwwLjAyNTgwNjQ1MTYxMjkwMzIsMC4wLDAuMTI5MDMyMjU4MDY0NTE2MSxNZWRhbCw0NyxNZWRhbApNb25nb2xpYSw0MywxMCwyLjAsMi4wLDIuMCwwLjAsMS4wLDMuMCw0LjAsMC4wOTMwMjMyNTU4MTM5NTM0LDAuMCwwLjQsTWVkYWwsNDcsTWVkYWwKRWN1YWRvciw0NiwxNywxLjAsMS4wLDEuMCwyLjAsMS4wLDAuMCwzLjAsMC4wNjUyMTczOTEzMDQzNDc4LDAuNjY2NjY2NjY2NjY2NjY2NiwwLjE3NjQ3MDU4ODIzNTI5NDEsTWVkYWwsNjAsTWVkYWwKUWF0YXIsMTQsNiwxLjAsMS4wLDEuMCwyLjAsMC4wLDEuMCwzLjAsMC4yMTQyODU3MTQyODU3MTQyLDAuNjY2NjY2NjY2NjY2NjY2NiwwLjUsTWVkYWwsNjAsTWVkYWwKU291dGggQWZyaWNhLDE3MSwyMywxMi4wLDguMCwxMi4wLDEuMCwyLjAsMC4wLDMuMCwwLjAxNzU0Mzg1OTY0OTEyMjgsMC4zMzMzMzMzMzMzMzMzMzMzLDAuMTMwNDM0NzgyNjA4Njk1NixNZWRhbCw2MCxNZWRhbApBcmdlbnRpbmEsMTgwLDMxLDEwLjAsNy4wLDEwLjAsMC4wLDEuMCwyLjAsMy4wLDAuMDE2NjY2NjY2NjY2NjY2NiwwLjAsMC4wOTY3NzQxOTM1NDgzODcxLE1lZGFsLDYwLE1lZGFsCkt5cmd5enN0YW4sMTYsNiwwLjAsMC4wLDAuMCwwLjAsMi4wLDEuMCwzLjAsMC4xODc1LDAuMCwwLjUsTWVkYWwsNjAsTWVkYWwKU2FuIE1hcmlubyw0LDQsMC4wLDAuMCwwLjAsMC4wLDEuMCwyLjAsMy4wLDAuNzUsMC4wLDAuNzUsTWVkYWwsNjAsTWVkYWwKQmFoYW1hcywxNiwyLDEuMCwxLjAsMS4wLDIuMCwwLjAsMC4wLDIuMCwwLjEyNSwxLjAsMS4wLE1lZGFsLDY2LE1lZGFsCktvc292bywxMCw2LDAuMCwwLjAsMC4wLDIuMCwwLjAsMC4wLDIuMCwwLjIsMS4wLDAuMzMzMzMzMzMzMzMzMzMzMyxNZWRhbCw2NixNZWRhbApFc3RvbmlhLDMzLDE1LDEuMCwxLjAsMS4wLDEuMCwwLjAsMS4wLDIuMCwwLjA2MDYwNjA2MDYwNjA2MDYsMC41LDAuMTMzMzMzMzMzMzMzMzMzMyxNZWRhbCw2NixNZWRhbApGaWppLDI4LDYsMi4wLDEuMCwyLjAsMS4wLDAuMCwxLjAsMi4wLDAuMDcxNDI4NTcxNDI4NTcxNCwwLjUsMC4zMzMzMzMzMzMzMzMzMzMzLE1lZGFsLDY2LE1lZGFsCkxhdHZpYSwyOSwxNSwzLjAsMi4wLDMuMCwxLjAsMC4wLDEuMCwyLjAsMC4wNjg5NjU1MTcyNDEzNzkzLDAuNSwwLjEzMzMzMzMzMzMzMzMzMzMsTWVkYWwsNjYsTWVkYWwKVGhhaWxhbmQsMzksMTUsMC4wLDAuMCwwLjAsMS4wLDAuMCwxLjAsMi4wLDAuMDUxMjgyMDUxMjgyMDUxMiwwLjUsMC4xMzMzMzMzMzMzMzMzMzMzLE1lZGFsLDY2LE1lZGFsClR1bmlzaWEsNTcsMTcsMy4wLDMuMCwzLjAsMS4wLDEuMCwwLjAsMi4wLDAuMDM1MDg3NzE5Mjk4MjQ1NiwwLjUsMC4xMTc2NDcwNTg4MjM1Mjk0LE1lZGFsLDY2LE1lZGFsCkZpbmxhbmQsNDUsMTAsMC4wLDAuMCwwLjAsMC4wLDAuMCwyLjAsMi4wLDAuMDQ0NDQ0NDQ0NDQ0NDQ0NCwwLjAsMC4yLE1lZGFsLDY2LE1lZGFsCkpvcmRhbiwxMSw3LDAuMCwwLjAsMC4wLDAuMCwxLjAsMS4wLDIuMCwwLjE4MTgxODE4MTgxODE4MTgsMC4wLDAuMjg1NzE0Mjg1NzE0Mjg1NyxNZWRhbCw2NixNZWRhbApNYWxheXNpYSwyOSwxMCwxLjAsMS4wLDEuMCwwLjAsMS4wLDEuMCwyLjAsMC4wNjg5NjU1MTcyNDEzNzkzLDAuMCwwLjIsTWVkYWwsNjYsTWVkYWwKTmlnZXJpYSw1OSwxMCw0LjAsMi4wLDQuMCwwLjAsMS4wLDEuMCwyLjAsMC4wMzM4OTgzMDUwODQ3NDU3LDAuMCwwLjIsTWVkYWwsNjYsTWVkYWwKQmVybXVkYSwyLDIsMC4wLDAuMCwwLjAsMS4wLDAuMCwwLjAsMS4wLDAuNSwxLjAsMC41LE1lZGFsLDc3LE1lZGFsCk1vcm9jY28sNDgsMTgsMS4wLDEuMCwxLjAsMS4wLDAuMCwwLjAsMS4wLDAuMDIwODMzMzMzMzMzMzMzMywxLjAsMC4wNTU1NTU1NTU1NTU1NTU1LE1lZGFsLDc3LE1lZGFsClB1ZXJ0byBSaWNvLDM1LDE1LDEuMCwxLjAsMS4wLDEuMCwwLjAsMC4wLDEuMCwwLjAyODU3MTQyODU3MTQyODUsMS4wLDAuMDY2NjY2NjY2NjY2NjY2NixNZWRhbCw3NyxNZWRhbApCYWhyYWluLDMwLDUsMS4wLDEuMCwxLjAsMC4wLDEuMCwwLjAsMS4wLDAuMDMzMzMzMzMzMzMzMzMzMywwLjAsMC4yLE1lZGFsLDc3LE1lZGFsCkJvdHN3YW5hLDEzLDQsMS4wLDEuMCwxLjAsMC4wLDAuMCwxLjAsMS4wLDAuMDc2OTIzMDc2OTIzMDc2OSwwLjAsMC4yNSxNZWRhbCw3NyxNZWRhbApCdXJraW5hIEZhc28sNyw1LDAuMCwwLjAsMC4wLDAuMCwwLjAsMS4wLDEuMCwwLjE0Mjg1NzE0Mjg1NzE0MjgsMC4wLDAuMixNZWRhbCw3NyxNZWRhbApDw7R0ZSBkJ0l2b2lyZSwyOSw1LDEuMCwxLjAsMS4wLDAuMCwwLjAsMS4wLDEuMCwwLjAzNDQ4Mjc1ODYyMDY4OTYsMC4wLDAuMixNZWRhbCw3NyxNZWRhbApHaGFuYSwxNCw1LDEuMCwxLjAsMS4wLDAuMCwwLjAsMS4wLDEuMCwwLjA3MTQyODU3MTQyODU3MTQsMC4wLDAuMixNZWRhbCw3NyxNZWRhbApHcmVuYWRhLDYsMiwwLjAsMC4wLDAuMCwwLjAsMC4wLDEuMCwxLjAsMC4xNjY2NjY2NjY2NjY2NjY2LDAuMCwwLjUsTWVkYWwsNzcsTWVkYWwKS3V3YWl0LDEwLDUsMC4wLDAuMCwwLjAsMC4wLDAuMCwxLjAsMS4wLDAuMSwwLjAsMC4yLE1lZGFsLDc3LE1lZGFsCkxpdGh1YW5pYSwzNywxMywyLjAsMi4wLDIuMCwwLjAsMS4wLDAuMCwxLjAsMC4wMjcwMjcwMjcwMjcwMjcsMC4wLDAuMDc2OTIzMDc2OTIzMDc2OSxNZWRhbCw3NyxNZWRhbApOYW1pYmlhLDExLDYsMC4wLDAuMCwwLjAsMC4wLDEuMCwwLjAsMS4wLDAuMDkwOTA5MDkwOTA5MDkwOSwwLjAsMC4xNjY2NjY2NjY2NjY2NjY2LE1lZGFsLDc3LE1lZGFsCk5vcnRoIE1hY2Vkb25pYSw4LDcsMC4wLDAuMCwwLjAsMC4wLDEuMCwwLjAsMS4wLDAuMTI1LDAuMCwwLjE0Mjg1NzE0Mjg1NzE0MjgsTWVkYWwsNzcsTWVkYWwKUmVwdWJsaWMgb2YgTW9sZG92YSwxOSw4LDEuMCwxLjAsMS4wLDAuMCwwLjAsMS4wLDEuMCwwLjA1MjYzMTU3ODk0NzM2ODQsMC4wLDAuMTI1LE1lZGFsLDc3LE1lZGFsClNhdWRpIEFyYWJpYSwzMiw5LDEuMCwxLjAsMS4wLDAuMCwxLjAsMC4wLDEuMCwwLjAzMTI1LDAuMCwwLjExMTExMTExMTExMTExMTEsTWVkYWwsNzcsTWVkYWwKU3lyaWFuIEFyYWIgUmVwdWJsaWMsNiw2LDAuMCwwLjAsMC4wLDAuMCwwLjAsMS4wLDEuMCwwLjE2NjY2NjY2NjY2NjY2NjYsMC4wLDAuMTY2NjY2NjY2NjY2NjY2NixNZWRhbCw3NyxNZWRhbApUdXJrbWVuaXN0YW4sOCw0LDAuMCwwLjAsMC4wLDAuMCwxLjAsMC4wLDEuMCwwLjEyNSwwLjAsMC4yNSxNZWRhbCw3NyxNZWRhbApBZmdoYW5pc3Rhbiw1LDQsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsCkFsYmFuaWEsOCw2LDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbApBbGdlcmlhLDQxLDE0LDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbApBbWVyaWNhbiBTYW1vYSw1LDQsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsCkFuZG9ycmEsMiwyLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbApBbmdvbGEsMjAsNSwxLjAsMS4wLDEuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKQW50aWd1YSBhbmQgQmFyYnVkYSw2LDQsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsCkFydWJhLDMsMiwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKQmFuZ2xhZGVzaCw2LDQsMS4wLDEuMCwxLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsCkJhcmJhZG9zLDcsMiwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKQmVsaXplLDMsMiwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKQmVuaW4sNyw0LDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbApCaHV0YW4sMywzLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbApCb2xpdmlhLDUsMywwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKQm9zbmlhIGFuZCBIZXJ6ZWdvdmluYSw3LDUsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsCkJydW5laSBEYXJ1c3NhbGFtLDIsMiwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKQnVydW5kaSw2LDMsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsCkNhbWJvZGlhLDMsMiwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKQ2FtZXJvb24sMTEsNiwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKQ2FwZSBWZXJkZSw2LDUsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsCkNheW1hbiBJc2xhbmRzLDUsMywwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKQ2VudHJhbCBBZnJpY2FuIFJlcHVibGljLDIsMiwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKQ2hhZCwzLDMsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsCkNoaWxlLDU2LDI1LDIuMCwyLjAsMi4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbApDb21vcm9zLDMsMiwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKQ29uZ28sMywyLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbApDb29rIElzbGFuZHMsNiw0LDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbApDb3N0YSBSaWNhLDEzLDgsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsCkN5cHJ1cywxNCw2LDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbApEZW1vY3JhdGljIFJlcHVibGljIG9mIFRpbW9yLUxlc3RlLDMsMiwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKRGVtb2NyYXRpYyBSZXB1YmxpYyBvZiB0aGUgQ29uZ28sNyw0LDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbApEamlib3V0aSw0LDMsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsCkRvbWluaWNhLDIsMSwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKRWwgU2FsdmFkb3IsNSw0LDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbApFcXVhdG9yaWFsIEd1aW5lYSwzLDIsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsCkVyaXRyZWEsMTMsMywwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKRXN3YXRpbmksNCwzLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbApGZWRlcmF0ZWQgU3RhdGVzIG9mIE1pY3JvbmVzaWEsMywyLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbApHYWJvbiw1LDQsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsCkdhbWJpYSwzLDIsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsCkd1YW0sNSw0LDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbApHdWF0ZW1hbGEsMjIsMTAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsCkd1aW5lYSw1LDQsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsCkd1aW5lYS1CaXNzYXUsNCwzLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbApHdXlhbmEsNyw0LDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbApIYWl0aSw2LDUsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsCkhvbmR1cmFzLDI1LDUsMS4wLDEuMCwxLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsCkljZWxhbmQsNCwzLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbApJcmFxLDQsMywwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKS2lyaWJhdGksMywzLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbApMYW8gUGVvcGxlJ3MgRGVtb2NyYXRpYyBSZXB1YmxpYyw0LDMsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsCkxlYmFub24sNiw1LDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbApMZXNvdGhvLDIsMSwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKTGliZXJpYSwzLDEsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsCkxpYnlhLDQsNCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKTGllY2h0ZW5zdGVpbiw1LDMsMS4wLDEuMCwxLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsCkx1eGVtYm91cmcsMTEsNywwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKTWFkYWdhc2Nhciw2LDQsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsCk1hbGF3aSw1LDQsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsCk1hbGRpdmVzLDQsMywwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKTWFsaSw0LDMsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsCk1hbHRhLDYsNSwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKTWFyc2hhbGwgSXNsYW5kcywyLDEsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsCk1hdXJpdGFuaWEsMiwxLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbApNYXVyaXRpdXMsNyw2LDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbApNb25hY28sNiw1LDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbApNb250ZW5lZ3JvLDM1LDcsMi4wLDIuMCwyLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsCk1vemFtYmlxdWUsOCw1LDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbApNeWFubWFyLDIsMiwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKTmF1cnUsMiwyLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbApOZXBhbCw1LDQsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsCk5pY2FyYWd1YSw4LDYsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsCk5pZ2VyLDcsNCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKT21hbiw1LDQsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsClBha2lzdGFuLDEwLDYsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsClBhbGF1LDMsMiwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKUGFsZXN0aW5lLDQsNCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKUGFuYW1hLDksNSwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKUGFwdWEgTmV3IEd1aW5lYSw3LDUsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsClBhcmFndWF5LDgsNiwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKUGVydSwzMywxNywwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKUmVmdWdlZSBPbHltcGljIFRlYW0sMjYsMTEsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsClJ3YW5kYSw1LDMsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsClNhaW50IEtpdHRzIGFuZCBOZXZpcywyLDEsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsClNhaW50IEx1Y2lhLDUsMywwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKU2Ftb2EsOCw1LDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbApTYW8gVG9tZSBhbmQgUHJpbmNpcGUsMywyLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbApTZW5lZ2FsLDksOCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKU2V5Y2hlbGxlcyw1LDQsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsClNpZXJyYSBMZW9uZSw0LDMsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsClNpbmdhcG9yZSwyMywxMiwxLjAsMS4wLDEuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKU29sb21vbiBJc2xhbmRzLDMsMywwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKU29tYWxpYSwyLDIsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsClNvdXRoIFN1ZGFuLDIsMSwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKU3JpIExhbmthLDksNywwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKU3QgVmluY2VudCBhbmQgdGhlIEdyZW5hZGluZXMsMiwxLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbApTdWRhbiw1LDQsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsClN1cmluYW1lLDMsMywwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKVGFqaWtpc3Rhbiw4LDQsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsClRvZ28sNCw0LDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbApUb25nYSw1LDQsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsClRyaW5pZGFkIGFuZCBUb2JhZ28sMzEsOCwzLjAsMS4wLDMuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKVHV2YWx1LDIsMSwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKVW5pdGVkIEFyYWIgRW1pcmF0ZXMsNCwzLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbApVbml0ZWQgUmVwdWJsaWMgb2YgVGFuemFuaWEsMiwxLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbApVcnVndWF5LDExLDUsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsClZhbnVhdHUsMiwyLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbApWaWV0bmFtLDE3LDExLDEuMCwxLjAsMS4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbAoiVmlyZ2luIElzbGFuZHMsIEJyaXRpc2giLDMsMiwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsTm8gTWVkYWwsOTQsTm8gTWVkYWwKIlZpcmdpbiBJc2xhbmRzLCBVUyIsNCwzLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbApZZW1lbiwzLDMsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsClphbWJpYSwyOSw1LDEuMCwxLjAsMS4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCxObyBNZWRhbCw5NCxObyBNZWRhbApaaW1iYWJ3ZSw1LDQsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLDAuMCwwLjAsMC4wLE5vIE1lZGFsLDk0LE5vIE1lZGFsCg==\", BinaryEncoding.Base64), [Delimiter=\",\", Columns=16, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"country\", type text}, {\"athlete_count\", Int64.Type}, {\"athlete_discipline_count\", Int64.Type}, {\"team_count\", Int64.Type}, {\"team_discipline_count\", Int64.Type}, {\"team_event_count\", Int64.Type}, {\"Gold\", Int64.Type}, {\"Silver\", Int64.Type}, {\"Bronze\", Int64.Type}, {\"Total\", Int64.Type}, {\"medal_rate_per_athlete\", type number}, {\"gold_share\", type number}, {\"medals_per_discipline\", type number}, {\"performance_class\", type text}, {\"medal_rank\", Int64.Type}, {\"performance_label\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

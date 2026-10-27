@@ -1,0 +1,69 @@
+{
+  "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed/providers/Microsoft.ManagedIdentity/userAssignedIdentities/dbmanagedidentity": [],
+  "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed/providers/Microsoft.Databricks/accessConnectors/unity-catalog-access-connector": [
+    {
+      "createdBy": "44f63f09-88c9-4814-826b-7e78327a2ca0",
+      "createdOn": "2026-10-26T15:22:41.692233+00:00",
+      "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed/providers/Microsoft.Storage/storageAccounts/dbstorageqtiay3xsvnfe6/providers/Microsoft.Authorization/roleAssignments/9a5a116b-3d2f-4268-b082-c4bb56e72458",
+      "name": "9a5a116b-3d2f-4268-b082-c4bb56e72458",
+      "principalId": "99090798-412e-4ced-b1e7-c44a4d2220bc",
+      "principalName": "59427813-b700-490f-a63c-de1dcc273ce7",
+      "principalType": "ServicePrincipal",
+      "resourceGroup": "rg-tokyo-olympics-databricks-managed",
+      "roleDefinitionId": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/providers/Microsoft.Authorization/roleDefinitions/ba92f5b4-2d11-453d-a403-e96b0029c9fe",
+      "roleDefinitionName": "Storage Blob Data Contributor",
+      "scope": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed/providers/Microsoft.Storage/storageAccounts/dbstorageqtiay3xsvnfe6",
+      "type": "Microsoft.Authorization/roleAssignments",
+      "updatedBy": "44f63f09-88c9-4814-826b-7e78327a2ca0",
+      "updatedOn": "2026-10-26T15:22:41.692233+00:00"
+    },
+    {
+      "createdBy": "44f63f09-88c9-4814-826b-7e78327a2ca0",
+      "createdOn": "2026-10-26T15:22:46.592199+00:00",
+      "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed/providers/Microsoft.Storage/storageAccounts/dbstorageqtiay3xsvnfe6/providers/Microsoft.Authorization/roleAssignments/9fddf313-de5c-4b0a-86a0-f29cd605355e",
+      "name": "9fddf313-de5c-4b0a-86a0-f29cd605355e",
+      "principalId": "99090798-412e-4ced-b1e7-c44a4d2220bc",
+      "principalName": "59427813-b700-490f-a63c-de1dcc273ce7",
+      "principalType": "ServicePrincipal",
+      "resourceGroup": "rg-tokyo-olympics-databricks-managed",
+      "roleDefinitionId": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/providers/Microsoft.Authorization/roleDefinitions/17d1049b-9a84-46fb-8f53-869881c3d3ab",
+      "roleDefinitionName": "Storage Account Contributor",
+      "scope": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed/providers/Microsoft.Storage/storageAccounts/dbstorageqtiay3xsvnfe6",
+      "type": "Microsoft.Authorization/roleAssignments",
+      "updatedBy": "44f63f09-88c9-4814-826b-7e78327a2ca0",
+      "updatedOn": "2026-10-26T15:22:46.592199+00:00"
+    },
+    {
+      "createdBy": "44f63f09-88c9-4814-826b-7e78327a2ca0",
+      "createdOn": "2026-10-26T15:22:50.428805+00:00",
+      "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed/providers/Microsoft.Storage/storageAccounts/dbstorageqtiay3xsvnfe6/providers/Microsoft.Authorization/roleAssignments/cdf558ce-c952-405f-83b1-ed812b1bbc4f",
+      "name": "cdf558ce-c952-405f-83b1-ed812b1bbc4f",
+      "principalId": "99090798-412e-4ced-b1e7-c44a4d2220bc",
+      "principalName": "59427813-b700-490f-a63c-de1dcc273ce7",
+      "principalType": "ServicePrincipal",
+      "resourceGroup": "rg-tokyo-olympics-databricks-managed",
+      "roleDefinitionId": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/providers/Microsoft.Authorization/roleDefinitions/428e0ff0-5e57-4d9c-a221-2c70d0e0a443",
+      "roleDefinitionName": "EventGrid EventSubscription Contributor",
+      "scope": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed/providers/Microsoft.Storage/storageAccounts/dbstorageqtiay3xsvnfe6",
+      "type": "Microsoft.Authorization/roleAssignments",
+      "updatedBy": "44f63f09-88c9-4814-826b-7e78327a2ca0",
+      "updatedOn": "2026-10-26T15:22:50.428805+00:00"
+    },
+    {
+      "createdBy": "44f63f09-88c9-4814-826b-7e78327a2ca0",
+      "createdOn": "2026-10-26T15:22:52.480972+00:00",
+      "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed/providers/Microsoft.Storage/storageAccounts/dbstorageqtiay3xsvnfe6/providers/Microsoft.Authorization/roleAssignments/57a68e35-4bca-45ea-9760-0be9530f8364",
+      "name": "57a68e35-4bca-45ea-9760-0be9530f8364",
+      "principalId": "99090798-412e-4ced-b1e7-c44a4d2220bc",
+      "principalName": "59427813-b700-490f-a63c-de1dcc273ce7",
+      "principalType": "ServicePrincipal",
+      "resourceGroup": "rg-tokyo-olympics-databricks-managed",
+      "roleDefinitionId": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/providers/Microsoft.Authorization/roleDefinitions/974c5e8b-45b9-4653-ba55-5f855dd0fb88",
+      "roleDefinitionName": "Storage Queue Data Contributor",
+      "scope": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed/providers/Microsoft.Storage/storageAccounts/dbstorageqtiay3xsvnfe6",
+      "type": "Microsoft.Authorization/roleAssignments",
+      "updatedBy": "44f63f09-88c9-4814-826b-7e78327a2ca0",
+      "updatedOn": "2026-10-26T15:22:52.480972+00:00"
+    }
+  ]
+}

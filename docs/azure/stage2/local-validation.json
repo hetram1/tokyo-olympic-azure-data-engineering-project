@@ -1,0 +1,18 @@
+{
+  "tests": {
+    "command": ".venv/bin/python -B -m unittest discover -s tests -v",
+    "count": 95,
+    "result": "passed",
+    "duration_seconds": 7.449
+  },
+  "dependency_check": "No broken requirements found; existing unwritable pip cache warning only",
+  "git_diff_check": "passed",
+  "protected_tracked_files_except_readme_match_head": true,
+  "model_sha256": {
+    "models/medal_prediction_model.joblib": "7e43d312e97d44be219b418bea47d194abf226be3450d531c4745969c4e4335e",
+    "models/medal_classification_model.joblib": "16423720e98cafe6c4473eebe05b78b3f5f8cf1f7070b60fb693790450a2fa76"
+  },
+  "no_model_loaded_for_verification": true,
+  "branch": "feature/olympic-ai-platform",
+  "head": "eb30e6fbf31afe59d74b67973fd230df43a59c23"
+}

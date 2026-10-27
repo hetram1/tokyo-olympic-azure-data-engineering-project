@@ -1,0 +1,80 @@
+{
+  "properties": {
+    "isUcEnabled": true,
+    "managedResourceGroupId": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed",
+    "parameters": {
+      "enableFedRampCertification": {
+        "type": "Bool",
+        "value": false
+      },
+      "enableNoPublicIp": {
+        "type": "Bool",
+        "value": true
+      },
+      "prepareEncryption": {
+        "type": "Bool",
+        "value": false
+      },
+      "requireInfrastructureEncryption": {
+        "type": "Bool",
+        "value": false
+      },
+      "resourceTags": {
+        "type": "Object",
+        "value": {
+          "application": "databricks",
+          "databricks-environment": "true",
+          "project": "tokyo-olympics",
+          "purpose": "education-demo"
+        }
+      },
+      "storageAccountName": {
+        "type": "String",
+        "value": "dbstorageqtiay3xsvnfe6"
+      },
+      "storageAccountSkuName": {
+        "type": "String",
+        "value": "Standard_ZRS"
+      }
+    },
+    "provisioningState": "Succeeded",
+    "authorizations": [
+      {
+        "principalId": "9a74af6f-d153-4348-988a-e2672920bee9",
+        "roleDefinitionId": "8e3af657-a8ff-443c-a75c-2fe8c4bcb635"
+      }
+    ],
+    "createdBy": {
+      "oid": "e1cb3c81-0093-4eec-bd1c-beb3c29669ad",
+      "puid": "0003400166B4ECD9",
+      "applicationId": "04b07795-8ddb-461a-bbee-02f9e1bf7b46"
+    },
+    "updatedBy": {
+      "oid": "e1cb3c81-0093-4eec-bd1c-beb3c29669ad",
+      "puid": "0003400166B4ECD9",
+      "applicationId": "04b07795-8ddb-461a-bbee-02f9e1bf7b46"
+    },
+    "workspaceId": "7405618282355913",
+    "workspaceUrl": "adb-7405618282355913.13.azuredatabricks.net",
+    "createdDateTime": "2026-10-26T09:16:33.8432862Z"
+  },
+  "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics/providers/Microsoft.Databricks/workspaces/dbw-tokyo-olympics-hetram-2026",
+  "name": "dbw-tokyo-olympics-hetram-2026",
+  "type": "Microsoft.Databricks/workspaces",
+  "sku": {
+    "name": "premium"
+  },
+  "location": "eastasia",
+  "tags": {
+    "project": "tokyo-olympics",
+    "purpose": "education-demo"
+  },
+  "systemData": {
+    "createdBy": "hetramgugrwal13@gmail.com",
+    "createdByType": "User",
+    "createdAt": "2026-10-26T09:16:33.5777368+00:00",
+    "lastModifiedBy": "hetramgugrwal13@gmail.com",
+    "lastModifiedByType": "User",
+    "lastModifiedAt": "2026-10-26T09:16:33.5777368+00:00"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "stage": 1,
+  "status": "passed",
+  "validation_level": "ProviderNoRbac",
+  "error": null,
+  "subscription_id": "b52df7c6-044d-4326-92c8-496670def7c1",
+  "resource_group": "rg-tokyo-olympics",
+  "template": "infra/azure/adf_ingestion.arm.json",
+  "template_sha256": "9bfceb133363352d3e70ed44276d58b29b320d2bdf8cfc987845449fafdfd3b6",
+  "validated_names": [
+    "ls_tokyo_adls_mi",
+    "ds_tokyo_staged_binary",
+    "ds_tokyo_raw_binary",
+    "pl_tokyo_ingest"
+  ],
+  "deployment_performed_by_validation": false,
+  "pipeline_triggered": false
+}

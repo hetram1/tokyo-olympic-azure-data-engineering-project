@@ -1,0 +1,117 @@
+{
+  "archive_local_temporary_path": "/tmp/tokyo-stage3-bundle.zip",
+  "archive_sha256": "fe4e98b5e07cc3588cf242dbc2e150bc1eeeb7be36fcacd50869aeef55bc47f4",
+  "bytes": 55885,
+  "workspace_root": "/Workspace/Shared/tokyo-stage3/bundle",
+  "files": {
+    "dashboards/olympic_country_dashboard.csv": {
+      "sha256": "37495ff232f8aa5140e6f194d851f41c053aa4cf4390f65faaf45e6283956bcb",
+      "bytes": 18382
+    },
+    "databricks/tokyo_transform.py": {
+      "sha256": "e8063ce81aeefcb1c8e2aed4945feb303db2eff87123edcb1cfd362b104e6907",
+      "bytes": 5085
+    },
+    "infra/azure/data_contract.json": {
+      "sha256": "a20edabddf49bb744d8e5d3183ba1b30fd0bba40d146e7dbd6afaf0aa431857f",
+      "bytes": 6010
+    },
+    "models/country_analytics.csv": {
+      "sha256": "fec85180639173ddbe768d5ff5d4741582c92e0cc43747b4148bfb1378127e8c",
+      "bytes": 15950
+    },
+    "models/country_features.csv": {
+      "sha256": "a6bdd867d999895c126e7b3c0eb112a40c4cb47134f96e8d3d8b14aadd231480",
+      "bytes": 8001
+    },
+    "src/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "src/azure/__init__.py": {
+      "sha256": "f38e461df9f74fdc4d39524066dde627e5d5d36ad9981bbf72829fdcd7176e9d",
+      "bytes": 74
+    },
+    "src/azure/adf.py": {
+      "sha256": "f3a4e93c25f05998be83f3f9fe3212176842ece328ceab6a5b46009e95b3f749",
+      "bytes": 6028
+    },
+    "src/azure/contracts.py": {
+      "sha256": "937bd24a08043ecc689411036e4fb7e37d4fa06b1b1996a1b40ff69b449a2539",
+      "bytes": 6156
+    },
+    "src/azure/inventory.py": {
+      "sha256": "05bfaa686508b132d94472c776bee5793f7c0086270195eb0b95cd68e49da546",
+      "bytes": 9465
+    },
+    "src/azure/spark_transform.py": {
+      "sha256": "793908d928d1ae6ac1080e932e7f3f904f47ede9d962e9cb8a8fffdf607cb8cf",
+      "bytes": 3356
+    },
+    "src/features/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "src/features/build_analytics.py": {
+      "sha256": "e6675a730d1f921cab06b6ab8371a98f9e268dce3151537b86bc1fa225882c8d",
+      "bytes": 3647
+    },
+    "src/features/build_features.py": {
+      "sha256": "67b685d962bb0e683e2c0617e7dab9f8f53ed9bb94c5e92b59c7593c605df8ff",
+      "bytes": 3287
+    },
+    "src/features/build_powerbi_dataset.py": {
+      "sha256": "62d1273d00b75924396075c0eb01c19c8ec4803b2b3f7615516e635af87e3929",
+      "bytes": 3215
+    },
+    "src/features/team_counts.py": {
+      "sha256": "e6cd0ebb4546c7e1420256c7fe1c78181af0e95017e902499305e3325155770d",
+      "bytes": 1375
+    },
+    "src/ml/analyze_model.py": {
+      "sha256": "6e8c7c588e9dad2db984eea2b1782e9d6ca92688af2a2b1d937db2ebe14a5325",
+      "bytes": 769
+    },
+    "src/ml/classify_medal_performance.py": {
+      "sha256": "f701a323c6eac638f75800e9af1db617084f49803fb3caa4cd88699668539c14",
+      "bytes": 10655
+    },
+    "src/ml/cross_validate.py": {
+      "sha256": "298142b55cfea80ccd04595953d5917a00a538405af8a9c1a1c856fb3d521a07",
+      "bytes": 688
+    },
+    "src/ml/persist_classification.py": {
+      "sha256": "aa277deec0e7c13f03cf633f1578f3a61cd64fcfc97abf1b5632cc79a58cf96d",
+      "bytes": 16498
+    },
+    "src/ml/persist_regression.py": {
+      "sha256": "8305b525dac5e657107bab6c1f2132e2e198a070ff935ff55ab3953c377dbb00",
+      "bytes": 14605
+    },
+    "src/ml/train_model.py": {
+      "sha256": "56a80173a3e8533b0be5673ffbfecfe649467dbfb7ae90972a61fa6a278e2d46",
+      "bytes": 7572
+    },
+    "src/quality/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "src/quality/data_quality.py": {
+      "sha256": "adbd36b06f5cfd689787920f78fb9fd027199bec15a5e2f454eb2c86d39f70de",
+      "bytes": 8823
+    },
+    "src/quality/gates.py": {
+      "sha256": "4bdcb1d840a7db3ab3fb0ea87045b16d3c69ef1efacdb007bc5406258104b586",
+      "bytes": 12445
+    },
+    "src/quality/gender_data.py": {
+      "sha256": "d616a32f18b6d1f4f7bfa6c04e87f3d1b5ed17e9df49515e258a3d5d4b2989f5",
+      "bytes": 5867
+    },
+    "src/quality/team_text.py": {
+      "sha256": "679baf9a8f12c0d7041707537f5292c547834db4a056117f114bcdf9dcf17de8",
+      "bytes": 920
+    }
+  },
+  "deployment": "Use Files API to preserve .py source bytes; separately import the exact pinned databricks/tokyo_transform.py as a notebook. Stop on a path collision. No upload occurred."
+}

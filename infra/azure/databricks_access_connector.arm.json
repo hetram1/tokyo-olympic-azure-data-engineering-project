@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "name": {"type": "string", "defaultValue": "ac-tokyo-olympics-hetram-2026"},
+    "location": {"type": "string", "defaultValue": "eastasia"}
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Databricks/accessConnectors",
+      "apiVersion": "2023-05-01",
+      "name": "[parameters('name')]",
+      "location": "[parameters('location')]",
+      "identity": {"type": "SystemAssigned"},
+      "properties": {},
+      "tags": {"project": "tokyo-olympics", "purpose": "education-demo"}
+    }
+  ]
+}

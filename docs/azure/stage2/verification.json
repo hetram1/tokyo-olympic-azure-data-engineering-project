@@ -1,0 +1,235 @@
+{
+  "checked_at": "2026-10-25T13:58:37.607561+00:00",
+  "run_id": "1a11a954-8e6c-45e9-98b1-fc530f00a6e8",
+  "checks": [
+    {
+      "source": "staging/218c96338c6c3926d6a3910ceebcf2915e1097f9cccd024b1fa39a9458057685/Athletes.csv",
+      "destination": "raw/adf/1a11a954-8e6c-45e9-98b1-fc530f00a6e8/Athletes.csv",
+      "bytes": 407406,
+      "sha256": "689e808c9c4dc46c041977ac2ca3e90aa592e235bbfca6cfd0ae50545fabcdfa",
+      "matches_pinned_local_and_preflight_staged_source": true,
+      "etag": "0x8DF329F2BFD1B5C"
+    },
+    {
+      "source": "staging/218c96338c6c3926d6a3910ceebcf2915e1097f9cccd024b1fa39a9458057685/Coaches.csv",
+      "destination": "raw/adf/1a11a954-8e6c-45e9-98b1-fc530f00a6e8/Coaches.csv",
+      "bytes": 16494,
+      "sha256": "7f0fd82d59be93ef1fe53c9ca7617f5c8541169413e2bc5142dd186e0b93c4dd",
+      "matches_pinned_local_and_preflight_staged_source": true,
+      "etag": "0x8DF329F39CC0E44"
+    },
+    {
+      "source": "staging/218c96338c6c3926d6a3910ceebcf2915e1097f9cccd024b1fa39a9458057685/EntriesGender.csv",
+      "destination": "raw/adf/1a11a954-8e6c-45e9-98b1-fc530f00a6e8/EntriesGender.csv",
+      "bytes": 1076,
+      "sha256": "2c0d18cfe475341d29098e559cc24e6511155938392a78a0db357fe55f4c6821",
+      "matches_pinned_local_and_preflight_staged_source": true,
+      "etag": "0x8DF329F445AFA98"
+    },
+    {
+      "source": "staging/218c96338c6c3926d6a3910ceebcf2915e1097f9cccd024b1fa39a9458057685/Medals.csv",
+      "destination": "raw/adf/1a11a954-8e6c-45e9-98b1-fc530f00a6e8/Medals.csv",
+      "bytes": 2320,
+      "sha256": "453b4753dd7ee174e3e7056fa37ef4b5aaaab3885add9001d7998e60c66152e8",
+      "matches_pinned_local_and_preflight_staged_source": true,
+      "etag": "0x8DF329F506A4860"
+    },
+    {
+      "source": "staging/218c96338c6c3926d6a3910ceebcf2915e1097f9cccd024b1fa39a9458057685/Teams.csv",
+      "destination": "raw/adf/1a11a954-8e6c-45e9-98b1-fc530f00a6e8/Teams.csv",
+      "bytes": 34600,
+      "sha256": "41403e201a4b209ad5042ecd685a99c40edafb83d50dbfdcd822824650505ee3",
+      "matches_pinned_local_and_preflight_staged_source": true,
+      "etag": "0x8DF329F5BDDEC08"
+    }
+  ],
+  "pipeline": {
+    "runId": "1a11a954-8e6c-45e9-98b1-fc530f00a6e8",
+    "pipelineName": "pl_tokyo_ingest",
+    "status": "Succeeded",
+    "runStart": "2026-10-25T13:51:51.3786548Z",
+    "runEnd": "2026-10-25T13:53:36.8537534Z",
+    "durationInMs": 105475,
+    "parameters": {},
+    "invokedBy": {
+      "id": "e0544df338304620a3a1213bd88ff17d",
+      "invokedByType": "Manual",
+      "name": "Manual"
+    }
+  },
+  "activities": [
+    {
+      "activityRunId": "643074c4-43ee-4b10-a2ba-59a6ab1edb85",
+      "activityName": "CopyAllFive",
+      "activityType": "ForEach",
+      "status": "Succeeded",
+      "activityRunStart": "2026-10-25T13:51:59.9903084Z",
+      "activityRunEnd": "2026-10-25T13:53:36.5371359Z",
+      "durationInMs": 96546,
+      "retryAttempt": null
+    },
+    {
+      "activityRunId": "bcdaa0bc-3547-4a7c-912a-d149aeb5a969",
+      "activityName": "CopyPinnedFile",
+      "activityType": "Copy",
+      "status": "Succeeded",
+      "activityRunStart": "2026-10-25T13:52:00.3024085Z",
+      "activityRunEnd": "2026-10-25T13:52:17.0795685Z",
+      "durationInMs": 16777,
+      "retryAttempt": null,
+      "file_inferred_from_sequential_pipeline_order": "Athletes.csv",
+      "attribution_source": "Verified sequential ForEach definition; secure activity payloads unavailable"
+    },
+    {
+      "activityRunId": "5d8ad19d-d15f-4c52-a521-abb528192fdf",
+      "activityName": "CopyPinnedFile",
+      "activityType": "Copy",
+      "status": "Succeeded",
+      "activityRunStart": "2026-10-25T13:52:17.9221546Z",
+      "activityRunEnd": "2026-10-25T13:52:38.7388575Z",
+      "durationInMs": 20816,
+      "retryAttempt": null,
+      "file_inferred_from_sequential_pipeline_order": "Coaches.csv",
+      "attribution_source": "Verified sequential ForEach definition; secure activity payloads unavailable"
+    },
+    {
+      "activityRunId": "17d34e7f-8e55-4066-9bf7-b2a82d332f8b",
+      "activityName": "CopyPinnedFile",
+      "activityType": "Copy",
+      "status": "Succeeded",
+      "activityRunStart": "2026-10-25T13:52:39.5493681Z",
+      "activityRunEnd": "2026-10-25T13:52:56.7806215Z",
+      "durationInMs": 17231,
+      "retryAttempt": null,
+      "file_inferred_from_sequential_pipeline_order": "EntriesGender.csv",
+      "attribution_source": "Verified sequential ForEach definition; secure activity payloads unavailable"
+    },
+    {
+      "activityRunId": "a30cef89-24c8-4825-b989-0a7537817f4e",
+      "activityName": "CopyPinnedFile",
+      "activityType": "Copy",
+      "status": "Succeeded",
+      "activityRunStart": "2026-10-25T13:52:57.7212586Z",
+      "activityRunEnd": "2026-10-25T13:53:16.5803075Z",
+      "durationInMs": 18859,
+      "retryAttempt": null,
+      "file_inferred_from_sequential_pipeline_order": "Medals.csv",
+      "attribution_source": "Verified sequential ForEach definition; secure activity payloads unavailable"
+    },
+    {
+      "activityRunId": "177bbf1c-49b0-4594-82ca-f0fcfb2b972e",
+      "activityName": "CopyPinnedFile",
+      "activityType": "Copy",
+      "status": "Succeeded",
+      "activityRunStart": "2026-10-25T13:53:17.5619003Z",
+      "activityRunEnd": "2026-10-25T13:53:35.3427158Z",
+      "durationInMs": 17780,
+      "retryAttempt": null,
+      "file_inferred_from_sequential_pipeline_order": "Teams.csv",
+      "attribution_source": "Verified sequential ForEach definition; secure activity payloads unavailable"
+    }
+  ],
+  "copy_activities": [
+    {
+      "activityRunId": "bcdaa0bc-3547-4a7c-912a-d149aeb5a969",
+      "activityName": "CopyPinnedFile",
+      "activityType": "Copy",
+      "status": "Succeeded",
+      "activityRunStart": "2026-10-25T13:52:00.3024085Z",
+      "activityRunEnd": "2026-10-25T13:52:17.0795685Z",
+      "durationInMs": 16777,
+      "retryAttempt": null,
+      "file_inferred_from_sequential_pipeline_order": "Athletes.csv",
+      "attribution_source": "Verified sequential ForEach definition; secure activity payloads unavailable"
+    },
+    {
+      "activityRunId": "5d8ad19d-d15f-4c52-a521-abb528192fdf",
+      "activityName": "CopyPinnedFile",
+      "activityType": "Copy",
+      "status": "Succeeded",
+      "activityRunStart": "2026-10-25T13:52:17.9221546Z",
+      "activityRunEnd": "2026-10-25T13:52:38.7388575Z",
+      "durationInMs": 20816,
+      "retryAttempt": null,
+      "file_inferred_from_sequential_pipeline_order": "Coaches.csv",
+      "attribution_source": "Verified sequential ForEach definition; secure activity payloads unavailable"
+    },
+    {
+      "activityRunId": "17d34e7f-8e55-4066-9bf7-b2a82d332f8b",
+      "activityName": "CopyPinnedFile",
+      "activityType": "Copy",
+      "status": "Succeeded",
+      "activityRunStart": "2026-10-25T13:52:39.5493681Z",
+      "activityRunEnd": "2026-10-25T13:52:56.7806215Z",
+      "durationInMs": 17231,
+      "retryAttempt": null,
+      "file_inferred_from_sequential_pipeline_order": "EntriesGender.csv",
+      "attribution_source": "Verified sequential ForEach definition; secure activity payloads unavailable"
+    },
+    {
+      "activityRunId": "a30cef89-24c8-4825-b989-0a7537817f4e",
+      "activityName": "CopyPinnedFile",
+      "activityType": "Copy",
+      "status": "Succeeded",
+      "activityRunStart": "2026-10-25T13:52:57.7212586Z",
+      "activityRunEnd": "2026-10-25T13:53:16.5803075Z",
+      "durationInMs": 18859,
+      "retryAttempt": null,
+      "file_inferred_from_sequential_pipeline_order": "Medals.csv",
+      "attribution_source": "Verified sequential ForEach definition; secure activity payloads unavailable"
+    },
+    {
+      "activityRunId": "177bbf1c-49b0-4594-82ca-f0fcfb2b972e",
+      "activityName": "CopyPinnedFile",
+      "activityType": "Copy",
+      "status": "Succeeded",
+      "activityRunStart": "2026-10-25T13:53:17.5619003Z",
+      "activityRunEnd": "2026-10-25T13:53:35.3427158Z",
+      "durationInMs": 17780,
+      "retryAttempt": null,
+      "file_inferred_from_sequential_pipeline_order": "Teams.csv",
+      "attribution_source": "Verified sequential ForEach definition; secure activity payloads unavailable"
+    }
+  ],
+  "secure_activity_output_redacted": true,
+  "runs_in_execution_window": [
+    {
+      "runId": "1a11a954-8e6c-45e9-98b1-fc530f00a6e8",
+      "pipelineName": "pl_tokyo_ingest",
+      "status": "Succeeded"
+    }
+  ],
+  "preexisting_file_etags_unchanged": true,
+  "storage_settings_unchanged": true,
+  "adf_role_unchanged": true,
+  "month_to_date_cost": {
+    "columns": [
+      {
+        "name": "PreTaxCost",
+        "type": "Number"
+      },
+      {
+        "name": "ServiceName",
+        "type": "String"
+      },
+      {
+        "name": "Currency",
+        "type": "String"
+      }
+    ],
+    "nextLink": null,
+    "rows": [
+      [
+        0.0,
+        "Bandwidth",
+        "INR"
+      ],
+      [
+        0.0459837220700002,
+        "Storage",
+        "INR"
+      ]
+    ]
+  },
+  "cost_limitations": "Delayed subscription MTD data is not an isolated run bill. Estimate USD0.05-0.10; USD0.50 allowance is not enforced; secure activity output can hide DIU billing details."
+}

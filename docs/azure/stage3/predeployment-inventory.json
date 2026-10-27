@@ -1,0 +1,518 @@
+{
+  "captured_at": "2026-10-25T14:09:20.102500+00:00",
+  "mode": "read-only, no registration/resource creation/RBAC/compute",
+  "checks": {
+    "subscription": {
+      "status": "read",
+      "value": {
+        "id": "b52df7c6-044d-4326-92c8-496670def7c1",
+        "name": "Azure for Students",
+        "state": "Enabled"
+      }
+    },
+    "subscription_policies": {
+      "status": "read",
+      "value": {
+        "state": "Enabled",
+        "subscriptionPolicies": {
+          "locationPlacementId": "Public_2014-09-01",
+          "quotaId": "AzureForStudents_2018-01-01",
+          "spendingLimit": "On"
+        }
+      }
+    },
+    "policy_assignments": {
+      "status": "read",
+      "value": [
+        {
+          "name": "sys.regionrestriction",
+          "parameters": {
+            "listOfAllowedLocations": {
+              "value": [
+                "indonesiacentral",
+                "eastasia",
+                "malaysiawest",
+                "polandcentral",
+                "indiasouthcentral"
+              ]
+            }
+          },
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b86dabb9-b578-4d7b-b842-3b45e95769a1",
+          "scope": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1"
+        }
+      ]
+    },
+    "resources": {
+      "status": "read",
+      "value": [
+        {
+          "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics/providers/Microsoft.Storage/storageAccounts/tokyoolympicdatahetram",
+          "location": "indiasouthcentral",
+          "name": "tokyoolympicdatahetram",
+          "resourceGroup": "rg-tokyo-olympics",
+          "type": "Microsoft.Storage/storageAccounts"
+        },
+        {
+          "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics/providers/Microsoft.DataFactory/factories/adf-tokyo-olympics-hetram-2026",
+          "location": "indiasouthcentral",
+          "name": "adf-tokyo-olympics-hetram-2026",
+          "resourceGroup": "rg-tokyo-olympics",
+          "type": "Microsoft.DataFactory/factories"
+        }
+      ]
+    },
+    "resource_groups": {
+      "status": "read",
+      "value": [
+        {
+          "location": "centralindia",
+          "name": "rg-tokyo-olympics"
+        }
+      ]
+    },
+    "quota_eastasia": {
+      "status": "read",
+      "value": [
+        {
+          "limit": "6",
+          "name": "cores",
+          "used": "0"
+        },
+        {
+          "limit": "4",
+          "name": "standardDDSv4Family",
+          "used": "0"
+        }
+      ]
+    },
+    "sku_d4ds_v4": {
+      "status": "read",
+      "value": [
+        {
+          "capabilities": [
+            {
+              "name": "MaxResourceVolumeMB",
+              "value": "153600"
+            },
+            {
+              "name": "OSVhdSizeMB",
+              "value": "1047552"
+            },
+            {
+              "name": "vCPUs",
+              "value": "4"
+            },
+            {
+              "name": "MemoryPreservingMaintenanceSupported",
+              "value": "True"
+            },
+            {
+              "name": "HyperVGenerations",
+              "value": "V1,V2"
+            },
+            {
+              "name": "SupportedCapacityReservationTypes",
+              "value": "Open,Targeted"
+            },
+            {
+              "name": "SupportedEphemeralOSDiskPlacements",
+              "value": "ResourceDisk,CacheDisk"
+            },
+            {
+              "name": "MemoryGB",
+              "value": "16"
+            },
+            {
+              "name": "MaxDataDiskCount",
+              "value": "8"
+            },
+            {
+              "name": "CpuArchitectureType",
+              "value": "x64"
+            },
+            {
+              "name": "LowPriorityCapable",
+              "value": "True"
+            },
+            {
+              "name": "PremiumIO",
+              "value": "True"
+            },
+            {
+              "name": "VMDeploymentTypes",
+              "value": "IaaS"
+            },
+            {
+              "name": "vCPUsConstraintsAllowed",
+              "value": "1, 2, 4"
+            },
+            {
+              "name": "vCPUsAvailable",
+              "value": "4"
+            },
+            {
+              "name": "ACUs",
+              "value": "195"
+            },
+            {
+              "name": "vCPUsPerCore",
+              "value": "2"
+            },
+            {
+              "name": "CombinedTempDiskAndCachedIOPS",
+              "value": "38500"
+            },
+            {
+              "name": "CombinedTempDiskAndCachedReadBytesPerSecond",
+              "value": "242221056"
+            },
+            {
+              "name": "CombinedTempDiskAndCachedWriteBytesPerSecond",
+              "value": "242221056"
+            },
+            {
+              "name": "CachedDiskBytes",
+              "value": "107374182400"
+            },
+            {
+              "name": "UncachedDiskIOPS",
+              "value": "6400"
+            },
+            {
+              "name": "UncachedDiskBytesPerSecond",
+              "value": "96000000"
+            },
+            {
+              "name": "EphemeralOSDiskSupported",
+              "value": "True"
+            },
+            {
+              "name": "EncryptionAtHostSupported",
+              "value": "True"
+            },
+            {
+              "name": "CapacityReservationSupported",
+              "value": "False"
+            },
+            {
+              "name": "AcceleratedNetworkingEnabled",
+              "value": "True"
+            },
+            {
+              "name": "RdmaEnabled",
+              "value": "False"
+            },
+            {
+              "name": "MaxNetworkInterfaces",
+              "value": "2"
+            },
+            {
+              "name": "UltraSSDAvailable",
+              "value": "True"
+            }
+          ],
+          "family": "standardDDSv4Family",
+          "name": "Standard_D4ds_v4",
+          "restrictions": []
+        }
+      ]
+    },
+    "storage": {
+      "status": "read",
+      "value": {
+        "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics/providers/Microsoft.Storage/storageAccounts/tokyoolympicdatahetram",
+        "isHnsEnabled": true,
+        "location": "indiasouthcentral",
+        "networkRuleSet": {
+          "bypass": "AzureServices",
+          "defaultAction": "Allow",
+          "ipRules": [],
+          "ipv6Rules": [],
+          "resourceAccessRules": null,
+          "virtualNetworkRules": []
+        },
+        "publicNetworkAccess": "Enabled",
+        "sku": "Standard_LRS"
+      }
+    },
+    "raw_files": {
+      "status": "read",
+      "value": [
+        {
+          "bytes": 407406,
+          "etag": "0x8DF329F2BFD1B5C",
+          "metadata": {},
+          "name": "raw/adf/1a11a954-8e6c-45e9-98b1-fc530f00a6e8/Athletes.csv"
+        },
+        {
+          "bytes": 16494,
+          "etag": "0x8DF329F39CC0E44",
+          "metadata": {},
+          "name": "raw/adf/1a11a954-8e6c-45e9-98b1-fc530f00a6e8/Coaches.csv"
+        },
+        {
+          "bytes": 1076,
+          "etag": "0x8DF329F445AFA98",
+          "metadata": {},
+          "name": "raw/adf/1a11a954-8e6c-45e9-98b1-fc530f00a6e8/EntriesGender.csv"
+        },
+        {
+          "bytes": 2320,
+          "etag": "0x8DF329F506A4860",
+          "metadata": {},
+          "name": "raw/adf/1a11a954-8e6c-45e9-98b1-fc530f00a6e8/Medals.csv"
+        },
+        {
+          "bytes": 34600,
+          "etag": "0x8DF329F5BDDEC08",
+          "metadata": {},
+          "name": "raw/adf/1a11a954-8e6c-45e9-98b1-fc530f00a6e8/Teams.csv"
+        }
+      ]
+    },
+    "existing_adf_role": {
+      "status": "read",
+      "value": [
+        {
+          "principalId": "2b14c4a6-9415-4738-b6a6-a8b671d97d6f",
+          "role": "Storage Blob Data Contributor",
+          "scope": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics/providers/Microsoft.Storage/storageAccounts/tokyoolympicdatahetram/blobServices/default/containers/tokyo-olympic-data"
+        }
+      ]
+    },
+    "operator_rg_permissions": {
+      "status": "read",
+      "value": [
+        {
+          "actions": [
+            "*"
+          ],
+          "notActions": []
+        },
+        {
+          "actions": [
+            "Microsoft.Authorization/elevateAccess/action"
+          ],
+          "notActions": []
+        },
+        {
+          "actions": [
+            "Microsoft.Authorization/roleAssignments/read",
+            "Microsoft.Authorization/roleDefinitions/read"
+          ],
+          "notActions": []
+        }
+      ]
+    },
+    "budget": {
+      "status": "read",
+      "value": []
+    },
+    "blob_delegator_role": {
+      "status": "read",
+      "value": [
+        {
+          "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/providers/Microsoft.Authorization/roleDefinitions/db58b8e5-c6ad-4a2a-8342-4190687cbf4a",
+          "permissions": [
+            {
+              "actions": [
+                "Microsoft.Storage/storageAccounts/blobServices/generateUserDelegationKey/action"
+              ],
+              "condition": null,
+              "conditionVersion": null,
+              "dataActions": [],
+              "notActions": [],
+              "notDataActions": []
+            }
+          ],
+          "roleName": "Storage Blob Delegator"
+        }
+      ]
+    },
+    "provider_Microsoft.Databricks": {
+      "status": "read",
+      "value": {
+        "registrationState": "Registered",
+        "types": [
+          {
+            "locations": [
+              "West US",
+              "East US 2",
+              "West Europe",
+              "East US",
+              "North Europe",
+              "Southeast Asia",
+              "East Asia",
+              "South Central US",
+              "North Central US",
+              "West US 2",
+              "Central US",
+              "UK West",
+              "UK South",
+              "Australia East",
+              "Australia Southeast",
+              "Australia Central",
+              "Australia Central 2",
+              "Japan East",
+              "Japan West",
+              "Canada Central",
+              "Canada East",
+              "Central India",
+              "South India",
+              "West India",
+              "Korea Central",
+              "South Africa North",
+              "Brazil South",
+              "Switzerland North",
+              "France Central",
+              "UAE North",
+              "Norway East",
+              "Germany West Central",
+              "Switzerland West",
+              "Sweden Central",
+              "Qatar Central",
+              "West Central US",
+              "West US 3",
+              "Mexico Central"
+            ],
+            "type": "workspaces"
+          },
+          {
+            "locations": [
+              "West US",
+              "East US 2",
+              "West Europe",
+              "East US",
+              "North Europe",
+              "Southeast Asia",
+              "East Asia",
+              "South Central US",
+              "North Central US",
+              "West US 2",
+              "Central US",
+              "UK West",
+              "UK South",
+              "Australia East",
+              "Australia Southeast",
+              "Australia Central",
+              "Australia Central 2",
+              "Japan East",
+              "Japan West",
+              "Canada Central",
+              "Canada East",
+              "Central India",
+              "South India",
+              "West India",
+              "Korea Central",
+              "South Africa North",
+              "Brazil South",
+              "Switzerland North",
+              "France Central",
+              "UAE North",
+              "Norway East",
+              "Germany West Central",
+              "Switzerland West",
+              "Sweden Central",
+              "Qatar Central",
+              "West Central US",
+              "West US 3",
+              "Mexico Central"
+            ],
+            "type": "accessConnectors"
+          }
+        ]
+      }
+    },
+    "provider_Microsoft.Compute": {
+      "status": "read",
+      "value": {
+        "registrationState": "Registered",
+        "types": []
+      }
+    },
+    "provider_Microsoft.Network": {
+      "status": "read",
+      "value": {
+        "registrationState": "NotRegistered",
+        "types": []
+      }
+    },
+    "month_to_date_cost": {
+      "status": "read",
+      "value": {
+        "columns": [
+          {
+            "name": "PreTaxCost",
+            "type": "Number"
+          },
+          {
+            "name": "ServiceName",
+            "type": "String"
+          },
+          {
+            "name": "Currency",
+            "type": "String"
+          }
+        ],
+        "nextLink": null,
+        "rows": [
+          [
+            0.0,
+            "Bandwidth",
+            "INR"
+          ],
+          [
+            0.0459837220700002,
+            "Storage",
+            "INR"
+          ]
+        ]
+      }
+    },
+    "credits": {
+      "status": "read",
+      "value": {
+        "balanceSummary": {
+          "currentBalance": {
+            "currency": "USD",
+            "value": 100.0
+          },
+          "estimatedBalance": {
+            "currency": "USD",
+            "value": 100.0
+          },
+          "estimatedBalanceInBillingCurrency": {
+            "currency": "INR",
+            "exchangeRate": 95.98940000000036,
+            "exchangeRateMonth": 202610,
+            "value": 9598.940000000035
+          }
+        },
+        "creditCurrency": "USD",
+        "expiredCredit": {
+          "currency": "USD",
+          "value": 0.0
+        },
+        "isEstimatedBalance": false,
+        "pendingEligibleCharges": {
+          "currency": "USD",
+          "value": 0.0
+        }
+      }
+    },
+    "workspace_arm_validation": {
+      "status": "read",
+      "value": {
+        "error": null,
+        "state": "Succeeded"
+      }
+    },
+    "access_connector_arm_validation": {
+      "status": "read",
+      "value": {
+        "error": null,
+        "state": "Succeeded"
+      }
+    }
+  }
+}

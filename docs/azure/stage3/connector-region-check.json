@@ -1,0 +1,7 @@
+{
+  "candidate_location": "indiasouthcentral",
+  "operation": "ProviderNoRbac ARM validation only",
+  "result": "failed",
+  "error_code": "LocationNotAvailableForResourceType",
+  "decision": "Retain original East Asia Access Connector; its ARM validation succeeded. Co-location is recommended but the storage region does not support this resource type; no cloud changes."
+}

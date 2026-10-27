@@ -1,0 +1,5 @@
+{
+  "at": "2026-10-26T15:19:39.827975+00:00",
+  "source": "Direct user approval in the current chat required before starting this additional readiness-recovery setup",
+  "scope": "One further setup with at most five minutes of read-only worker-environment readiness waits, one original job, same USD5 total allowance including all attempts; cleanup all new dependencies; no job retry, no manual metastore, no subscription upgrade"
+}

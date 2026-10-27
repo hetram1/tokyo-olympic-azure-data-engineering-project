@@ -1,0 +1,121 @@
+{
+  "at": "2026-10-27T09:18:23.589693+00:00",
+  "reported_totals": {
+    "INR": 15.346172113043849
+  },
+  "query": {
+    "type": "ActualCost",
+    "timeframe": "Custom",
+    "timePeriod": {
+      "from": "2026-10-25T00:00:00Z",
+      "to": "2026-10-28T00:00:00Z"
+    },
+    "dataset": {
+      "granularity": "Daily",
+      "aggregation": {
+        "totalCost": {
+          "name": "PreTaxCost",
+          "function": "Sum"
+        }
+      },
+      "grouping": [
+        {
+          "type": "Dimension",
+          "name": "ResourceId"
+        },
+        {
+          "type": "Dimension",
+          "name": "ServiceName"
+        }
+      ],
+      "filter": {
+        "dimensions": {
+          "name": "ResourceId",
+          "operator": "In",
+          "values": [
+            "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed/providers/Microsoft.Databricks/accessConnectors/unity-catalog-access-connector",
+            "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed/providers/Microsoft.ManagedIdentity/userAssignedIdentities/dbmanagedidentity",
+            "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed/providers/Microsoft.Network/natGateways/nat-gateway",
+            "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed/providers/Microsoft.Network/networkSecurityGroups/workers-sg",
+            "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed/providers/Microsoft.Network/publicIPAddresses/nat-gw-public-ip",
+            "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed/providers/Microsoft.Network/virtualNetworks/workers-vnet",
+            "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed/providers/Microsoft.Storage/storageAccounts/dbstorageqtiay3xsvnfe6",
+            "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics/providers/Microsoft.Databricks/accessConnectors/ac-tokyo-olympics-hetram-2026",
+            "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics/providers/Microsoft.Databricks/workspaces/dbw-tokyo-olympics-hetram-2026"
+          ]
+        }
+      }
+    }
+  },
+  "response": {
+    "id": "subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/providers/Microsoft.CostManagement/query/729ccdfe-589c-4612-b236-35cb118d0d0d",
+    "name": "729ccdfe-589c-4612-b236-35cb118d0d0d",
+    "type": "Microsoft.CostManagement/query",
+    "location": null,
+    "sku": null,
+    "eTag": null,
+    "properties": {
+      "nextLink": null,
+      "columns": [
+        {
+          "name": "PreTaxCost",
+          "type": "Number"
+        },
+        {
+          "name": "UsageDate",
+          "type": "Number"
+        },
+        {
+          "name": "ResourceId",
+          "type": "String"
+        },
+        {
+          "name": "ServiceName",
+          "type": "String"
+        },
+        {
+          "name": "Currency",
+          "type": "String"
+        }
+      ],
+      "rows": [
+        [
+          4.33512127750002,
+          20261025,
+          "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourcegroups/rg-tokyo-olympics-databricks-managed/providers/microsoft.network/natgateways/nat-gateway",
+          "NAT Gateway",
+          "INR"
+        ],
+        [
+          0.481680141944446,
+          20261025,
+          "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourcegroups/rg-tokyo-olympics-databricks-managed/providers/microsoft.network/publicipaddresses/nat-gw-public-ip",
+          "Virtual Network",
+          "INR"
+        ],
+        [
+          0.00253316026600001,
+          20261025,
+          "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourcegroups/rg-tokyo-olympics-databricks-managed/providers/microsoft.storage/storageaccounts/dbstorageqtiay3xsvnfe6",
+          "Storage",
+          "INR"
+        ],
+        [
+          9.47415378000004,
+          20261026,
+          "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourcegroups/rg-tokyo-olympics-databricks-managed/providers/microsoft.network/natgateways/nat-gateway",
+          "NAT Gateway",
+          "INR"
+        ],
+        [
+          1.05268375333334,
+          20261026,
+          "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourcegroups/rg-tokyo-olympics-databricks-managed/providers/microsoft.network/publicipaddresses/nat-gw-public-ip",
+          "Virtual Network",
+          "INR"
+        ]
+      ]
+    }
+  },
+  "limitation": "Delayed reported cost, not final charges or a hard spending cap."
+}

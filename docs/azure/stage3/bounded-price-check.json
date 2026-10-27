@@ -1,0 +1,344 @@
+{
+  "captured_at": "2026-10-25T14:09:44.801772+00:00",
+  "source": "https://prices.azure.com/api/retail/prices",
+  "method": "Three bounded queries, one page each; no iterative pricing investigation",
+  "results": {
+    "nat": {
+      "query": "armRegionName eq 'eastasia' and serviceName eq 'Virtual Network' and priceType eq 'Consumption'",
+      "next_page_not_followed": false,
+      "selected_meters": [
+        {
+          "productName": "Public IP Prefix",
+          "skuName": "Standard",
+          "meterName": "Standard Static IP Addresses",
+          "armRegionName": "eastasia",
+          "unitPrice": 0.006,
+          "unitOfMeasure": "1 Hour",
+          "currencyCode": "USD",
+          "effectiveStartDate": "2018-09-01T00:00:00Z",
+          "isPrimaryMeterRegion": false
+        },
+        {
+          "productName": "IP Addresses",
+          "skuName": "Basic",
+          "meterName": "Basic IPv4 Dynamic Public IP",
+          "armRegionName": "eastasia",
+          "unitPrice": 0.004,
+          "unitOfMeasure": "1 Hour",
+          "currencyCode": "USD",
+          "effectiveStartDate": "2014-12-01T00:00:00Z",
+          "isPrimaryMeterRegion": false
+        },
+        {
+          "productName": "IP Addresses",
+          "skuName": "Standard",
+          "meterName": "Standard IPv4 Static Public IP",
+          "armRegionName": "eastasia",
+          "unitPrice": 0.005,
+          "unitOfMeasure": "1 Hour",
+          "currencyCode": "USD",
+          "effectiveStartDate": "2018-06-01T00:00:00Z",
+          "isPrimaryMeterRegion": false
+        },
+        {
+          "productName": "IP Addresses",
+          "skuName": "Basic",
+          "meterName": "Basic IPv4 Static Public IP",
+          "armRegionName": "eastasia",
+          "unitPrice": 0.0036,
+          "unitOfMeasure": "1 Hour",
+          "currencyCode": "USD",
+          "effectiveStartDate": "2014-08-01T00:00:00Z",
+          "isPrimaryMeterRegion": false
+        },
+        {
+          "productName": "IP Addresses",
+          "skuName": "Global",
+          "meterName": "Global IPv4 Static Public IP",
+          "armRegionName": "eastasia",
+          "unitPrice": 0.01,
+          "unitOfMeasure": "1 Hour",
+          "currencyCode": "USD",
+          "effectiveStartDate": "2022-03-01T00:00:00Z",
+          "isPrimaryMeterRegion": false
+        }
+      ]
+    },
+    "disks": {
+      "query": "armRegionName eq 'eastasia' and serviceName eq 'Storage' and contains(productName, 'Managed Disks') and priceType eq 'Consumption'",
+      "next_page_not_followed": false,
+      "selected_meters": [
+        {
+          "productName": "Premium SSD Managed Disks",
+          "skuName": "P10 LRS",
+          "meterName": "P10 LRS Disk",
+          "armRegionName": "eastasia",
+          "unitPrice": 21.68,
+          "unitOfMeasure": "1/Month",
+          "currencyCode": "USD",
+          "effectiveStartDate": "2018-05-01T00:00:00Z",
+          "isPrimaryMeterRegion": true
+        },
+        {
+          "productName": "Premium SSD Managed Disks",
+          "skuName": "P6 LRS",
+          "meterName": "P6 LRS Disk Mount",
+          "armRegionName": "eastasia",
+          "unitPrice": 0.728,
+          "unitOfMeasure": "1/Month",
+          "currencyCode": "USD",
+          "effectiveStartDate": "2021-07-01T00:00:00Z",
+          "isPrimaryMeterRegion": true
+        },
+        {
+          "productName": "Premium SSD Managed Disks",
+          "skuName": "P10 LRS",
+          "meterName": "P10 LRS Disk Mount",
+          "armRegionName": "eastasia",
+          "unitPrice": 1.41,
+          "unitOfMeasure": "1/Month",
+          "currencyCode": "USD",
+          "effectiveStartDate": "2021-07-01T00:00:00Z",
+          "isPrimaryMeterRegion": true
+        },
+        {
+          "productName": "Standard SSD Managed Disks",
+          "skuName": "E10 LRS",
+          "meterName": "E10 LRS Disk Mount",
+          "armRegionName": "eastasia",
+          "unitPrice": 1.41,
+          "unitOfMeasure": "1/Month",
+          "currencyCode": "USD",
+          "effectiveStartDate": "2021-07-01T00:00:00Z",
+          "isPrimaryMeterRegion": true
+        },
+        {
+          "productName": "Premium SSD Managed Disks",
+          "skuName": "P6 LRS",
+          "meterName": "P6 LRS Disk",
+          "armRegionName": "eastasia",
+          "unitPrice": 11.2272,
+          "unitOfMeasure": "1/Month",
+          "currencyCode": "USD",
+          "effectiveStartDate": "2018-05-01T00:00:00Z",
+          "isPrimaryMeterRegion": true
+        },
+        {
+          "productName": "Standard SSD Managed Disks",
+          "skuName": "E10 LRS",
+          "meterName": "E10 LRS Disk Operations",
+          "armRegionName": "eastasia",
+          "unitPrice": 0.002,
+          "unitOfMeasure": "10K",
+          "currencyCode": "USD",
+          "effectiveStartDate": "2018-11-01T00:00:00Z",
+          "isPrimaryMeterRegion": false
+        },
+        {
+          "productName": "Standard SSD Managed Disks",
+          "skuName": "E10 LRS",
+          "meterName": "E10 LRS Disk",
+          "armRegionName": "eastasia",
+          "unitPrice": 9.6,
+          "unitOfMeasure": "1/Month",
+          "currencyCode": "USD",
+          "effectiveStartDate": "2018-11-01T00:00:00Z",
+          "isPrimaryMeterRegion": true
+        }
+      ]
+    },
+    "transfer": {
+      "query": "armRegionName eq 'eastasia' and serviceName eq 'Bandwidth' and priceType eq 'Consumption'",
+      "next_page_not_followed": false,
+      "selected_meters": [
+        {
+          "productName": "Rtn Preference: MGN",
+          "skuName": "Standard",
+          "meterName": "Standard Inter-Region Data Transfer",
+          "armRegionName": "eastasia",
+          "unitPrice": 0.08,
+          "unitOfMeasure": "1 GB",
+          "currencyCode": "USD",
+          "effectiveStartDate": "2018-02-01T00:00:00Z",
+          "isPrimaryMeterRegion": true
+        },
+        {
+          "productName": "Bandwidth - Routing Preference: Internet",
+          "skuName": "Standard",
+          "meterName": "Standard Data Transfer Out",
+          "armRegionName": "eastasia",
+          "unitPrice": 0.0,
+          "unitOfMeasure": "1 GB",
+          "currencyCode": "USD",
+          "effectiveStartDate": "2022-03-01T00:00:00Z",
+          "isPrimaryMeterRegion": false
+        },
+        {
+          "productName": "Bandwidth - Routing Preference: Internet",
+          "skuName": "Standard",
+          "meterName": "Standard Data Transfer Out",
+          "armRegionName": "eastasia",
+          "unitPrice": 0.11,
+          "unitOfMeasure": "1 GB",
+          "currencyCode": "USD",
+          "effectiveStartDate": "2022-03-01T00:00:00Z",
+          "isPrimaryMeterRegion": false
+        },
+        {
+          "productName": "Bandwidth - Routing Preference: Internet",
+          "skuName": "Standard",
+          "meterName": "Standard Data Transfer Out",
+          "armRegionName": "eastasia",
+          "unitPrice": 0.075,
+          "unitOfMeasure": "1 GB",
+          "currencyCode": "USD",
+          "effectiveStartDate": "2022-03-01T00:00:00Z",
+          "isPrimaryMeterRegion": false
+        },
+        {
+          "productName": "Bandwidth - Routing Preference: Internet",
+          "skuName": "Standard",
+          "meterName": "Standard Data Transfer Out",
+          "armRegionName": "eastasia",
+          "unitPrice": 0.06,
+          "unitOfMeasure": "1 GB",
+          "currencyCode": "USD",
+          "effectiveStartDate": "2022-03-01T00:00:00Z",
+          "isPrimaryMeterRegion": false
+        },
+        {
+          "productName": "Bandwidth - Routing Preference: Internet",
+          "skuName": "Standard",
+          "meterName": "Standard Data Transfer Out",
+          "armRegionName": "eastasia",
+          "unitPrice": 0.07,
+          "unitOfMeasure": "1 GB",
+          "currencyCode": "USD",
+          "effectiveStartDate": "2022-03-01T00:00:00Z",
+          "isPrimaryMeterRegion": false
+        },
+        {
+          "productName": "Rtn Preference: MGN",
+          "skuName": "Standard",
+          "meterName": "Standard Data Transfer In - from China",
+          "armRegionName": "eastasia",
+          "unitPrice": 0.09,
+          "unitOfMeasure": "1 GB",
+          "currencyCode": "USD",
+          "effectiveStartDate": "2016-07-07T00:00:00Z",
+          "isPrimaryMeterRegion": true
+        },
+        {
+          "productName": "Rtn Preference: MGN",
+          "skuName": "Standard",
+          "meterName": "Standard Inter-Availability Zone Data Transfer Out",
+          "armRegionName": "eastasia",
+          "unitPrice": 0.01,
+          "unitOfMeasure": "1 GB",
+          "currencyCode": "USD",
+          "effectiveStartDate": "2021-01-01T00:00:00Z",
+          "isPrimaryMeterRegion": false
+        },
+        {
+          "productName": "Rtn Preference: MGN",
+          "skuName": "Standard",
+          "meterName": "Standard Data Transfer Out - to China",
+          "armRegionName": "eastasia",
+          "unitPrice": 0.0,
+          "unitOfMeasure": "1 GB",
+          "currencyCode": "USD",
+          "effectiveStartDate": "2016-07-07T00:00:00Z",
+          "isPrimaryMeterRegion": true
+        },
+        {
+          "productName": "Rtn Preference: MGN",
+          "skuName": "Standard",
+          "meterName": "Standard Inter-Availability Zone Data Transfer In",
+          "armRegionName": "eastasia",
+          "unitPrice": 0.01,
+          "unitOfMeasure": "1 GB",
+          "currencyCode": "USD",
+          "effectiveStartDate": "2021-01-01T00:00:00Z",
+          "isPrimaryMeterRegion": false
+        },
+        {
+          "productName": "Rtn Preference: MGN",
+          "skuName": "Standard",
+          "meterName": "Standard Data Transfer Out",
+          "armRegionName": "eastasia",
+          "unitPrice": 0.0,
+          "unitOfMeasure": "1 GB",
+          "currencyCode": "USD",
+          "effectiveStartDate": "2022-05-01T00:00:00Z",
+          "isPrimaryMeterRegion": false
+        },
+        {
+          "productName": "Rtn Preference: MGN",
+          "skuName": "Standard",
+          "meterName": "Standard Data Transfer Out",
+          "armRegionName": "eastasia",
+          "unitPrice": 0.12,
+          "unitOfMeasure": "1 GB",
+          "currencyCode": "USD",
+          "effectiveStartDate": "2022-05-01T00:00:00Z",
+          "isPrimaryMeterRegion": false
+        },
+        {
+          "productName": "Rtn Preference: MGN",
+          "skuName": "Standard",
+          "meterName": "Standard Data Transfer Out",
+          "armRegionName": "eastasia",
+          "unitPrice": 0.085,
+          "unitOfMeasure": "1 GB",
+          "currencyCode": "USD",
+          "effectiveStartDate": "2022-05-01T00:00:00Z",
+          "isPrimaryMeterRegion": false
+        },
+        {
+          "productName": "Rtn Preference: MGN",
+          "skuName": "Standard",
+          "meterName": "Standard Data Transfer Out",
+          "armRegionName": "eastasia",
+          "unitPrice": 0.08,
+          "unitOfMeasure": "1 GB",
+          "currencyCode": "USD",
+          "effectiveStartDate": "2022-05-01T00:00:00Z",
+          "isPrimaryMeterRegion": false
+        },
+        {
+          "productName": "Rtn Preference: MGN",
+          "skuName": "Standard",
+          "meterName": "Standard Data Transfer Out",
+          "armRegionName": "eastasia",
+          "unitPrice": 0.08,
+          "unitOfMeasure": "1 GB",
+          "currencyCode": "USD",
+          "effectiveStartDate": "2022-05-01T00:00:00Z",
+          "isPrimaryMeterRegion": false
+        },
+        {
+          "productName": "Rtn Preference: MGN",
+          "skuName": "Standard",
+          "meterName": "Standard Data Transfer Out",
+          "armRegionName": "eastasia",
+          "unitPrice": 0.082,
+          "unitOfMeasure": "1 GB",
+          "currencyCode": "USD",
+          "effectiveStartDate": "2022-05-01T00:00:00Z",
+          "isPrimaryMeterRegion": false
+        },
+        {
+          "productName": "Rtn Preference: MGN",
+          "skuName": "Standard",
+          "meterName": "Standard Data Transfer In",
+          "armRegionName": "eastasia",
+          "unitPrice": 0.0,
+          "unitOfMeasure": "1 GB",
+          "currencyCode": "USD",
+          "effectiveStartDate": "2015-07-01T00:00:00Z",
+          "isPrimaryMeterRegion": false
+        }
+      ]
+    }
+  }
+}

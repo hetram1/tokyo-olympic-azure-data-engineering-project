@@ -1,0 +1,164 @@
+{
+  "stage": 1,
+  "checked_at_utc": "2026-10-24T14:10:14.714748+00:00",
+  "cloud_execution_verified": false,
+  "adf_container_assignments": [
+    {
+      "condition": null,
+      "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics/providers/Microsoft.Storage/storageAccounts/tokyoolympicdatahetram/blobServices/default/containers/tokyo-olympic-data/providers/Microsoft.Authorization/roleAssignments/fd9de1e9-0685-56c5-96d9-ab9d2073cf0f",
+      "principalId": "2b14c4a6-9415-4738-b6a6-a8b671d97d6f",
+      "principalType": "ServicePrincipal",
+      "roleDefinitionId": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/providers/Microsoft.Authorization/roleDefinitions/ba92f5b4-2d11-453d-a403-e96b0029c9fe",
+      "scope": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics/providers/Microsoft.Storage/storageAccounts/tokyoolympicdatahetram/blobServices/default/containers/tokyo-olympic-data"
+    }
+  ],
+  "container_paths": [
+    {
+      "contentLength": 0,
+      "isDirectory": true,
+      "name": "analytics"
+    },
+    {
+      "contentLength": 0,
+      "isDirectory": true,
+      "name": "curated"
+    },
+    {
+      "contentLength": 0,
+      "isDirectory": true,
+      "name": "raw"
+    },
+    {
+      "contentLength": 0,
+      "isDirectory": true,
+      "name": "raw/athletes"
+    },
+    {
+      "contentLength": 0,
+      "isDirectory": true,
+      "name": "raw/coaches"
+    },
+    {
+      "contentLength": 0,
+      "isDirectory": true,
+      "name": "raw/entries_gender"
+    },
+    {
+      "contentLength": 0,
+      "isDirectory": true,
+      "name": "raw/medals"
+    },
+    {
+      "contentLength": 0,
+      "isDirectory": true,
+      "name": "raw/teams"
+    },
+    {
+      "contentLength": 0,
+      "isDirectory": true,
+      "name": "staging"
+    },
+    {
+      "contentLength": 0,
+      "isDirectory": true,
+      "name": "staging/218c96338c6c3926d6a3910ceebcf2915e1097f9cccd024b1fa39a9458057685"
+    },
+    {
+      "contentLength": 407406,
+      "isDirectory": false,
+      "name": "staging/218c96338c6c3926d6a3910ceebcf2915e1097f9cccd024b1fa39a9458057685/Athletes.csv"
+    },
+    {
+      "contentLength": 16494,
+      "isDirectory": false,
+      "name": "staging/218c96338c6c3926d6a3910ceebcf2915e1097f9cccd024b1fa39a9458057685/Coaches.csv"
+    },
+    {
+      "contentLength": 1076,
+      "isDirectory": false,
+      "name": "staging/218c96338c6c3926d6a3910ceebcf2915e1097f9cccd024b1fa39a9458057685/EntriesGender.csv"
+    },
+    {
+      "contentLength": 2320,
+      "isDirectory": false,
+      "name": "staging/218c96338c6c3926d6a3910ceebcf2915e1097f9cccd024b1fa39a9458057685/Medals.csv"
+    },
+    {
+      "contentLength": 34600,
+      "isDirectory": false,
+      "name": "staging/218c96338c6c3926d6a3910ceebcf2915e1097f9cccd024b1fa39a9458057685/Teams.csv"
+    }
+  ],
+  "only_five_manually_staged_source_files": true,
+  "raw_curated_analytics_have_no_output_files": true,
+  "existing_directory_acls_unchanged": {
+    "/": {
+      "acl": "user::rwx,group::r-x,other::---",
+      "permissions": "rwxr-x---"
+    },
+    "raw": {
+      "acl": "user::rwx,group::r-x,other::---",
+      "permissions": "rwxr-x---"
+    },
+    "curated": {
+      "acl": "user::rwx,group::r-x,other::---",
+      "permissions": "rwxr-x---"
+    },
+    "analytics": {
+      "acl": "user::rwx,group::r-x,other::---",
+      "permissions": "rwxr-x---"
+    }
+  },
+  "subscription_resources": [
+    {
+      "location": "indiasouthcentral",
+      "name": "tokyoolympicdatahetram",
+      "resourceGroup": "rg-tokyo-olympics",
+      "type": "Microsoft.Storage/storageAccounts"
+    },
+    {
+      "location": "indiasouthcentral",
+      "name": "adf-tokyo-olympics-hetram-2026",
+      "resourceGroup": "rg-tokyo-olympics",
+      "type": "Microsoft.DataFactory/factories"
+    }
+  ],
+  "pipeline_run_query": {
+    "window": {
+      "lastUpdatedAfter": "2026-10-23T14:10:27.953047+00:00",
+      "lastUpdatedBefore": "2026-10-24T14:10:27.953047+00:00"
+    },
+    "runs": [],
+    "no_pagination": true
+  },
+  "month_to_date_cost": {
+    "columns": [
+      {
+        "name": "PreTaxCost",
+        "type": "Number"
+      },
+      {
+        "name": "ServiceName",
+        "type": "String"
+      },
+      {
+        "name": "Currency",
+        "type": "String"
+      }
+    ],
+    "nextLink": null,
+    "rows": [
+      [
+        0.0,
+        "Bandwidth",
+        "INR"
+      ],
+      [
+        0.0183554770256001,
+        "Storage",
+        "INR"
+      ]
+    ]
+  },
+  "cost_limitations": "Billing may lag; month-to-date totals are not an isolated Stage 1 bill. No pipeline/data-movement or Databricks compute was started."
+}

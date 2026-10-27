@@ -1,0 +1,34 @@
+{
+  "operator_subscription_permissions": {
+    "status": "read",
+    "value": [
+      {
+        "actions": [
+          "*"
+        ],
+        "notActions": []
+      },
+      {
+        "actions": [
+          "Microsoft.Authorization/elevateAccess/action"
+        ],
+        "notActions": []
+      },
+      {
+        "actions": [
+          "Microsoft.Authorization/roleAssignments/read",
+          "Microsoft.Authorization/roleDefinitions/read"
+        ],
+        "notActions": []
+      }
+    ]
+  },
+  "curated/adf/c3c77b21-7385-4f93-91bd-e1d8ea1984d4/": {
+    "status": "read",
+    "value": []
+  },
+  "analytics/adf/c3c77b21-7385-4f93-91bd-e1d8ea1984d4/": {
+    "status": "read",
+    "value": []
+  }
+}

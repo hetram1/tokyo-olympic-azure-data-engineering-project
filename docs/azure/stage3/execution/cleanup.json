@@ -1,0 +1,13 @@
+{
+  "at": "2026-10-25T17:14:40.504651+00:00",
+  "workspace_absent": true,
+  "managed_group_absent": true,
+  "new_resources_remaining": [],
+  "preservation": {
+    "blobs_unchanged": true,
+    "adf_unchanged": true,
+    "roles_unchanged": true,
+    "storage_unchanged": true
+  },
+  "cleanup_verified": true
+}

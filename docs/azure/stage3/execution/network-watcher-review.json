@@ -1,0 +1,33 @@
+{
+  "at": "2026-10-25T17:14:28.920137+00:00",
+  "resource": {
+    "changedTime": "2026-10-25T17:09:51.696512+00:00",
+    "createdTime": "2026-10-25T16:59:50.526444+00:00",
+    "extendedLocation": null,
+    "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/NetworkWatcherRG/providers/Microsoft.Network/networkWatchers/NetworkWatcher_eastasia",
+    "identity": null,
+    "kind": null,
+    "location": "eastasia",
+    "managedBy": null,
+    "name": "NetworkWatcher_eastasia",
+    "plan": null,
+    "properties": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "NetworkWatcherRG",
+    "sku": null,
+    "tags": null,
+    "type": "Microsoft.Network/networkWatchers"
+  },
+  "children": {
+    "flowLogs": {
+      "value": []
+    },
+    "packetCaptures": {
+      "value": []
+    },
+    "connectionMonitors": {
+      "value": []
+    }
+  },
+  "scope": "Specific automatically created resource absent before Stage 3; parent NetworkWatcherRG is preserved"
+}

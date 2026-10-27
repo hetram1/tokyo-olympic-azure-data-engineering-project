@@ -1,0 +1,15 @@
+{
+  "started_at": "2026-10-26T09:04:44.943320+00:00",
+  "phase": "failed",
+  "job_invocations": 0,
+  "roles": [],
+  "locations": [],
+  "credential": null,
+  "connector_attempted": false,
+  "workspace_attempted": true,
+  "job_id": null,
+  "run_id": null,
+  "host": "adb-7405606436110154.14.azuredatabricks.net",
+  "workspace_numeric_id": 7405606436110154,
+  "error": "Unexpected pre-compute footprint"
+}

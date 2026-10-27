@@ -1,0 +1,17 @@
+{
+  "started_at": "2026-10-26T09:16:07.130359+00:00",
+  "phase": "failed",
+  "job_invocations": 0,
+  "roles": [],
+  "locations": [],
+  "credential": null,
+  "connector_attempted": false,
+  "workspace_attempted": true,
+  "bundle_attempted": false,
+  "job_id": null,
+  "run_id": null,
+  "host": "adb-7405618282355913.13.azuredatabricks.net",
+  "workspace_numeric_id": 7405618282355913,
+  "operator": "hetramgugrwal13@gmail.com",
+  "error": "HTTP 400: {\"error_code\":\"BAD_REQUEST\",\"message\":\"Current organization 7405618282355913 does not have any associated worker environments\",\"details\":[{\"@type\":\"type.googleapis.com/google.rpc.RequestInfo\",\"request_id\":\"bd475a10-caaf-45fb-b40f-577c590af251\",\"serving_data\":\"\"}]}"
+}

@@ -1,0 +1,29 @@
+{
+  "rows": 206,
+  "countries": 206,
+  "athletes": 11071,
+  "medals": 1080,
+  "medal_countries": 93,
+  "team_entries": 743,
+  "source_sha256": "37495ff232f8aa5140e6f194d851f41c053aa4cf4390f65faaf45e6283956bcb",
+  "source_file": "olympic_country_dashboard.csv",
+  "model_type": "embedded frozen import snapshot",
+  "pages": [
+    "overview",
+    "participation",
+    "country_detail",
+    "methodology"
+  ],
+  "measure_count": 16,
+  "validation": "passed: real Desktop DAX reconciled to CSV",
+  "live_dax_captured_at": "2026-10-26T15:06:47.7229126Z",
+  "checks": [
+    "Embedded import bytes equal pinned CSV",
+    "All 206 countries: medals, medal colors, athletes, teams, efficiency and gold share",
+    "Global totals and ratio-of-sums",
+    "India + United States combined filter totals and ratios",
+    "Empty selection returns blanks",
+    "All 206 medal ranks and top-ten visibility, including ties"
+  ],
+  "cloud_lineage": "Local validated analytics snapshot; no successful Stage 3 Databricks output exists"
+}

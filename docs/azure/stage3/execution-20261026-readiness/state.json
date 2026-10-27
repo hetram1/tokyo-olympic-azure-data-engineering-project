@@ -1,0 +1,25 @@
+{
+  "started_at": "2026-10-26T15:19:16.020231+00:00",
+  "phase": "failed",
+  "job_invocations": 0,
+  "roles": [],
+  "locations": [],
+  "credential": null,
+  "connector_attempted": false,
+  "workspace_attempted": true,
+  "bundle_attempted": false,
+  "job_id": null,
+  "run_id": null,
+  "host": "adb-7405618772656956.16.azuredatabricks.net",
+  "workspace_numeric_id": 7405618772656956,
+  "operator": "hetramgugrwal13@gmail.com",
+  "readiness_waits": [
+    {
+      "path": "2.0/clusters/list-node-types",
+      "remaining_seconds": 299.30918732899994,
+      "reason": "worker environment provisioning not ready",
+      "at": "2026-10-26T15:25:07.929535+00:00"
+    }
+  ],
+  "error": "HTTP 400: {\"error_code\":\"INVALID_PARAMETER_VALUE\",\"message\":\"Delegate unexpected exception during listing node types: com.google.common.util.concurrent.UncheckedExecutionException: com.databricks.backend.manager.util.UnknownWorkerEnvironmentException: Unknown worker environment WorkerEnvId(workerenv-7405618772656956)\",\"details\":[{\"@type\":\"type.googleapis.com/google.rpc.RequestInfo\",\"request_id\":\"4cf33193-b72e-4ae8-bd1a-1f1e6668f6c1\",\"serving_data\":\"\"}]}"
+}

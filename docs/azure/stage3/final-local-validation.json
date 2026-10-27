@@ -1,0 +1,24 @@
+{
+  "automated_tests": {
+    "command": ".venv/bin/python -B -m unittest discover -s tests -v",
+    "count": 95,
+    "duration_seconds": 7.371,
+    "result": "passed"
+  },
+  "dependency_check": "No broken requirements found; unwritable cache warning only",
+  "contract_check": "passed",
+  "protected_files_checked": 60,
+  "preservation": "All snapshotted source/tests/datasets/models/reports/Stage1/Stage2 evidence byte-identical",
+  "configuration_sha256": {
+    "infra/azure/stage3/unity-catalog-plan.json": "2a62270f8e3f4a264047bd7cc10231c03797a0015fcf13c0e839f5e421792d7b",
+    "infra/azure/stage3/job.json": "b7f88783526d78fb2a5e4321e0828d8eb1a3e6a8d6ccdded7a6aa87930ab56d3"
+  },
+  "credential_pattern_check": "passed",
+  "branch": "feature/olympic-ai-platform",
+  "head": "eb30e6fbf31afe59d74b67973fd230df43a59c23",
+  "cloud_mutations": [],
+  "cloud_eligibility_limitations": "ProviderNoRbac ARM validation is not a live capacity reservation, full deployment authorization check or Databricks entitlement verification.",
+  "git_diff_check": "passed",
+  "approval_preview_sha256": "c78866ecfaf3bfd42dcf978e4bc8e6be32166bea9dd63d348f85301c5477b451",
+  "readiness_detail_sha256": "8d929aeada997f7c4daa3e324bc05a35e9aae92b183784cd04fb9df244100eb2"
+}

@@ -1,0 +1,188 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "factoryName": {
+      "type": "string"
+    },
+    "storageAccount": {
+      "type": "string"
+    },
+    "container": {
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.DataFactory/factories/linkedservices",
+      "apiVersion": "2018-06-01",
+      "name": "[concat(parameters('factoryName'), '/ls_tokyo_adls_mi')]",
+      "dependsOn": [],
+      "properties": {
+        "type": "AzureBlobFS",
+        "typeProperties": {
+          "url": "[concat('https://', parameters('storageAccount'), '.dfs.core.windows.net')]"
+        }
+      }
+    },
+    {
+      "type": "Microsoft.DataFactory/factories/datasets",
+      "apiVersion": "2018-06-01",
+      "name": "[concat(parameters('factoryName'), '/ds_tokyo_staged_binary')]",
+      "dependsOn": [
+        "[resourceId('Microsoft.DataFactory/factories/linkedservices', parameters('factoryName'), 'ls_tokyo_adls_mi')]"
+      ],
+      "properties": {
+        "type": "Binary",
+        "linkedServiceName": {
+          "referenceName": "ls_tokyo_adls_mi",
+          "type": "LinkedServiceReference"
+        },
+        "parameters": {
+          "fileName": {
+            "type": "String"
+          },
+          "runId": {
+            "type": "String",
+            "defaultValue": ""
+          }
+        },
+        "typeProperties": {
+          "location": {
+            "type": "AzureBlobFSLocation",
+            "fileSystem": "[parameters('container')]",
+            "folderPath": "staging/218c96338c6c3926d6a3910ceebcf2915e1097f9cccd024b1fa39a9458057685",
+            "fileName": {
+              "value": "@dataset().fileName",
+              "type": "Expression"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "Microsoft.DataFactory/factories/datasets",
+      "apiVersion": "2018-06-01",
+      "name": "[concat(parameters('factoryName'), '/ds_tokyo_raw_binary')]",
+      "dependsOn": [
+        "[resourceId('Microsoft.DataFactory/factories/linkedservices', parameters('factoryName'), 'ls_tokyo_adls_mi')]"
+      ],
+      "properties": {
+        "type": "Binary",
+        "linkedServiceName": {
+          "referenceName": "ls_tokyo_adls_mi",
+          "type": "LinkedServiceReference"
+        },
+        "parameters": {
+          "fileName": {
+            "type": "String"
+          },
+          "runId": {
+            "type": "String",
+            "defaultValue": ""
+          }
+        },
+        "typeProperties": {
+          "location": {
+            "type": "AzureBlobFSLocation",
+            "fileSystem": "[parameters('container')]",
+            "folderPath": {
+              "value": "@concat('raw/adf/', dataset().runId)",
+              "type": "Expression"
+            },
+            "fileName": {
+              "value": "@dataset().fileName",
+              "type": "Expression"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "Microsoft.DataFactory/factories/pipelines",
+      "apiVersion": "2018-06-01",
+      "name": "[concat(parameters('factoryName'), '/pl_tokyo_ingest')]",
+      "dependsOn": [
+        "[resourceId('Microsoft.DataFactory/factories/datasets', parameters('factoryName'), 'ds_tokyo_staged_binary')]",
+        "[resourceId('Microsoft.DataFactory/factories/datasets', parameters('factoryName'), 'ds_tokyo_raw_binary')]"
+      ],
+      "properties": {
+        "concurrency": 1,
+        "annotations": [
+          "Pinned binary copy; source manually staged; raw files created only by ADF"
+        ],
+        "activities": [
+          {
+            "name": "CopyAllFive",
+            "type": "ForEach",
+            "typeProperties": {
+              "isSequential": true,
+              "items": {
+                "value": "@createArray('Athletes.csv','Coaches.csv','EntriesGender.csv','Medals.csv','Teams.csv')",
+                "type": "Expression"
+              },
+              "activities": [
+                {
+                  "name": "CopyPinnedFile",
+                  "type": "Copy",
+                  "policy": {
+                    "timeout": "0.00:10:00",
+                    "retry": 0,
+                    "secureInput": true,
+                    "secureOutput": true
+                  },
+                  "inputs": [
+                    {
+                      "referenceName": "ds_tokyo_staged_binary",
+                      "type": "DatasetReference",
+                      "parameters": {
+                        "fileName": {
+                          "value": "@item()",
+                          "type": "Expression"
+                        }
+                      }
+                    }
+                  ],
+                  "outputs": [
+                    {
+                      "referenceName": "ds_tokyo_raw_binary",
+                      "type": "DatasetReference",
+                      "parameters": {
+                        "fileName": {
+                          "value": "@item()",
+                          "type": "Expression"
+                        },
+                        "runId": {
+                          "value": "@pipeline().RunId",
+                          "type": "Expression"
+                        }
+                      }
+                    }
+                  ],
+                  "typeProperties": {
+                    "source": {
+                      "type": "BinarySource",
+                      "storeSettings": {
+                        "type": "AzureBlobFSReadSettings",
+                        "recursive": false
+                      }
+                    },
+                    "sink": {
+                      "type": "BinarySink",
+                      "storeSettings": {
+                        "type": "AzureBlobFSWriteSettings"
+                      }
+                    },
+                    "enableStaging": false,
+                    "dataIntegrationUnits": 2,
+                    "parallelCopies": 1
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

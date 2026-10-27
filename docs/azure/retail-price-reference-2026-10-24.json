@@ -1,0 +1,174 @@
+{
+  "source": "https://prices.azure.com/api/retail/prices",
+  "retrieved_date": "2026-10-24",
+  "currency": "USD",
+  "status": "Verified public list meters, not subscription quotes or spend approval. NAT rates were not returned; no further pricing searches planned.",
+  "selected_meters": {
+    "databricks": [
+      {
+        "productName": "Azure Databricks",
+        "skuName": "Premium Jobs Compute",
+        "meterName": "Premium Jobs Compute DBU",
+        "armSkuName": "",
+        "armRegionName": "centralindia",
+        "unitPrice": 0.3,
+        "currencyCode": "USD",
+        "unitOfMeasure": "1 Hour",
+        "type": "Consumption",
+        "effectiveStartDate": "2019-03-01T00:00:00Z"
+      },
+      {
+        "productName": "Azure Databricks",
+        "skuName": "Premium All-purpose Compute",
+        "meterName": "Premium All-purpose Compute DBU",
+        "armSkuName": "",
+        "armRegionName": "centralindia",
+        "unitPrice": 0.55,
+        "currencyCode": "USD",
+        "unitOfMeasure": "1 Hour",
+        "type": "Consumption",
+        "effectiveStartDate": "2018-05-01T00:00:00Z"
+      }
+    ],
+    "adf": [
+      {
+        "productName": "Azure Data Factory v2",
+        "skuName": "Cloud",
+        "meterName": "Cloud External Pipeline Activity",
+        "armSkuName": "",
+        "armRegionName": "indiasouthcentral",
+        "unitPrice": 0.00025,
+        "currencyCode": "USD",
+        "unitOfMeasure": "1 Hour",
+        "type": "Consumption",
+        "effectiveStartDate": "2026-05-01T00:00:00Z"
+      },
+      {
+        "productName": "Azure Data Factory v2",
+        "skuName": "Cloud",
+        "meterName": "Cloud Pipeline Activity",
+        "armSkuName": "",
+        "armRegionName": "indiasouthcentral",
+        "unitPrice": 0.005,
+        "currencyCode": "USD",
+        "unitOfMeasure": "1 Hour",
+        "type": "Consumption",
+        "effectiveStartDate": "2026-05-01T00:00:00Z"
+      },
+      {
+        "productName": "Azure Data Factory v2",
+        "skuName": "Cloud",
+        "meterName": "Cloud Monitoring Operations",
+        "armSkuName": "",
+        "armRegionName": "indiasouthcentral",
+        "unitPrice": 0.25,
+        "currencyCode": "USD",
+        "unitOfMeasure": "50K",
+        "type": "Consumption",
+        "effectiveStartDate": "2026-05-01T00:00:00Z"
+      },
+      {
+        "productName": "Azure Data Factory v2",
+        "skuName": "Cloud",
+        "meterName": "Inactive Pipeline",
+        "armSkuName": "",
+        "armRegionName": "indiasouthcentral",
+        "unitPrice": 0.8,
+        "currencyCode": "USD",
+        "unitOfMeasure": "1/Month",
+        "type": "Consumption",
+        "effectiveStartDate": "2026-05-01T00:00:00Z"
+      },
+      {
+        "productName": "Azure Data Factory v2",
+        "skuName": "Cloud",
+        "meterName": "Cloud Orchestration Activity Run",
+        "armSkuName": "",
+        "armRegionName": "indiasouthcentral",
+        "unitPrice": 1.0,
+        "currencyCode": "USD",
+        "unitOfMeasure": "1K",
+        "type": "Consumption",
+        "effectiveStartDate": "2026-05-01T00:00:00Z"
+      },
+      {
+        "productName": "Azure Data Factory v2",
+        "skuName": "Cloud",
+        "meterName": "Cloud Read Write Operations",
+        "armSkuName": "",
+        "armRegionName": "indiasouthcentral",
+        "unitPrice": 0.5,
+        "currencyCode": "USD",
+        "unitOfMeasure": "50K",
+        "type": "Consumption",
+        "effectiveStartDate": "2026-05-01T00:00:00Z"
+      },
+      {
+        "productName": "Azure Data Factory v2",
+        "skuName": "Cloud",
+        "meterName": "Cloud Data Movement",
+        "armSkuName": "",
+        "armRegionName": "indiasouthcentral",
+        "unitPrice": 0.25,
+        "currencyCode": "USD",
+        "unitOfMeasure": "1 Hour",
+        "type": "Consumption",
+        "effectiveStartDate": "2026-05-01T00:00:00Z"
+      }
+    ],
+    "candidate_vm": [
+      {
+        "productName": "Virtual Machines Ddsv5 Series",
+        "skuName": "Standard_D4ds_v5",
+        "meterName": "D4ds v5",
+        "armSkuName": "Standard_D4ds_v5",
+        "armRegionName": "centralindia",
+        "unitPrice": 0.244,
+        "currencyCode": "USD",
+        "unitOfMeasure": "1 Hour",
+        "type": "Consumption",
+        "effectiveStartDate": "2021-11-01T00:00:00Z"
+      }
+    ]
+  },
+  "eastasia_candidate": {
+    "databricks": [
+      {
+        "productName": "Azure Databricks",
+        "skuName": "Premium All-purpose Compute",
+        "meterName": "Premium All-purpose Compute DBU",
+        "armSkuName": "",
+        "armRegionName": "eastasia",
+        "unitPrice": 0.55,
+        "currencyCode": "USD",
+        "unitOfMeasure": "1 Hour",
+        "effectiveStartDate": "2018-05-01T00:00:00Z"
+      },
+      {
+        "productName": "Azure Databricks",
+        "skuName": "Premium Jobs Compute",
+        "meterName": "Premium Jobs Compute DBU",
+        "armSkuName": "",
+        "armRegionName": "eastasia",
+        "unitPrice": 0.3,
+        "currencyCode": "USD",
+        "unitOfMeasure": "1 Hour",
+        "effectiveStartDate": "2019-03-01T00:00:00Z"
+      }
+    ],
+    "vm_d4ds_v4": [
+      {
+        "productName": "Virtual Machines Ddsv4 Series",
+        "skuName": "D4ds v4",
+        "meterName": "D4ds v4",
+        "armSkuName": "Standard_D4ds_v4",
+        "armRegionName": "eastasia",
+        "unitPrice": 0.31,
+        "currencyCode": "USD",
+        "unitOfMeasure": "1 Hour",
+        "effectiveStartDate": "2021-11-01T00:00:00Z"
+      }
+    ],
+    "nat_gateway": []
+  }
+}

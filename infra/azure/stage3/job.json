@@ -1,0 +1,53 @@
+{
+  "name": "tokyo-transform-verify",
+  "max_concurrent_runs": 1,
+  "timeout_seconds": 1800,
+  "queue": {
+    "enabled": false
+  },
+  "tags": {
+    "project": "tokyo-olympics",
+    "stage": "stage3",
+    "raw_run_id": "1a11a954-8e6c-45e9-98b1-fc530f00a6e8"
+  },
+  "tasks": [
+    {
+      "task_key": "transform_and_verify",
+      "timeout_seconds": 1800,
+      "max_retries": 0,
+      "retry_on_timeout": false,
+      "notebook_task": {
+        "notebook_path": "/Shared/tokyo-stage3/tokyo_transform",
+        "source": "WORKSPACE",
+        "base_parameters": {
+          "repo_path": "/Workspace/Shared/tokyo-stage3/bundle",
+          "storage_account": "tokyoolympicdatahetram",
+          "container": "tokyo-olympic-data",
+          "raw_run_id": "1a11a954-8e6c-45e9-98b1-fc530f00a6e8",
+          "output_run_id": "c3c77b21-7385-4f93-91bd-e1d8ea1984d4"
+        }
+      },
+      "new_cluster": {
+        "spark_version": "17.3.x-scala2.13",
+        "node_type_id": "Standard_D4ds_v4",
+        "driver_node_type_id": "Standard_D4ds_v4",
+        "num_workers": 0,
+        "data_security_mode": "SINGLE_USER",
+        "runtime_engine": "STANDARD",
+        "spark_conf": {
+          "spark.databricks.cluster.profile": "singleNode",
+          "spark.master": "local[*]"
+        },
+        "custom_tags": {
+          "ResourceClass": "SingleNode",
+          "project": "tokyo-olympics",
+          "stage": "stage3"
+        },
+        "azure_attributes": {
+          "availability": "ON_DEMAND_AZURE",
+          "first_on_demand": 1
+        }
+      }
+    }
+  ]
+}

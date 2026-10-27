@@ -1,0 +1,104 @@
+{
+  "queried_at": "2026-10-26T15:09:01.397286+00:00",
+  "query": {
+    "type": "ActualCost",
+    "timeframe": "Custom",
+    "timePeriod": {
+      "from": "2026-10-25T00:00:00Z",
+      "to": "2026-10-26T23:59:59Z"
+    },
+    "dataset": {
+      "granularity": "Daily",
+      "aggregation": {
+        "totalCost": {
+          "name": "PreTaxCost",
+          "function": "Sum"
+        }
+      },
+      "grouping": [
+        {
+          "type": "Dimension",
+          "name": "ResourceId"
+        },
+        {
+          "type": "Dimension",
+          "name": "ServiceName"
+        }
+      ],
+      "filter": {
+        "dimensions": {
+          "name": "ResourceId",
+          "operator": "In",
+          "values": [
+            "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed/providers/Microsoft.Databricks/accessConnectors/unity-catalog-access-connector",
+            "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed/providers/Microsoft.ManagedIdentity/userAssignedIdentities/dbmanagedidentity",
+            "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed/providers/Microsoft.Network/natGateways/nat-gateway",
+            "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed/providers/Microsoft.Network/networkSecurityGroups/workers-sg",
+            "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed/providers/Microsoft.Network/publicIPAddresses/nat-gw-public-ip",
+            "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed/providers/Microsoft.Network/virtualNetworks/workers-vnet",
+            "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed/providers/Microsoft.Storage/storageAccounts/dbstorageqtiay3xsvnfe6",
+            "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics/providers/Microsoft.Databricks/accessConnectors/ac-tokyo-olympics-hetram-2026",
+            "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics/providers/Microsoft.Databricks/workspaces/dbw-tokyo-olympics-hetram-2026"
+          ]
+        }
+      }
+    }
+  },
+  "response": {
+    "id": "subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/providers/Microsoft.CostManagement/query/e9af5a55-b243-4dd6-aad1-96710d300bb6",
+    "name": "e9af5a55-b243-4dd6-aad1-96710d300bb6",
+    "type": "Microsoft.CostManagement/query",
+    "location": null,
+    "sku": null,
+    "eTag": null,
+    "properties": {
+      "nextLink": null,
+      "columns": [
+        {
+          "name": "PreTaxCost",
+          "type": "Number"
+        },
+        {
+          "name": "UsageDate",
+          "type": "Number"
+        },
+        {
+          "name": "ResourceId",
+          "type": "String"
+        },
+        {
+          "name": "ServiceName",
+          "type": "String"
+        },
+        {
+          "name": "Currency",
+          "type": "String"
+        }
+      ],
+      "rows": [
+        [
+          4.33512127750002,
+          20261025,
+          "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourcegroups/rg-tokyo-olympics-databricks-managed/providers/microsoft.network/natgateways/nat-gateway",
+          "NAT Gateway",
+          "INR"
+        ],
+        [
+          0.481680141944446,
+          20261025,
+          "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourcegroups/rg-tokyo-olympics-databricks-managed/providers/microsoft.network/publicipaddresses/nat-gw-public-ip",
+          "Virtual Network",
+          "INR"
+        ],
+        [
+          0.00253316026600001,
+          20261025,
+          "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourcegroups/rg-tokyo-olympics-databricks-managed/providers/microsoft.storage/storageaccounts/dbstorageqtiay3xsvnfe6",
+          "Storage",
+          "INR"
+        ]
+      ]
+    }
+  },
+  "limitation": "Delayed Azure actual-cost data, not a final bill. Empty or zero rows do not prove zero charges. US$5 was an allowance, not an enforced hard cap."
+}

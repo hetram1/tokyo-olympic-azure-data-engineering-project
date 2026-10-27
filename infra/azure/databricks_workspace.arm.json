@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "workspaceName": {
+      "type": "string",
+      "defaultValue": "dbw-tokyo-olympics-hetram-2026"
+    },
+    "location": {
+      "type": "string",
+      "defaultValue": "eastasia"
+    },
+    "managedResourceGroupName": {
+      "type": "string",
+      "defaultValue": "rg-tokyo-olympics-databricks-managed"
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Databricks/workspaces",
+      "apiVersion": "2024-05-01",
+      "name": "[parameters('workspaceName')]",
+      "location": "[parameters('location')]",
+      "sku": {
+        "name": "premium"
+      },
+      "tags": {
+        "project": "tokyo-olympics",
+        "purpose": "education-demo"
+      },
+      "properties": {
+        "managedResourceGroupId": "[subscriptionResourceId('Microsoft.Resources/resourceGroups', parameters('managedResourceGroupName'))]",
+        "parameters": {
+          "enableNoPublicIp": {
+            "value": true
+          }
+        }
+      }
+    }
+  ]
+}

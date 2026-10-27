@@ -1,10 +1,43 @@
-# Tokyo Olympics: local data quality, analytics and ML
+# Tokyo Olympics: Azure Data Engineering, Analytics & ML
 
 This repository validates five Tokyo Olympics CSV datasets, builds country
 features and analytics, and contains country-medal ML experiments. Local commands
-need no Azure credentials. An older Databricks notebook is included, but a working
-ADF/ADLS/Databricks deployment and Power BI reports are not reproduced by this
-local setup.
+need no Azure credentials. ADF ingestion is deployed and hash-verified. The native
+[Power BI report](powerbi/TokyoOlympics/README.md) has four pages and a validated
+embedded snapshot. Databricks Stage 3 stopped before job submission; cloud/local
+Spark parity and Power BI Service publication are not complete. See the
+[completion audit](docs/project-completion.md) for verified results and limits.
+
+## Verified project results
+
+| Component | Evidence-backed status |
+| --- | --- |
+| Data quality and analytics | Validated transformations and 206-country dataset |
+| Azure Data Factory / ADLS | One successful ingestion; all five file hashes verified |
+| Power BI Desktop | Four pages, 16 measures; all 206 countries reconciled with live DAX |
+| ML | Reproducible regression and OOF classification evaluation |
+| Databricks PySpark | Implementation prepared; successful cloud execution still pending |
+| Tests | 95 repository tests passing |
+
+[Interview guide](docs/interview-guide.md) · [Power BI setup](powerbi/TokyoOlympics/README.md)
+· [Execution and cleanup evidence](docs/azure/progress.md)
+
+![Power BI medal overview](powerbi/TokyoOlympics/previews/Overview.png)
+
+```mermaid
+flowchart LR
+    Source[Five pinned CSV sources] --> ADF[ADF Binary Copy: verified]
+    ADF --> Raw[ADLS raw run: SHA256 verified]
+    Raw -. prepared cloud path .-> Spark[Databricks PySpark: execution pending]
+    Spark -. planned validated outputs .-> Curated[Parquet and country CSVs]
+    Source --> Local[Validated local quality and analytics]
+    Local --> BI[Power BI: live DAX verified]
+    Local --> ML[Regression and OOF classification]
+```
+
+Solid lines show verified execution. Dotted lines show the implemented cloud path
+whose execution is not yet verified. Power BI currently embeds the validated
+local CSV; it is not proof of Databricks execution or a published Service dashboard.
 
 ## Prerequisites and tested environment
 
@@ -65,7 +98,7 @@ This is a version-pinned environment, not a hash-verified installation lock.
 
 ## Tests and read-only data validation
 
-Run the complete **80-test** suite:
+Run the complete **95-test** suite:
 
 ```bash
 python -B -m unittest discover -s tests -v
@@ -235,7 +268,7 @@ country/team counts. It drops the retired `medals_per_team_event` field.
 | `models/medal_classification_model.joblib` | Separate full-data demonstration/inference classifier; ignored by Git |
 | `reports/classification_evaluation.json` | Classification OOF/baseline metrics, folds, hashes, versions and final-model provenance |
 | `reports/classification_oof_predictions.csv` | Country-sorted OOF labels/probabilities and fold-trained baseline evidence |
-| `dashboards/olympic_country_dashboard.csv` | Current corrected exporter output; CSV for future Power BI work |
+| `dashboards/olympic_country_dashboard.csv` | Current corrected exporter output; embedded in the validated native Power BI report |
 
 Local loaders handle the source CSV encodings. Do not bulk-convert or edit raw
 files to reproduce the workflow. `.env.example` is empty because the local code
@@ -280,9 +313,25 @@ paths. PySpark is not installed in the tested local environment and is deliberat
 excluded from local requirements. Adding PySpark alone would not provide the
 Databricks/Azure runtime or establish compatibility with this Python environment.
 
-Azure Data Factory definitions and verified current cloud runs are absent.
+Prepared Azure Data Factory templates, pinned data contracts, a replacement
+Databricks transformation and parity checks are now included. One approved ADF
+ingestion run succeeded and all five raw output hashes match pinned sources.
+Databricks transformation and cloud analytics parity remain unverified. See [Azure progress](docs/azure/progress.md) and
+[setup, architecture and approval boundaries](docs/azure/README.md).
 Executing the notebook would require a separately configured compatible
 Databricks runtime, Azure resources, identities/permissions and verified paths.
-No Power BI report files or published-dashboard evidence are included. Azure and
-Power BI reproducibility remain separate, unverified work; none is deployed or
-accessed by the local setup above.
+The native [Power BI project](powerbi/TokyoOlympics/TokyoOlympics.pbip) includes
+four report pages, 16 DAX measures, an embedded CSV snapshot and actual Desktop
+captures. Live DAX reconciled all 206 countries and selected-country aggregates.
+Open the project in Desktop and Refresh to load a fresh source checkout.
+No Power BI Service dashboard has been published. The report uses verified local
+analytics, not a successful Databricks output. No GitHub push was performed.
+
+Validate the captured Power BI evidence without cloud access:
+
+```bash
+.venv/bin/python -B scripts/verify_powerbi_snapshot.py
+```
+
+This checks the frozen source/model/evidence; it does not rerun Desktop DAX or
+establish a successful Azure transformation.

@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-27",
+  "unit_tests": {
+    "passed": 95,
+    "duration_seconds": 7.561
+  },
+  "contracts": "passed",
+  "powerbi_snapshot_reconciliation": "passed",
+  "pip_check": "No broken requirements found",
+  "readiness_helper_tests": 5,
+  "scope": "Local validation; cloud outcome is recorded separately."
+}

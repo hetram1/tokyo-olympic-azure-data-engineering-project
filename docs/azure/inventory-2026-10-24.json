@@ -1,0 +1,516 @@
+{
+  "captured_at_utc": "2026-10-24T13:22:47.833618+00:00",
+  "subscription_id": "b52df7c6-044d-4326-92c8-496670def7c1",
+  "mode": "read-only; no resource changes",
+  "checks": {
+    "subscription": {
+      "status": "read",
+      "value": {
+        "id": "b52df7c6-044d-4326-92c8-496670def7c1",
+        "name": "Azure for Students",
+        "state": "Enabled"
+      }
+    },
+    "resource_group": {
+      "status": "read",
+      "value": {
+        "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics",
+        "location": "centralindia",
+        "name": "rg-tokyo-olympics",
+        "provisioningState": "Succeeded"
+      }
+    },
+    "factory_rest": {
+      "status": "read",
+      "value": {
+        "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics/providers/Microsoft.DataFactory/factories/adf-tokyo-olympics-hetram-2026",
+        "identity": {
+          "principalId": "2b14c4a6-9415-4738-b6a6-a8b671d97d6f",
+          "type": "SystemAssigned"
+        },
+        "location": "indiasouthcentral",
+        "publicNetworkAccess": "Enabled"
+      }
+    },
+    "storage": {
+      "status": "read",
+      "value": {
+        "allowSharedKeyAccess": true,
+        "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics/providers/Microsoft.Storage/storageAccounts/tokyoolympicdatahetram",
+        "isHnsEnabled": true,
+        "kind": "StorageV2",
+        "location": "indiasouthcentral",
+        "networkRuleSet": {
+          "bypass": "AzureServices",
+          "defaultAction": "Allow",
+          "ipRules": [],
+          "ipv6Rules": [],
+          "resourceAccessRules": null,
+          "virtualNetworkRules": []
+        },
+        "publicNetworkAccess": "Enabled",
+        "sku": "Standard_LRS"
+      }
+    },
+    "factory_storage_roles": {
+      "status": "read",
+      "value": []
+    },
+    "my_storage_management_permissions": {
+      "status": "read",
+      "value": [
+        {
+          "actions": [
+            "*"
+          ],
+          "dataActions": [],
+          "notActions": [],
+          "notDataActions": []
+        },
+        {
+          "actions": [
+            "Microsoft.Authorization/elevateAccess/action"
+          ],
+          "dataActions": [],
+          "notActions": [],
+          "notDataActions": []
+        },
+        {
+          "actions": [
+            "Microsoft.Authorization/roleAssignments/read",
+            "Microsoft.Authorization/roleDefinitions/read"
+          ],
+          "dataActions": [],
+          "notActions": [],
+          "notDataActions": []
+        }
+      ]
+    },
+    "regional_compute_usage": {
+      "status": "read",
+      "value": []
+    },
+    "adf_pipelines": {
+      "status": "read",
+      "value": []
+    },
+    "adf_datasets": {
+      "status": "read",
+      "value": []
+    },
+    "adf_linkedservices": {
+      "status": "read",
+      "value": []
+    },
+    "adf_triggers": {
+      "status": "read",
+      "value": []
+    },
+    "container": {
+      "status": "read",
+      "value": {
+        "name": "tokyo-olympic-data",
+        "publicAccess": null
+      }
+    },
+    "root_paths": {
+      "status": "read",
+      "value": [
+        {
+          "contentLength": 0,
+          "isDirectory": true,
+          "name": "analytics"
+        },
+        {
+          "contentLength": 0,
+          "isDirectory": true,
+          "name": "curated"
+        },
+        {
+          "contentLength": 0,
+          "isDirectory": true,
+          "name": "raw"
+        },
+        {
+          "contentLength": 0,
+          "isDirectory": true,
+          "name": "raw/athletes"
+        },
+        {
+          "contentLength": 0,
+          "isDirectory": true,
+          "name": "raw/coaches"
+        },
+        {
+          "contentLength": 0,
+          "isDirectory": true,
+          "name": "raw/entries_gender"
+        },
+        {
+          "contentLength": 0,
+          "isDirectory": true,
+          "name": "raw/medals"
+        },
+        {
+          "contentLength": 0,
+          "isDirectory": true,
+          "name": "raw/teams"
+        }
+      ]
+    },
+    "acl_root": {
+      "status": "read",
+      "value": {
+        "acl": "user::rwx,group::r-x,other::---",
+        "permissions": "rwxr-x---",
+        "owner": "$superuser",
+        "group": "$superuser"
+      }
+    },
+    "acl_raw": {
+      "status": "read",
+      "value": {
+        "acl": "user::rwx,group::r-x,other::---",
+        "permissions": "rwxr-x---"
+      }
+    },
+    "acl_curated": {
+      "status": "read",
+      "value": {
+        "acl": "user::rwx,group::r-x,other::---",
+        "permissions": "rwxr-x---"
+      }
+    },
+    "acl_analytics": {
+      "status": "read",
+      "value": {
+        "acl": "user::rwx,group::r-x,other::---",
+        "permissions": "rwxr-x---"
+      }
+    },
+    "acl_staging": {
+      "status": "missing",
+      "error_code": "PathNotFound",
+      "action_taken": "No directory created"
+    },
+    "databricks_provider": {
+      "status": "read",
+      "value": {
+        "registrationState": "NotRegistered",
+        "workspaces": [
+          {
+            "apiVersions": [
+              "2026-01-01",
+              "2025-10-01-preview",
+              "2025-08-01-preview",
+              "2025-03-01-preview",
+              "2025-02-01-preview",
+              "2024-09-01-preview",
+              "2024-05-01",
+              "2024-02-01-preview",
+              "2023-09-15-preview",
+              "2023-04-01-preview",
+              "2023-02-01",
+              "2022-04-01-preview",
+              "2021-04-01-preview",
+              "2018-04-01"
+            ],
+            "locations": [
+              "West US",
+              "East US 2",
+              "West Europe",
+              "East US",
+              "North Europe",
+              "Southeast Asia",
+              "East Asia",
+              "South Central US",
+              "North Central US",
+              "West US 2",
+              "Central US",
+              "UK West",
+              "UK South",
+              "Australia East",
+              "Australia Southeast",
+              "Australia Central",
+              "Australia Central 2",
+              "Japan East",
+              "Japan West",
+              "Canada Central",
+              "Canada East",
+              "Central India",
+              "South India",
+              "West India",
+              "Korea Central",
+              "South Africa North",
+              "Brazil South",
+              "Switzerland North",
+              "France Central",
+              "UAE North",
+              "Norway East",
+              "Germany West Central",
+              "Switzerland West",
+              "Sweden Central",
+              "Qatar Central",
+              "West Central US",
+              "West US 3",
+              "Mexico Central"
+            ]
+          }
+        ]
+      }
+    },
+    "databricks_workspaces": {
+      "status": "read",
+      "value": []
+    },
+    "budgets": {
+      "status": "read",
+      "value": []
+    },
+    "month_to_date_cost": {
+      "status": "read",
+      "value": {
+        "columns": [
+          {
+            "name": "PreTaxCost",
+            "type": "Number"
+          },
+          {
+            "name": "ServiceName",
+            "type": "String"
+          },
+          {
+            "name": "Currency",
+            "type": "String"
+          }
+        ],
+        "rows": [
+          [
+            0.0,
+            "Bandwidth",
+            "INR"
+          ],
+          [
+            0.0183554770256001,
+            "Storage",
+            "INR"
+          ]
+        ]
+      }
+    },
+    "subscription_policies": {
+      "status": "read",
+      "value": {
+        "state": "Enabled",
+        "quotaId": "AzureForStudents_2018-01-01",
+        "spendingLimit": "On"
+      }
+    },
+    "subscription_resources": {
+      "status": "read",
+      "value": [
+        {
+          "name": "tokyoolympicdatahetram",
+          "type": "Microsoft.Storage/storageAccounts",
+          "location": "indiasouthcentral",
+          "resourceGroup": "rg-tokyo-olympics"
+        },
+        {
+          "name": "adf-tokyo-olympics-hetram-2026",
+          "type": "Microsoft.DataFactory/factories",
+          "location": "indiasouthcentral",
+          "resourceGroup": "rg-tokyo-olympics"
+        }
+      ]
+    },
+    "all_containers": {
+      "status": "read",
+      "value": [
+        {
+          "name": "tokyo-olympic-data",
+          "publicAccess": null
+        }
+      ]
+    },
+    "billing_profile_credit_summary": {
+      "status": "read",
+      "source": "Microsoft.Consumption/credits/balanceSummary 2024-08-01, accessible MCA billing profile",
+      "value": {
+        "currentBalance": {
+          "currency": "USD",
+          "value": 100.0
+        },
+        "estimatedBalance": {
+          "currency": "USD",
+          "value": 100.0
+        },
+        "estimatedBalanceInBillingCurrency": {
+          "currency": "INR",
+          "value": 9598.940000000035,
+          "exchangeRate": 95.98940000000036,
+          "exchangeRateMonth": 202610
+        },
+        "isEstimatedBalance": false,
+        "pendingEligibleCharges": {
+          "currency": "USD",
+          "value": 0.0
+        },
+        "expiredCredit": {
+          "currency": "USD",
+          "value": 0.0
+        }
+      }
+    },
+    "billing_account_available_balance": {
+      "status": "read",
+      "value": {
+        "amount": null,
+        "totalPaymentsOnAccount": {
+          "currency": "INR",
+          "value": 0.0
+        }
+      },
+      "interpretation": "Payment-on-account amount is not the student promotional credit balance."
+    },
+    "billing_benefits_credit_resources": {
+      "status": "unavailable",
+      "error_code": "SubscriptionNotRegistered",
+      "provider": "Microsoft.BillingBenefits",
+      "action_taken": "No provider registration attempted"
+    },
+    "centralindia_compute_quota": {
+      "status": "read",
+      "value": [],
+      "interpretation": "Both CLI and direct Microsoft.Compute usage API returned an empty list; quota availability not established."
+    },
+    "provider_registration": {
+      "status": "read",
+      "value": {
+        "Microsoft.Compute": "NotRegistered",
+        "Microsoft.Databricks": "NotRegistered",
+        "Microsoft.Storage": "Registered",
+        "Microsoft.DataFactory": "Registered"
+      }
+    },
+    "centralindia_candidate_skus": {
+      "status": "read",
+      "value": [
+        {
+          "name": "Standard_D4ds_v5",
+          "location": "CentralIndia",
+          "location_restriction": false,
+          "restricted_zones": [
+            "2",
+            "3"
+          ],
+          "restriction_reason": "NotAvailableForSubscription"
+        },
+        {
+          "name": "Standard_D4s_v3",
+          "location": "CentralIndia",
+          "location_restriction": true,
+          "restricted_zones": [
+            "1",
+            "2",
+            "3"
+          ],
+          "restriction_reason": "NotAvailableForSubscription"
+        }
+      ],
+      "interpretation": "D4s_v3 is location-restricted; D4ds_v5 has zone restrictions only. Neither proves quota, Databricks node support or deployability."
+    },
+    "adf_ingestion_template_validation": {
+      "status": "passed",
+      "validation_level": "Template",
+      "error": null,
+      "resources": [
+        "ls_tokyo_adls_mi",
+        "ds_tokyo_staged_binary",
+        "ds_tokyo_raw_binary",
+        "pl_tokyo_ingest"
+      ],
+      "interpretation": "ARM template-only validation; no deployment or execution. Provider/runtime semantics and connectivity still unverified."
+    },
+    "credit_subscription_link": {
+      "status": "verified",
+      "source": "Subscription-scoped Microsoft.Billing/billingProperty/default 2024-04-01",
+      "value": "Returned billingProfileId matches the profile used for credit balanceSummary. No personal billing fields retained."
+    },
+    "post_approval_provider_registration": {
+      "status": "read",
+      "value": {
+        "Microsoft.Compute": "Registered",
+        "Microsoft.Databricks": "Registered",
+        "Microsoft.Network": "NotRegistered"
+      }
+    },
+    "allowed_locations": {
+      "status": "read",
+      "policy": "sys.regionrestriction",
+      "enforcementMode": "Default",
+      "value": [
+        "indonesiacentral",
+        "eastasia",
+        "malaysiawest",
+        "polandcentral",
+        "indiasouthcentral"
+      ]
+    },
+    "centralindia_workspace_provider_validation": {
+      "status": "denied",
+      "error_code": "RequestDisallowedByAzure",
+      "reason": "Subscription allowed-location policy excludes centralindia",
+      "resources_created": false
+    },
+    "eastasia_workspace_provider_validation": {
+      "status": "passed",
+      "validation_level": "ProviderNoRbac",
+      "error": null,
+      "resources_created": false,
+      "limitations": "Validation is not a deployment, RBAC verification or capacity reservation. Later enableNoPublicIp is an explicit plan setting, not a tested running workspace."
+    },
+    "post_registration_compute_quota": {
+      "status": "read",
+      "value": {
+        "centralindia": {
+          "total_vcpu": 6,
+          "used_vcpu": 0,
+          "standardDDSv4Family": 4,
+          "standardDDSv5Family": 0,
+          "standardDSv3Family": 4
+        },
+        "eastasia": {
+          "total_vcpu": 6,
+          "used_vcpu": 0,
+          "standardDDSv4Family": 4,
+          "standardDDSv5Family": 0,
+          "standardDSv3Family": 4
+        }
+      }
+    },
+    "eastasia_candidate_sku": {
+      "status": "read",
+      "value": {
+        "name": "Standard_D4ds_v4",
+        "family": "standardDDSv4Family",
+        "restrictions": []
+      },
+      "limitations": "Azure quota/SKU checks do not establish Databricks node-type availability or live VM capacity."
+    }
+  },
+  "unknowns": [
+    "Credit expiry and lagged usage remain unverified; balance summary currently shows USD 100.",
+    "Databricks runtime/node-type availability, Unity Catalog permissions and live capacity need checks after approved workspace creation.",
+    "NAT gateway/public IP/disk/cross-region billing was not fully priced; no zero-cost assumption is made.",
+    "No RBAC/ACL/network change, resource deployment, source upload, pipeline run or paid compute has occurred."
+  ],
+  "cloud_execution_verified": false,
+  "cloud_mutations_authorized": [
+    "Register Microsoft.Compute",
+    "Register Microsoft.Databricks"
+  ],
+  "cloud_mutations_performed": [
+    "Register Microsoft.Compute",
+    "Register Microsoft.Databricks"
+  ]
+}

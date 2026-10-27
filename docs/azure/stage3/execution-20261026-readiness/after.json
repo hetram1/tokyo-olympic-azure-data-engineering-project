@@ -1,0 +1,466 @@
+{
+  "at": "2026-10-26T15:31:02.061341+00:00",
+  "resources": [
+    {
+      "changedTime": "2026-10-08T07:11:44.471437+00:00",
+      "createdTime": "2026-10-08T07:01:20.657232+00:00",
+      "extendedLocation": null,
+      "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics/providers/Microsoft.Storage/storageAccounts/tokyoolympicdatahetram",
+      "identity": null,
+      "kind": "StorageV2",
+      "location": "indiasouthcentral",
+      "managedBy": null,
+      "name": "tokyoolympicdatahetram",
+      "plan": null,
+      "properties": null,
+      "provisioningState": "Succeeded",
+      "resourceGroup": "rg-tokyo-olympics",
+      "sku": {
+        "capacity": null,
+        "family": null,
+        "model": null,
+        "name": "Standard_LRS",
+        "size": null,
+        "tier": "Standard"
+      },
+      "tags": {},
+      "type": "Microsoft.Storage/storageAccounts"
+    },
+    {
+      "changedTime": "2026-10-08T07:27:33.786579+00:00",
+      "createdTime": "2026-10-08T07:17:30.769742+00:00",
+      "extendedLocation": null,
+      "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics/providers/Microsoft.DataFactory/factories/adf-tokyo-olympics-hetram-2026",
+      "identity": {
+        "principalId": "2b14c4a6-9415-4738-b6a6-a8b671d97d6f",
+        "tenantId": "fae6a919-55a8-478f-81b8-640ca685d113",
+        "type": "SystemAssigned",
+        "userAssignedIdentities": null
+      },
+      "kind": null,
+      "location": "indiasouthcentral",
+      "managedBy": null,
+      "name": "adf-tokyo-olympics-hetram-2026",
+      "plan": null,
+      "properties": null,
+      "provisioningState": "Succeeded",
+      "resourceGroup": "rg-tokyo-olympics",
+      "sku": null,
+      "tags": {},
+      "type": "Microsoft.DataFactory/factories"
+    }
+  ],
+  "blobs": [
+    {
+      "bytes": 0,
+      "etag": "0x8DF250B62B57014",
+      "name": "analytics"
+    },
+    {
+      "bytes": 0,
+      "etag": "0x8DF250B556CC504",
+      "name": "curated"
+    },
+    {
+      "bytes": 0,
+      "etag": "0x8DF250AFE4F797C",
+      "name": "raw"
+    },
+    {
+      "bytes": 0,
+      "etag": "0x8DF329F2BEA8CA4",
+      "name": "raw/adf"
+    },
+    {
+      "bytes": 0,
+      "etag": "0x8DF329F2BED86A4",
+      "name": "raw/adf/1a11a954-8e6c-45e9-98b1-fc530f00a6e8"
+    },
+    {
+      "bytes": 407406,
+      "etag": "0x8DF329F2BFD1B5C",
+      "name": "raw/adf/1a11a954-8e6c-45e9-98b1-fc530f00a6e8/Athletes.csv"
+    },
+    {
+      "bytes": 16494,
+      "etag": "0x8DF329F39CC0E44",
+      "name": "raw/adf/1a11a954-8e6c-45e9-98b1-fc530f00a6e8/Coaches.csv"
+    },
+    {
+      "bytes": 1076,
+      "etag": "0x8DF329F445AFA98",
+      "name": "raw/adf/1a11a954-8e6c-45e9-98b1-fc530f00a6e8/EntriesGender.csv"
+    },
+    {
+      "bytes": 2320,
+      "etag": "0x8DF329F506A4860",
+      "name": "raw/adf/1a11a954-8e6c-45e9-98b1-fc530f00a6e8/Medals.csv"
+    },
+    {
+      "bytes": 34600,
+      "etag": "0x8DF329F5BDDEC08",
+      "name": "raw/adf/1a11a954-8e6c-45e9-98b1-fc530f00a6e8/Teams.csv"
+    },
+    {
+      "bytes": 0,
+      "etag": "0x8DF250B1EEC01A4",
+      "name": "raw/athletes"
+    },
+    {
+      "bytes": 0,
+      "etag": "0x8DF250B24999480",
+      "name": "raw/coaches"
+    },
+    {
+      "bytes": 0,
+      "etag": "0x8DF250B2A61D654",
+      "name": "raw/entries_gender"
+    },
+    {
+      "bytes": 0,
+      "etag": "0x8DF250B313943A4",
+      "name": "raw/medals"
+    },
+    {
+      "bytes": 0,
+      "etag": "0x8DF250B381075E0",
+      "name": "raw/teams"
+    },
+    {
+      "bytes": 0,
+      "etag": "0x8DF31D82A021B5C",
+      "name": "staging"
+    },
+    {
+      "bytes": 0,
+      "etag": "0x8DF31D82A04204C",
+      "name": "staging/218c96338c6c3926d6a3910ceebcf2915e1097f9cccd024b1fa39a9458057685"
+    },
+    {
+      "bytes": 407406,
+      "etag": "0x8DF31D82A059CB0",
+      "name": "staging/218c96338c6c3926d6a3910ceebcf2915e1097f9cccd024b1fa39a9458057685/Athletes.csv"
+    },
+    {
+      "bytes": 16494,
+      "etag": "0x8DF31D82B343384",
+      "name": "staging/218c96338c6c3926d6a3910ceebcf2915e1097f9cccd024b1fa39a9458057685/Coaches.csv"
+    },
+    {
+      "bytes": 1076,
+      "etag": "0x8DF31D82C265188",
+      "name": "staging/218c96338c6c3926d6a3910ceebcf2915e1097f9cccd024b1fa39a9458057685/EntriesGender.csv"
+    },
+    {
+      "bytes": 2320,
+      "etag": "0x8DF31D82D283420",
+      "name": "staging/218c96338c6c3926d6a3910ceebcf2915e1097f9cccd024b1fa39a9458057685/Medals.csv"
+    },
+    {
+      "bytes": 34600,
+      "etag": "0x8DF31D82E2D81CC",
+      "name": "staging/218c96338c6c3926d6a3910ceebcf2915e1097f9cccd024b1fa39a9458057685/Teams.csv"
+    }
+  ],
+  "storage": {
+    "sku": {
+      "name": "Standard_LRS",
+      "tier": "Standard"
+    },
+    "kind": "StorageV2",
+    "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics/providers/Microsoft.Storage/storageAccounts/tokyoolympicdatahetram",
+    "name": "tokyoolympicdatahetram",
+    "type": "Microsoft.Storage/storageAccounts",
+    "location": "indiasouthcentral",
+    "tags": {},
+    "properties": {
+      "dualStackEndpointPreference": {
+        "defaultDualStackEndpoints": false,
+        "publishIpv4Endpoint": false,
+        "publishIpv6Endpoint": false
+      },
+      "dnsEndpointType": "Standard",
+      "defaultToOAuthAuthentication": true,
+      "publicNetworkAccess": "Enabled",
+      "keyCreationTime": {
+        "key1": "2026-10-08T07:01:20.8983459Z",
+        "key2": "2026-10-08T07:01:20.8983459Z"
+      },
+      "allowCrossTenantReplication": false,
+      "privateEndpointConnections": [],
+      "isSftpEnabled": false,
+      "minimumTlsVersion": "TLS1_2",
+      "allowBlobPublicAccess": false,
+      "allowSharedKeyAccess": true,
+      "isHnsEnabled": true,
+      "networkAcls": {
+        "ipv6Rules": [],
+        "bypass": "AzureServices",
+        "virtualNetworkRules": [],
+        "ipRules": [],
+        "defaultAction": "Allow"
+      },
+      "supportsHttpsTrafficOnly": true,
+      "encryption": {
+        "requireInfrastructureEncryption": false,
+        "services": {
+          "file": {
+            "keyType": "Account",
+            "enabled": true,
+            "lastEnabledTime": "2026-10-08T07:01:20.9085294Z"
+          },
+          "blob": {
+            "keyType": "Account",
+            "enabled": true,
+            "lastEnabledTime": "2026-10-08T07:01:20.9085294Z"
+          }
+        },
+        "keySource": "Microsoft.Storage"
+      },
+      "accessTier": "Hot",
+      "provisioningState": "Succeeded",
+      "creationTime": "2026-10-08T07:01:20.8165206Z",
+      "primaryEndpoints": {
+        "dfs": "https://tokyoolympicdatahetram.dfs.core.windows.net/",
+        "web": "https://tokyoolympicdatahetram.z58.web.core.windows.net/",
+        "blob": "https://tokyoolympicdatahetram.blob.core.windows.net/",
+        "queue": "https://tokyoolympicdatahetram.queue.core.windows.net/",
+        "table": "https://tokyoolympicdatahetram.table.core.windows.net/",
+        "file": "https://tokyoolympicdatahetram.file.core.windows.net/"
+      },
+      "primaryLocation": "indiasouthcentral",
+      "statusOfPrimary": "available"
+    }
+  },
+  "adf": {
+    "pipelines": {
+      "value": [
+        {
+          "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics/providers/Microsoft.DataFactory/factories/adf-tokyo-olympics-hetram-2026/pipelines/pl_tokyo_ingest",
+          "name": "pl_tokyo_ingest",
+          "type": "Microsoft.DataFactory/factories/pipelines",
+          "properties": {
+            "concurrency": 1,
+            "annotations": [
+              "Pinned binary copy; source manually staged; raw files created only by ADF"
+            ],
+            "activities": [
+              {
+                "name": "CopyAllFive",
+                "type": "ForEach",
+                "typeProperties": {
+                  "isSequential": true,
+                  "items": {
+                    "value": "@createArray('Athletes.csv','Coaches.csv','EntriesGender.csv','Medals.csv','Teams.csv')",
+                    "type": "Expression"
+                  },
+                  "activities": [
+                    {
+                      "name": "CopyPinnedFile",
+                      "type": "Copy",
+                      "policy": {
+                        "timeout": "0.00:10:00",
+                        "retry": 0,
+                        "secureInput": true,
+                        "secureOutput": true
+                      },
+                      "inputs": [
+                        {
+                          "referenceName": "ds_tokyo_staged_binary",
+                          "type": "DatasetReference",
+                          "parameters": {
+                            "fileName": {
+                              "value": "@item()",
+                              "type": "Expression"
+                            }
+                          }
+                        }
+                      ],
+                      "outputs": [
+                        {
+                          "referenceName": "ds_tokyo_raw_binary",
+                          "type": "DatasetReference",
+                          "parameters": {
+                            "fileName": {
+                              "value": "@item()",
+                              "type": "Expression"
+                            },
+                            "runId": {
+                              "value": "@pipeline().RunId",
+                              "type": "Expression"
+                            }
+                          }
+                        }
+                      ],
+                      "typeProperties": {
+                        "source": {
+                          "type": "BinarySource",
+                          "storeSettings": {
+                            "type": "AzureBlobFSReadSettings",
+                            "recursive": false
+                          }
+                        },
+                        "sink": {
+                          "type": "BinarySink",
+                          "storeSettings": {
+                            "type": "AzureBlobFSWriteSettings"
+                          }
+                        },
+                        "enableStaging": false,
+                        "dataIntegrationUnits": 2,
+                        "parallelCopies": 1
+                      }
+                    }
+                  ]
+                }
+              }
+            ],
+            "lastPublishTime": "2026-10-24T14:08:02Z"
+          },
+          "etag": "010088f4-0000-6300-0000-6adcbbc20000"
+        }
+      ]
+    },
+    "datasets": {
+      "value": [
+        {
+          "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics/providers/Microsoft.DataFactory/factories/adf-tokyo-olympics-hetram-2026/datasets/ds_tokyo_staged_binary",
+          "name": "ds_tokyo_staged_binary",
+          "type": "Microsoft.DataFactory/factories/datasets",
+          "properties": {
+            "type": "Binary",
+            "linkedServiceName": {
+              "referenceName": "ls_tokyo_adls_mi",
+              "type": "LinkedServiceReference"
+            },
+            "parameters": {
+              "fileName": {
+                "type": "String"
+              },
+              "runId": {
+                "type": "String",
+                "defaultValue": ""
+              }
+            },
+            "typeProperties": {
+              "location": {
+                "type": "AzureBlobFSLocation",
+                "fileSystem": "tokyo-olympic-data",
+                "folderPath": "staging/218c96338c6c3926d6a3910ceebcf2915e1097f9cccd024b1fa39a9458057685",
+                "fileName": {
+                  "value": "@dataset().fileName",
+                  "type": "Expression"
+                }
+              }
+            }
+          },
+          "etag": "010084f4-0000-6300-0000-6adcbbc10000"
+        },
+        {
+          "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics/providers/Microsoft.DataFactory/factories/adf-tokyo-olympics-hetram-2026/datasets/ds_tokyo_raw_binary",
+          "name": "ds_tokyo_raw_binary",
+          "type": "Microsoft.DataFactory/factories/datasets",
+          "properties": {
+            "type": "Binary",
+            "linkedServiceName": {
+              "referenceName": "ls_tokyo_adls_mi",
+              "type": "LinkedServiceReference"
+            },
+            "parameters": {
+              "fileName": {
+                "type": "String"
+              },
+              "runId": {
+                "type": "String",
+                "defaultValue": ""
+              }
+            },
+            "typeProperties": {
+              "location": {
+                "type": "AzureBlobFSLocation",
+                "fileSystem": "tokyo-olympic-data",
+                "folderPath": {
+                  "value": "@concat('raw/adf/', dataset().runId)",
+                  "type": "Expression"
+                },
+                "fileName": {
+                  "value": "@dataset().fileName",
+                  "type": "Expression"
+                }
+              }
+            }
+          },
+          "etag": "010086f4-0000-6300-0000-6adcbbc10000"
+        }
+      ]
+    },
+    "linkedservices": {
+      "value": [
+        {
+          "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics/providers/Microsoft.DataFactory/factories/adf-tokyo-olympics-hetram-2026/linkedservices/ls_tokyo_adls_mi",
+          "name": "ls_tokyo_adls_mi",
+          "type": "Microsoft.DataFactory/factories/linkedservices",
+          "properties": {
+            "type": "AzureBlobFS",
+            "typeProperties": {
+              "url": "https://tokyoolympicdatahetram.dfs.core.windows.net"
+            }
+          },
+          "etag": "010082f4-0000-6300-0000-6adcbbc00000"
+        }
+      ]
+    },
+    "triggers": {
+      "value": []
+    }
+  },
+  "roles": [
+    {
+      "createdBy": "",
+      "createdOn": "2026-10-08T06:39:11.324351+00:00",
+      "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/providers/Microsoft.Authorization/roleAssignments/dd015950-215c-4a29-bfb6-444c94ecf56d",
+      "name": "dd015950-215c-4a29-bfb6-444c94ecf56d",
+      "principalId": "e1cb3c81-0093-4eec-bd1c-beb3c29669ad",
+      "principalName": "hetramgugrwal13_gmail.com#EXT#@hetramgugrwal13gmail.onmicrosoft.com",
+      "principalType": "User",
+      "roleDefinitionId": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/providers/Microsoft.Authorization/roleDefinitions/8e3af657-a8ff-443c-a75c-2fe8c4bcb635",
+      "roleDefinitionName": "Owner",
+      "scope": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1",
+      "type": "Microsoft.Authorization/roleAssignments",
+      "updatedBy": "",
+      "updatedOn": "2026-10-08T06:39:11.324351+00:00"
+    },
+    {
+      "createdBy": "e1cb3c81-0093-4eec-bd1c-beb3c29669ad",
+      "createdOn": "2026-10-08T07:07:07.807128+00:00",
+      "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourcegroups/rg-tokyo-olympics/providers/Microsoft.Storage/storageAccounts/tokyoolympicdatahetram/blobServices/default/containers/tokyo-olympic-data/providers/Microsoft.Authorization/roleAssignments/2463da03-2fcf-468b-84aa-fc4367d7e24c",
+      "name": "2463da03-2fcf-468b-84aa-fc4367d7e24c",
+      "principalId": "e1cb3c81-0093-4eec-bd1c-beb3c29669ad",
+      "principalName": "hetramgugrwal13_gmail.com#EXT#@hetramgugrwal13gmail.onmicrosoft.com",
+      "principalType": "User",
+      "resourceGroup": "rg-tokyo-olympics",
+      "roleDefinitionId": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/providers/Microsoft.Authorization/roleDefinitions/ba92f5b4-2d11-453d-a403-e96b0029c9fe",
+      "roleDefinitionName": "Storage Blob Data Contributor",
+      "scope": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourcegroups/rg-tokyo-olympics/providers/Microsoft.Storage/storageAccounts/tokyoolympicdatahetram/blobServices/default/containers/tokyo-olympic-data",
+      "type": "Microsoft.Authorization/roleAssignments",
+      "updatedBy": "e1cb3c81-0093-4eec-bd1c-beb3c29669ad",
+      "updatedOn": "2026-10-08T07:07:07.807128+00:00"
+    },
+    {
+      "createdBy": "e1cb3c81-0093-4eec-bd1c-beb3c29669ad",
+      "createdOn": "2026-10-24T14:07:35.853238+00:00",
+      "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics/providers/Microsoft.Storage/storageAccounts/tokyoolympicdatahetram/blobServices/default/containers/tokyo-olympic-data/providers/Microsoft.Authorization/roleAssignments/fd9de1e9-0685-56c5-96d9-ab9d2073cf0f",
+      "name": "fd9de1e9-0685-56c5-96d9-ab9d2073cf0f",
+      "principalId": "2b14c4a6-9415-4738-b6a6-a8b671d97d6f",
+      "principalName": "5849560b-7cef-418c-8e71-ede615a0b735",
+      "principalType": "ServicePrincipal",
+      "resourceGroup": "rg-tokyo-olympics",
+      "roleDefinitionId": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/providers/Microsoft.Authorization/roleDefinitions/ba92f5b4-2d11-453d-a403-e96b0029c9fe",
+      "roleDefinitionName": "Storage Blob Data Contributor",
+      "scope": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics/providers/Microsoft.Storage/storageAccounts/tokyoolympicdatahetram/blobServices/default/containers/tokyo-olympic-data",
+      "type": "Microsoft.Authorization/roleAssignments",
+      "updatedBy": "e1cb3c81-0093-4eec-bd1c-beb3c29669ad",
+      "updatedOn": "2026-10-24T14:07:35.853238+00:00"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-26T15:08:55.656376+00:00",
+  "new_resources_remaining": [],
+  "preservation": {
+    "original_blobs": true,
+    "adf": true,
+    "storage": true,
+    "roles": true
+  },
+  "stage3_outputs": [],
+  "job_submitted": false
+}

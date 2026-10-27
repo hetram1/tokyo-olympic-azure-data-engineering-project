@@ -1,0 +1,75 @@
+{
+  "at": "2026-10-25T17:11:28.787626+00:00",
+  "group": "rg-tokyo-olympics-databricks-managed",
+  "resources": [
+    {
+      "changedTime": "2026-10-25T17:09:59.476237+00:00",
+      "createdTime": "2026-10-25T16:59:33.452960+00:00",
+      "extendedLocation": null,
+      "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed/providers/Microsoft.Storage/storageAccounts/dbstorageqtiay3xsvnfe6",
+      "identity": null,
+      "kind": "StorageV2",
+      "location": "eastasia",
+      "managedBy": null,
+      "name": "dbstorageqtiay3xsvnfe6",
+      "plan": null,
+      "properties": null,
+      "provisioningState": "Succeeded",
+      "resourceGroup": "rg-tokyo-olympics-databricks-managed",
+      "sku": {
+        "capacity": null,
+        "family": null,
+        "model": null,
+        "name": "Standard_ZRS",
+        "size": null,
+        "tier": "Standard"
+      },
+      "tags": {
+        "application": "databricks",
+        "databricks-environment": "true",
+        "project": "tokyo-olympics",
+        "purpose": "education-demo"
+      },
+      "type": "Microsoft.Storage/storageAccounts"
+    },
+    {
+      "changedTime": "2026-10-25T17:09:36.030644+00:00",
+      "createdTime": "2026-10-25T16:59:33.539057+00:00",
+      "extendedLocation": null,
+      "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics-databricks-managed/providers/Microsoft.Databricks/accessConnectors/unity-catalog-access-connector",
+      "identity": {
+        "principalId": "29971a7b-d800-471b-937c-61928443de0c",
+        "tenantId": "fae6a919-55a8-478f-81b8-640ca685d113",
+        "type": "SystemAssigned",
+        "userAssignedIdentities": null
+      },
+      "kind": null,
+      "location": "eastasia",
+      "managedBy": null,
+      "name": "unity-catalog-access-connector",
+      "plan": null,
+      "properties": null,
+      "provisioningState": "Succeeded",
+      "resourceGroup": "rg-tokyo-olympics-databricks-managed",
+      "sku": null,
+      "systemData": {
+        "createdAt": "2026-10-25T16:59:33.6110766Z",
+        "createdBy": "d9327919-6775-4843-9037-3fb0fb0473cb",
+        "createdByType": "Application",
+        "lastModifiedAt": "2026-10-25T16:59:33.6110766Z",
+        "lastModifiedBy": "d9327919-6775-4843-9037-3fb0fb0473cb",
+        "lastModifiedByType": "Application"
+      },
+      "tags": {
+        "application": "databricks",
+        "databricks-environment": "true",
+        "project": "tokyo-olympics",
+        "purpose": "education-demo"
+      },
+      "type": "Microsoft.Databricks/accessConnectors"
+    }
+  ],
+  "reason": "Default workspace catalog retention after workspace deletion; no job or output was created",
+  "scope": "Only newly provisioned managed group; existing rg-tokyo-olympics and all project ADLS data preserved",
+  "reference": "https://learn.microsoft.com/en-us/azure/databricks/admin/workspace/delete-workspace"
+}

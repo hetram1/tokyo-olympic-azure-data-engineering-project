@@ -1,0 +1,53 @@
+{
+  "status": "NOT DEPLOYED; exact GUID/workspace binding resolved and verified after approved creation",
+  "storage_credential": {
+    "name": "sc_tokyo_stage3",
+    "azure_managed_identity": {
+      "access_connector_id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics/providers/Microsoft.Databricks/accessConnectors/ac-tokyo-olympics-hetram-2026"
+    },
+    "read_only": false,
+    "skip_validation": false,
+    "isolation_mode": "ISOLATED"
+  },
+  "external_locations": [
+    {
+      "name": "el_tokyo_stage3_raw",
+      "url": "abfss://tokyo-olympic-data@tokyoolympicdatahetram.dfs.core.windows.net/raw/adf/1a11a954-8e6c-45e9-98b1-fc530f00a6e8",
+      "credential_name": "sc_tokyo_stage3",
+      "read_only": true,
+      "skip_validation": false,
+      "enable_file_events": false
+    },
+    {
+      "name": "el_tokyo_stage3_curated",
+      "url": "abfss://tokyo-olympic-data@tokyoolympicdatahetram.dfs.core.windows.net/curated/adf/c3c77b21-7385-4f93-91bd-e1d8ea1984d4",
+      "credential_name": "sc_tokyo_stage3",
+      "read_only": false,
+      "skip_validation": false,
+      "enable_file_events": false
+    },
+    {
+      "name": "el_tokyo_stage3_analytics",
+      "url": "abfss://tokyo-olympic-data@tokyoolympicdatahetram.dfs.core.windows.net/analytics/adf/c3c77b21-7385-4f93-91bd-e1d8ea1984d4",
+      "credential_name": "sc_tokyo_stage3",
+      "read_only": false,
+      "skip_validation": false,
+      "enable_file_events": false
+    }
+  ],
+  "job_identity": "Current authenticated operator; verify current-user identity, job owner and run_as match. No new service principal.",
+  "grants": {
+    "el_tokyo_stage3_raw": [
+      "READ_FILES"
+    ],
+    "el_tokyo_stage3_curated": [
+      "READ_FILES",
+      "WRITE_FILES"
+    ],
+    "el_tokyo_stage3_analytics": [
+      "READ_FILES",
+      "WRITE_FILES"
+    ]
+  },
+  "binding": "Bind new credential and all new external locations only to the new workspace ID; do not modify existing UC objects or metastore assignments."
+}

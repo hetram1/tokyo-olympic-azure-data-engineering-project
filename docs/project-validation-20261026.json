@@ -1,0 +1,27 @@
+{
+  "at": "2026-10-26T15:21:13.341400+00:00",
+  "unit_tests": {
+    "passed": 95,
+    "duration_seconds": 10.261
+  },
+  "contracts": "passed",
+  "powerbi_captured_live_dax_reconciliation": "passed for all 206 countries, totals, selected aggregation, empty selection and ranks",
+  "pip_check": "No broken requirements found",
+  "git_diff_check": "passed",
+  "protected_local_hashes": {
+    "count": 60,
+    "all_unchanged": true
+  },
+  "credential_pattern_scan": {
+    "findings": [],
+    "limitation": "Bounded pattern scan of tracked and non-ignored files up to 8 MB; not a guarantee that all sensitive content is absent"
+  },
+  "powerbi_cache_excluded_from_git": true,
+  "git_commit_or_push_performed": false,
+  "cloud_state": "See docs/azure/progress.md; this local validation does not prove cloud execution.",
+  "final_readiness_helper_tests": {
+    "passed": 4,
+    "cloud_execution_of_later_fix": false
+  },
+  "last_cleanup_verified_at": "2026-10-26T15:31:13.622761+00:00"
+}

@@ -1,0 +1,112 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "factoryName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "storageAccount": {
+      "type": "string",
+      "minLength": 1
+    },
+    "container": {
+      "type": "string",
+      "minLength": 1
+    },
+    "workspaceUrl": {
+      "type": "string",
+      "minLength": 1
+    },
+    "workspaceResourceId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "jobId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "repoPath": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.DataFactory/factories/linkedservices",
+      "apiVersion": "2018-06-01",
+      "name": "[concat(parameters('factoryName'), '/ls_tokyo_databricks_mi')]",
+      "properties": {
+        "type": "AzureDatabricks",
+        "typeProperties": {
+          "domain": "[parameters('workspaceUrl')]",
+          "authentication": "MSI",
+          "workspaceResourceId": "[parameters('workspaceResourceId')]"
+        }
+      },
+      "dependsOn": []
+    },
+    {
+      "type": "Microsoft.DataFactory/factories/pipelines",
+      "apiVersion": "2018-06-01",
+      "name": "[concat(parameters('factoryName'), '/pl_tokyo_end_to_end')]",
+      "properties": {
+        "concurrency": 1,
+        "activities": [
+          {
+            "name": "Ingest",
+            "type": "ExecutePipeline",
+            "typeProperties": {
+              "pipeline": {
+                "referenceName": "pl_tokyo_ingest",
+                "type": "PipelineReference"
+              },
+              "waitOnCompletion": true
+            }
+          },
+          {
+            "name": "TransformAndValidate",
+            "type": "DatabricksJob",
+            "dependsOn": [
+              {
+                "activity": "Ingest",
+                "dependencyConditions": [
+                  "Succeeded"
+                ]
+              }
+            ],
+            "policy": {
+              "timeout": "0.00:20:00",
+              "retry": 0,
+              "secureInput": true,
+              "secureOutput": true
+            },
+            "linkedServiceName": {
+              "referenceName": "ls_tokyo_databricks_mi",
+              "type": "LinkedServiceReference"
+            },
+            "typeProperties": {
+              "jobId": "[parameters('jobId')]",
+              "jobParameters": {
+                "repo_path": "[parameters('repoPath')]",
+                "storage_account": "[parameters('storageAccount')]",
+                "container": "[parameters('container')]",
+                "raw_run_id": {
+                  "value": "@activity('Ingest').output.pipelineRunId",
+                  "type": "Expression"
+                },
+                "output_run_id": {
+                  "value": "@pipeline().RunId",
+                  "type": "Expression"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.DataFactory/factories/linkedservices', parameters('factoryName'), 'ls_tokyo_databricks_mi')]"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics/providers/Microsoft.Resources/deployments/tokyo-stage3-workspace-20261025",
+  "name": "tokyo-stage3-workspace-20261025",
+  "type": "Microsoft.Resources/deployments",
+  "properties": {
+    "templateHash": "16375126895183812954",
+    "parameters": {
+      "workspaceName": {
+        "type": "String",
+        "value": "dbw-tokyo-olympics-hetram-2026"
+      },
+      "location": {
+        "type": "String",
+        "value": "eastasia"
+      },
+      "managedResourceGroupName": {
+        "type": "String",
+        "value": "rg-tokyo-olympics-databricks-managed"
+      }
+    },
+    "mode": "Incremental",
+    "provisioningState": "Running",
+    "timestamp": "2026-10-25T16:57:45.7706919Z",
+    "duration": "PT3M54.5768179S",
+    "correlationId": "524edd30-7ac7-47a5-8e15-d3aa37f54e39",
+    "providers": [
+      {
+        "namespace": "Microsoft.Databricks",
+        "resourceTypes": [
+          {
+            "resourceType": "workspaces",
+            "locations": [
+              "eastasia"
+            ]
+          }
+        ]
+      }
+    ],
+    "dependencies": []
+  }
+}

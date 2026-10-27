@@ -1,0 +1,32 @@
+{
+  "input_contract_matches": true,
+  "source_version": "218c96338c6c3926d6a3910ceebcf2915e1097f9cccd024b1fa39a9458057685",
+  "existing_raw_etags_and_sizes_match_stage2": true,
+  "raw_files_redownloaded": false,
+  "prepared_rows": {
+    "Athletes": 11084,
+    "Coaches": 393,
+    "EntriesGender": 46,
+    "Medals": 93,
+    "Teams": 743
+  },
+  "quality_valid": true,
+  "python_312_grammar_parsed_files": 23,
+  "local_environment": {
+    "python": "3.14.4",
+    "pandas": "3.0.6"
+  },
+  "cloud_runtime_documented_baseline": {
+    "runtime": "17.3 LTS",
+    "spark": "4.0.0",
+    "python": "3.12.3",
+    "pandas": "2.2.3"
+  },
+  "limitations": [
+    "No local PySpark installed; no Spark execution or DBR 17.3 compatibility pass claimed.",
+    "Databricks runtime built-ins differ from local pins; no requirements.txt installation in cloud.",
+    "Live runtime/node APIs, current-user, UC metastore, privileges, storage bindings and network data path require the approved workspace before verification.",
+    "Job owner/run_as must resolve to the current authenticated operator before the sole run."
+  ],
+  "proposed_output_run_id": "c3c77b21-7385-4f93-91bd-e1d8ea1984d4"
+}

@@ -1,0 +1,16 @@
+{
+  "metastore_id": "4ce45d62-e816-4529-8099-a9d903ab34a7",
+  "name": "metastore_azure_eastasia",
+  "cloud": "azure",
+  "region": "eastasia",
+  "global_metastore_id": "azure:eastasia:4ce45d62-e816-4529-8099-a9d903ab34a7",
+  "privilege_model_version": "1.0",
+  "delta_sharing_scope": "INTERNAL",
+  "owner": "4fb3d40c-b455-43e1-ada8-bab594ccf154",
+  "created_at": 1792947704307,
+  "created_by": "4fb3d40c-b455-43e1-ada8-bab594ccf154",
+  "updated_at": 1792947704307,
+  "updated_by": "4fb3d40c-b455-43e1-ada8-bab594ccf154",
+  "external_access_enabled": false,
+  "etag": "CAESCAAAAaF0AtHz"
+}
