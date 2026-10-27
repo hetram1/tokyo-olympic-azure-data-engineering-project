@@ -1,0 +1,26 @@
+{
+  "id": "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics/providers/Microsoft.Databricks/accessConnectors/ac-tokyo-olympics-hetram-2026",
+  "name": "ac-tokyo-olympics-hetram-2026",
+  "type": "Microsoft.Databricks/accessConnectors",
+  "location": "eastasia",
+  "identity": {
+    "principalId": "841bc109-3920-445d-b043-52ef9a1b90a4",
+    "tenantId": "fae6a919-55a8-478f-81b8-640ca685d113",
+    "type": "SystemAssigned"
+  },
+  "tags": {
+    "project": "tokyo-olympics",
+    "purpose": "stage3-bounded-run"
+  },
+  "properties": {
+    "provisioningState": "Succeeded"
+  },
+  "systemData": {
+    "createdBy": "hetramgugrwal13@gmail.com",
+    "createdByType": "User",
+    "createdAt": "2026-10-27T09:26:36.7399644+00:00",
+    "lastModifiedBy": "hetramgugrwal13@gmail.com",
+    "lastModifiedByType": "User",
+    "lastModifiedAt": "2026-10-27T09:26:36.7399644+00:00"
+  }
+}

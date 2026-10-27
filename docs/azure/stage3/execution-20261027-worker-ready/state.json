@@ -1,0 +1,47 @@
+{
+  "started_at": "2026-10-27T09:20:08.914127+00:00",
+  "phase": "failed",
+  "job_invocations": 0,
+  "roles": [
+    "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics/providers/Microsoft.Storage/storageAccounts/tokyoolympicdatahetram/blobServices/default/containers/tokyo-olympic-data/providers/Microsoft.Authorization/roleAssignments/b4081516-7362-49af-aedd-836e012aff6c",
+    "/subscriptions/b52df7c6-044d-4326-92c8-496670def7c1/resourceGroups/rg-tokyo-olympics/providers/Microsoft.Storage/storageAccounts/tokyoolympicdatahetram/providers/Microsoft.Authorization/roleAssignments/1c0c7d6c-216b-4caa-8488-04c4593bc9bf"
+  ],
+  "locations": [],
+  "credential": "sc_tokyo_stage3",
+  "connector_attempted": true,
+  "workspace_attempted": true,
+  "bundle_attempted": false,
+  "job_id": null,
+  "run_id": null,
+  "host": "adb-7405613592511893.13.azuredatabricks.net",
+  "workspace_numeric_id": 7405613592511893,
+  "operator": "hetramgugrwal13@gmail.com",
+  "readiness_waits": [
+    {
+      "path": "2.0/clusters/list-node-types",
+      "remaining_seconds": 298.6987275519999,
+      "reason": "worker environment provisioning not ready",
+      "at": "2026-10-27T09:25:34.487583+00:00"
+    },
+    {
+      "path": "2.0/clusters/list-node-types",
+      "remaining_seconds": 287.90228113800003,
+      "reason": "worker environment provisioning not ready",
+      "at": "2026-10-27T09:25:45.283890+00:00"
+    },
+    {
+      "path": "2.0/clusters/list-node-types",
+      "remaining_seconds": 277.220729292,
+      "reason": "worker environment provisioning not ready",
+      "at": "2026-10-27T09:25:55.965439+00:00"
+    },
+    {
+      "path": "2.0/clusters/list-node-types",
+      "remaining_seconds": 266.56351286999995,
+      "reason": "worker environment provisioning not ready",
+      "at": "2026-10-27T09:26:06.622659+00:00"
+    }
+  ],
+  "connector_principal": "841bc109-3920-445d-b043-52ef9a1b90a4",
+  "error": "HTTP 400: {\"error_code\":\"INVALID_PARAMETER_VALUE\",\"message\":\"The identity (id 141783593380820) used to validate this Azure credential is not associated with an Azure (Microsoft Entra ID) object ID, so its permissions on the Azure access connector cannot be verified. If this is a service principal, make sure it is an Azure (Microsoft Entra ID) service principal and run an identity provider (IdP) sync so its Azure object ID is populated, then retry.\",\"details\":[{\"@type\":\"type.googleapis.com/google.rpc.ErrorInfo\",\"reason\":\"UC_STORAGE_CREDENTIAL_PRINCIPAL_MISSING_AZURE_OBJECT_ID\",\"domain\":\"unity-catalog.databricks.com\",\"metadata\":{\"userId\":\"141783593380820\",\"databricks.com/sql_state\":\"42KDI\",\"databricks.com/message_template\":\"The identity (id <userId>) used to validate this Azure credential is not associated with an Azure (Microsoft Entra ID) object ID, so its permissions on the Azure access connector cannot be verified. If this is a service principal, make sure it is an Azure (Microsoft Entra ID) service principal and run an identity provider (IdP) sync so its Azure object ID is populated, then retry.\"}},{\"@type\":\"type.googleapis.com/google.rpc.RequestInfo\",\"request_id\":\"ad138b91-0741-42e2-b063-c09cf819192f\",\"serving_data\":\"\"}]}"
+}

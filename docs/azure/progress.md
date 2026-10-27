@@ -1,8 +1,10 @@
 # Azure completion progress — 2026-10-26
 
-> Update 2026-10-27: the user authorized the next bounded setup/run attempt and
-> GitHub push. That cloud attempt is in progress; no successful Databricks job is
-> claimed. Prior cleanup records below describe the completed earlier attempts.
+> Latest result — 2026-10-27: runtime/node readiness passed, but Unity Catalog
+> rejected storage credential validation because the operator lacks a linked
+> Entra object ID. Zero jobs were submitted. See the
+> [identity prerequisite](stage3/identity-prerequisite.md) and latest cleanup record.
+> The verified local project has been pushed to `feature/olympic-ai-platform`.
 
 
 **ADF Stage 2 is complete. Databricks Stage 3 is not complete. All newly created
@@ -101,7 +103,7 @@ from the node-type API. This second wording was omitted from the agent
 controller's retry predicate; it is a controller gap, not an established permanent
 entitlement failure. No successful Spark/runtime/storage-access execution,
 curated Parquet or analytics manifest exists. No Stage 3 connector role was
-applied because setup stopped before that step. Existing Stage 1 ADF access is
+applied in the first four attempts because setup stopped before that step. Existing Stage 1 ADF access is
 preserved.
 
 Final independent read-only audit at 2026-10-26T15:08:55Z found no new resources,
@@ -123,7 +125,7 @@ reported cost, **not a final bill or proof that total spend stayed under US$5**.
 - [Original Stage 3 scope](stage3/approval-preview.md), now historical proposal
 - [Pre-Stage 3 progress snapshot](progress-before-stage3-20261025.md)
 
-## Remaining completion boundary
+## Earlier completion boundary — before the 2026-10-27 attempt
 
 The approved setup attempts are consumed; no background job or workspace remains.
 No further attempt was started after the final approval. The remaining readiness
@@ -139,3 +141,29 @@ can close Stage 3. No full Azure end-to-end success is claimed.
 ## Final-attempt cleanup confirmation
 
 At 2026-10-26T15:31:13.622761+00:00, cleanup again verified no new resources and unchanged original blobs, ADF, storage settings, roles and all protected local hashes. The final attempt created no job, connector grants or Stage 3 outputs. All four attempts are retained as evidence; no successful run is inferred from workspace creation.
+
+## Latest attempt and cleanup — 2026-10-27
+
+The user's instruction to continue, finish and push authorized the next prepared
+bounded attempt. Four read-only readiness waits resolved the worker-environment
+startup responses; the exact 17.3 runtime and four-core D4ds_v4 node were found.
+The new Access Connector and exactly two approved scoped role assignments were
+created. Unity Catalog rejected credential creation because the validating
+operator was not linked to an Entra object ID. The job was never created or run;
+no new data output exists. No broader grants or validation bypass were attempted.
+
+Cleanup at **2026-10-27T09:33:14.264425+00:00** passed: no new resources remained; original
+blobs, ADF definitions, storage settings, roles and all 60 protected local files
+were unchanged. Both new role assignments and the connector were removed along
+with the workspace and managed dependencies.
+
+- [Final state and exact service error](stage3/execution-20261027-worker-ready/state.json)
+- [Verified runtime/node](stage3/execution-20261027-worker-ready/runtime-node-check.json)
+- [Cleanup and preservation](stage3/execution-20261027-worker-ready/cleanup.json)
+- [Identity prerequisite and official guidance](stage3/identity-prerequisite.md)
+- [Current delayed cost query](stage3/budget-check-20261027.json): **INR 15.346172113043849**
+  for Oct 25–26 as reported at 09:18:23 UTC Oct 27. Oct 27/final charges are pending;
+  the US$5 allowance is not a guaranteed billing cap.
+
+The verified local release is pushed to `feature/olympic-ai-platform`. Databricks
+cloud transformation/parity and Power BI Service publication remain incomplete.

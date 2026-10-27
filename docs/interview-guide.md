@@ -19,8 +19,7 @@ These are exploratory estimates within one Games, not forecasts of a future
 Olympics. Cloud execution status is documented separately from implemented code.”
 
 Before saying that Databricks ran successfully, check the current
-[completion audit](project-completion.md). The historical attempts stopped before
-job submission; a notebook or workspace alone is not execution evidence.
+[completion audit](project-completion.md). The latest attempt passed runtime readiness but was blocked by missing Entra identity association during credential validation. No job was submitted; a notebook or workspace alone is not execution evidence.
 
 ## Show these in a five-minute demo
 

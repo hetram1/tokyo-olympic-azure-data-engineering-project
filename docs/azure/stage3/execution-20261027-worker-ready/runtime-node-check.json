@@ -1,0 +1,39 @@
+{
+  "runtime": "17.3.x-scala2.13",
+  "node": {
+    "node_type_id": "Standard_D4ds_v4",
+    "memory_mb": 16384,
+    "num_cores": 4.0,
+    "description": "Standard_D4ds_v4",
+    "instance_type_id": "Standard_D4ds_v4",
+    "is_deprecated": false,
+    "category": "General Purpose",
+    "support_ebs_volumes": true,
+    "support_cluster_tags": true,
+    "num_gpus": 0,
+    "node_instance_type": {
+      "instance_type_id": "Standard_D4ds_v4",
+      "local_disks": 1,
+      "local_disk_size_gb": 150,
+      "instance_family": "Standard DDSv4 Family vCPUs",
+      "local_nvme_disk_size_gb": 0,
+      "local_nvme_disks": 0,
+      "swap_size": "10g",
+      "is_encrypted_in_transit": true,
+      "is_graviton": false
+    },
+    "is_hidden": false,
+    "support_port_forwarding": true,
+    "display_order": 0,
+    "is_io_cache_enabled": false,
+    "node_info": {
+      "available_core_quota": 4.0,
+      "total_core_quota": 4.0
+    },
+    "photon_worker_capable": true,
+    "photon_driver_capable": true,
+    "is_encrypted_in_transit": true,
+    "is_graviton": false,
+    "require_fabric_manager": false
+  }
+}

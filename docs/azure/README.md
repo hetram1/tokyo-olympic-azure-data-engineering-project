@@ -2,7 +2,7 @@
 
 See [current progress](progress.md) for approvals, execution evidence, cleanup,
 delayed costs and the remaining Databricks blocker. ADF Stage 2 succeeded; all
-five raw hashes match. Four approved workspace setup attempts ended before any
+five raw hashes match. Five approved workspace setup attempts ended before any
 Databricks job submission; all new resources were removed. The original plan
 below describes architecture, not proof of a completed cloud transformation.
 
@@ -195,6 +195,6 @@ source/output manifests, parity and billed-cost checks have been collected.
 
 The saved Stage 3 scope was approved and attempted; it is no longer awaiting its
 original approval. All allowed setup attempts have ended and cleanup is verified.
-A new billable setup is outside that exhausted attempt allowance. See
+The latest attempt passed runtime/node readiness, then failed on the documented Entra identity association prerequisite. Do not repeat workspace setup until that prerequisite is resolved. See
 [progress](progress.md) for the exact failure and next-step boundary. Do not run
 the optional parent pipeline: it would ingest again, contrary to the user's scope.

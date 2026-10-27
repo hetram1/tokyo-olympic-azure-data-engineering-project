@@ -4,7 +4,7 @@ This repository validates five Tokyo Olympics CSV datasets, builds country
 features and analytics, and contains country-medal ML experiments. Local commands
 need no Azure credentials. ADF ingestion is deployed and hash-verified. The native
 [Power BI report](powerbi/TokyoOlympics/README.md) has four pages and a validated
-embedded snapshot. Databricks Stage 3 stopped before job submission; cloud/local
+embedded snapshot. Databricks Stage 3 is blocked on Entra identity association before job submission; cloud/local
 Spark parity and Power BI Service publication are not complete. See the
 [completion audit](docs/project-completion.md) for verified results and limits.
 
@@ -16,11 +16,11 @@ Spark parity and Power BI Service publication are not complete. See the
 | Azure Data Factory / ADLS | One successful ingestion; all five file hashes verified |
 | Power BI Desktop | Four pages, 16 measures; all 206 countries reconciled with live DAX |
 | ML | Reproducible regression and OOF classification evaluation |
-| Databricks PySpark | Implementation prepared; successful cloud execution still pending |
+| Databricks PySpark | Runtime ready; credential validation blocked by Entra identity association; no job submitted |
 | Tests | 95 repository tests passing |
 
 [Interview guide](docs/interview-guide.md) · [Power BI setup](powerbi/TokyoOlympics/README.md)
-· [Execution and cleanup evidence](docs/azure/progress.md)
+· [Execution and cleanup evidence](docs/azure/progress.md) · [Future extensions](docs/future-roadmap.md)
 
 ![Power BI medal overview](powerbi/TokyoOlympics/previews/Overview.png)
 
@@ -36,7 +36,7 @@ flowchart LR
 ```
 
 Solid lines show verified execution. Dotted lines show the implemented cloud path
-whose execution is not yet verified. Power BI currently embeds the validated
+whose execution is not yet verified. See the [exact identity prerequisite](docs/azure/stage3/identity-prerequisite.md). Power BI currently embeds the validated
 local CSV; it is not proof of Databricks execution or a published Service dashboard.
 
 ## Prerequisites and tested environment
@@ -325,7 +325,7 @@ four report pages, 16 DAX measures, an embedded CSV snapshot and actual Desktop
 captures. Live DAX reconciled all 206 countries and selected-country aggregates.
 Open the project in Desktop and Refresh to load a fresh source checkout.
 No Power BI Service dashboard has been published. The report uses verified local
-analytics, not a successful Databricks output. No GitHub push was performed.
+analytics, not a successful Databricks output. The verified release is published on `feature/olympic-ai-platform`; the default branch is unchanged.
 
 Validate the captured Power BI evidence without cloud access:
 

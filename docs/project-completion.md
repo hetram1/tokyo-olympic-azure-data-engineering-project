@@ -1,8 +1,10 @@
 # Project completion audit — 2026-10-26
 
-> Update 2026-10-27: the user authorized the next bounded setup/run attempt and
-> GitHub push. That cloud attempt is in progress; no successful Databricks job is
-> claimed. Prior cleanup records below describe the completed earlier attempts.
+> Latest result — 2026-10-27: runtime/node readiness passed, but Unity Catalog
+> rejected storage credential validation because the operator lacks a linked
+> Entra object ID. Zero jobs were submitted. See the
+> [identity prerequisite](azure/stage3/identity-prerequisite.md) and latest cleanup record.
+> The verified local project has been pushed to `feature/olympic-ai-platform`.
 
 
 | Area | Verified status |
@@ -13,7 +15,7 @@
 | Temporary Azure resources | All new resources removed; original resources/data/access preserved |
 | Power BI Desktop | Four-page native PBIP saved; all 206 country rows and DAX aggregates reconciled |
 | Power BI Service dashboard | Not published |
-| GitHub | Files prepared locally; no commit or push |
+| GitHub | Verified release pushed to `feature/olympic-ai-platform`; default branch unchanged |
 
 Open [Power BI instructions](../powerbi/TokyoOlympics/README.md) and
 [actual overview capture](../powerbi/TokyoOlympics/previews/Overview.png).
@@ -57,3 +59,23 @@ captured live Power BI DAX reconciliation passed, pip found no broken requiremen
 and git diff --check passed. All 60 protected file hashes are unchanged. The
 later readiness-handler correction passed four isolated fake-clock tests but has
 not been exercised in Azure. [Validation journal](project-validation-20261026.json).
+
+## Latest handover — 2026-10-27
+
+The release is now pushed on `feature/olympic-ai-platform` (including the prior
+three local analytics/ML commits). All 95 tests passed again in 7.561 seconds;
+contracts, Power BI snapshot reconciliation, dependency and staged diff checks
+passed. The prepared readiness helper passed five tests. Power BI text files
+were normalized to LF for Git without changing the embedded source CSV.
+
+The fifth setup passed runtime/node readiness and applied only the two approved
+connector roles, but Unity Catalog returned
+`UC_STORAGE_CREDENTIAL_PRINCIPAL_MISSING_AZURE_OBJECT_ID`. No job was submitted.
+All new resources and both roles were removed, with preservation checks passing.
+The missing Entra identity association must be resolved through supported identity
+management before cloud execution can be completed. [Prerequisite](azure/stage3/identity-prerequisite.md).
+
+Reported historical setup cost is now INR 15.35 for Oct 25–26. New/final billing
+is delayed; no hard-cap or final-spend claim is made. This release is suitable for
+demonstrating verified work, but must not be described as a fully executed Azure
+pipeline. See the [interview guide](interview-guide.md).
